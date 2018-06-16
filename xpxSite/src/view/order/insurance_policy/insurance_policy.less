@@ -1,0 +1,200 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#f6f5fa;
+}
+.page_container{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+
+.policy_content_box{
+  width:100%;
+  padding:0.4rem 0.3rem 0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:#fff;
+  .text_res_val{
+    width:100%;
+    font-size:0.3rem;
+    color:#4a93f8;
+    border-bottom:#eee 1px solid;
+    padding-bottom:0.36rem;
+    margin-top:0.4rem;
+  }
+  &.padding{
+    padding-bottom:0.34rem;
+  }
+  .policy_title_box{
+    position: relative;
+    width:100%;
+    font-size:0.34rem;
+    color:#333;
+    padding-left:0.4rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight:bold;
+    .left_bg{
+      display:block;
+      .box_left_position(0);
+      width:0.1rem;
+      height:0.26rem;
+      border-radius:0.1rem;
+      background:#398ef9;
+    }
+  }
+  .time_box{
+    width:100%;
+    margin-top:0.4rem;
+    padding-bottom:0.36rem;
+    border-bottom:#e5e5e5 1px solid;
+    .time{
+      position: relative;
+      width:100%;
+      padding-right:0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .time_val{
+        display:block;
+        font-size:0.3rem;
+        color:#999;
+        .text_hidden;
+        margin:0;
+      }
+      .down_bg{
+        display:block;
+        .box_right_position(0);
+        width:0.21rem;
+        height:0.11rem;
+        background:url('../../../public-resource/imgs/icons/down_bg.png') no-repeat;
+        background-size:cover;
+      }
+    }
+  }
+  .text{
+    width:100%;
+    font-size:0.3rem;
+    color:#333;
+    margin:0;
+    margin-top:0.2rem;
+    span{
+      color:#398ef9;
+    }
+  }
+  .text_val{
+    width:100%;
+    font-size:0.3rem;
+    color:#666;
+    margin:0;
+    margin-top:0.1rem;
+    span{
+      color:#398ef9;
+    }
+  }
+  .img_box{
+    width:100%;
+    font-size:0;
+    border-radius:0.08rem;
+    overflow:hidden;
+    margin-top:0.3rem;
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  }
+}
+.details_introduce{
+  width:100%;
+  background:#fff;
+  padding-left:0.3rem;
+  padding-right:0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .introduce_text{
+    width:100%;
+    font-size:0.28rem;
+    color:#333;
+    padding-bottom:0.36rem;
+    border-bottom:#eee 1px solid;
+    .text_pos{
+      width:100%;
+      position: relative;
+      span{
+        width:100%;
+        display:block;
+      }
+      i{
+        position: absolute;
+        top:50%;
+        right:4px;
+        -webkit-transform: translate(0,-50%) rotate(135deg);
+        -moz-transform: translate(0,-50%) rotate(135deg);
+        -ms-transform: translate(0,-50%) rotate(135deg);
+        -o-transform: translate(0,-50%) rotate(135deg);
+        transform: translate(0,-50%) rotate(135deg);
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #333;
+        border-left: 1px solid #333;
+        display: block;
+        z-index: 10;
+      }
+
+    }
+  }
+}
+.insurance_clause_box{
+  width:100%;
+  background:#fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding:0.35rem 0.3rem;
+  .title{
+    width:100%;
+    font-size:0.28rem;
+    color:#333;
+    margin-bottom:0.22rem;
+  }
+  .a_box{
+    width:100%;
+    .clause_a{
+      display:block;
+      font-size:0.24rem;
+      color:#4a92f8;
+      margin-bottom:0.12rem;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
+}
+.btm_btn_box{
+  width:7.5rem;
+  max-width:7.5rem;
+  padding:0.5rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .next_btn{
+    display:block;
+    width:100%;
+    height:1rem;
+    line-height:1rem;
+    text-align: center;
+    font-size:0.36rem;
+    color:#fff;
+    border-radius:0.06rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    background:url('../../../public-resource/imgs/agree_btn_bg.jpg') no-repeat;
+    background-size:cover;
+  }
+}

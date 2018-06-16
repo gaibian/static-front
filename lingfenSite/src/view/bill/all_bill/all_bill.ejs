@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全部账单</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <a class="return_page_btn"></a>
+    <section class="page_header_container">全部账单</section>
+    <section class="all_bill_base_container">
+        <h3 class="time">2018年</h3>
+        <div class="btm_content_box">
+            <div class="money_box">
+                <p class="tit">全部待还(元)</p>
+                <p class="money_val">3901.23</p>
+            </div>
+            <a class="h_btn">提前还款</a>
+            <!--账单已还清-->
+            <!--<div class="status_finish_box">-->
+                <!--<h2>账单已还清</h2>-->
+                <!--<p class="remarks_text">棒棒哒,继续保持哟！</p>-->
+            <!--</div>-->
+        </div>
+    </section>
+    <section class="all_bill_list_container">
+        <ul class="list_ul">
+            <li class="list_li meet_active">
+                <div class="li_left">
+                    <span class="y_title">1月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">已还清</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li overdue_active">
+                <div class="li_left">
+                    <span class="y_title">2月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">已逾期</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li repayment_active">
+                <div class="li_left">
+                    <span class="y_title">3月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">账单已出，请尽快还款</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="li_left">
+                    <span class="y_title">4月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">未出账</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="li_left">
+                    <span class="y_title">5月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">未出账</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="li_left">
+                    <span class="y_title">6月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">未出账</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="li_left">
+                    <span class="y_title">1月</span>
+                    <span class="num">1,030.00</span>
+                </div>
+                <div class="li_right">
+                    <span class="status">未出账</span>
+                    <span class="right_bg"></span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="line_box"></section>
+    <section class="btm_edit_container">
+        <ul class="edit_ul">
+            <li class="edit_li">
+                <div class="left_box">
+                    <i class="left_icon_bg"></i>
+                    <span>消费记录</span>
+                </div>
+                <div class="right_box">
+                    <i class="right_bg"></i>
+                </div>
+            </li>
+            <li class="edit_li">
+                <div class="left_box">
+                    <i class="left_icon_bg"></i>
+                    <span>还款记录</span>
+                </div>
+                <div class="right_box">
+                    <i class="right_bg"></i>
+                </div>
+            </li>
+            <li class="edit_li">
+                <div class="left_box">
+                    <i class="left_icon_bg"></i>
+                    <span>自动还款</span>
+                </div>
+                <div class="right_box">
+                    <span>未开启</span>
+                    <i class="right_bg"></i>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+</main>
+</body>
+</html>

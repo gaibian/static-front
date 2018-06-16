@@ -1,0 +1,251 @@
+@import "../../public-resource/less/init.less";
+@import "../../public-resource/less/custom.less";
+body{
+  overflow-x: hidden;
+}
+.page{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  background:#fff;
+  padding-bottom:1rem;
+}
+.page_header_container{
+  width:100%;
+  margin-top:0.5rem;
+  margin-bottom:0.3rem;
+  padding:0 0.4rem 0 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .header_title{
+    width:100%;
+    font-size:0.6rem;
+    color:#333;
+    font-weight:bold;
+  }
+  .header_remark_text{
+    font-size:0.22rem;
+    color:#999;
+    margin-top:0.1rem;
+  }
+}
+.swiper_container{
+  position: relative;
+  width:6.7rem;
+  height:3rem;
+  border-radius:0.08rem;
+  overflow:hidden;
+  margin:0 auto;
+  .carousel_box{
+    overflow:hidden;
+    .swiper_item{
+      float:left;
+      width:6.7rem;
+      height:100%;
+      font-size:0;
+    }
+  }
+  .indicator{
+    width:100%;
+    position: absolute;
+    left:0;
+    bottom:0.2rem;
+    font-size:0;
+    text-align: center;
+    span{
+      display:inline-block;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      margin:0 0.08rem;
+      background:rgba(255,255,255,0.8);
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      &.active{
+        width:16px;
+        border-radius:16px;
+        background:#fff;
+      }
+    }
+  }
+}
+.car_insurance_stages_container{
+  width:100%;
+  margin-top:0.73rem;
+  .stages_header_box{
+    position: relative;
+    width:100%;
+    padding:0 0.4rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .stages_title{
+      font-size:0.48rem;
+      color:#333;
+      font-weight:bold;
+    }
+    .my_car_box{
+      .box_right_position(0);
+      width:1.86rem;
+      height:0.6rem;
+      background:#fcec62;
+      border-top-left-radius: 0.6rem;
+      border-bottom-left-radius:0.6rem;
+      .my_bg{
+        .box_left_position(0.24rem);
+        width:0.22rem;
+        height:0.24rem;
+        background:url('../../public-resource/imgs/icons/my_bg.png') no-repeat;
+        background-size:cover;
+      }
+      span{
+        .box_right_position(0.4rem);
+        font-size:0.22rem;
+        color:#333;
+        font-weight:bold;
+      }
+    }
+  }
+  .insurance_nav_box{
+    padding:0 0.4rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0.4rem -0.98rem 0.4rem 0;
+    overflow:hidden;
+    .nav_list{
+      float:left;
+      position: relative;
+      width:0.94rem;
+      margin-bottom:0.7rem;
+      margin-right:0.98rem;
+      .img_box{
+        width:0.94rem;
+        height:0.94rem;
+        font-size:0;
+        margin:0 auto;
+        &.rm_bg{
+          background:url('../../public-resource/imgs/icons/index_rm_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.tpy_bg{
+          background:url('../../public-resource/imgs/icons/index_tpy_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.bh_bg{
+          background:url('../../public-resource/imgs/icons/index_bh_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.zc_bg{
+          background:url('../../public-resource/imgs/icons/index_zc_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.yc_bg{
+          background:url('../../public-resource/imgs/icons/index_yc_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.pa_bg{
+          background:url('../../public-resource/imgs/icons/index_pa_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.ac_bg{
+          background:url('../../public-resource/imgs/icons/index_ac_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.ts_bg{
+          background:url('../../public-resource/imgs/icons/index_ts_insuran_bg.png') no-repeat;
+          background-size:contain;
+        }
+      }
+      .text{
+        width:1.6rem;
+        position: absolute;
+        left:50%;
+        bottom:-0.4rem;
+        -webkit-transform: translate(-50%,0);
+        -moz-transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+        -o-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+        text-align: center;
+        font-size:0.22rem;
+        color:#333;
+      }
+    }
+  }
+}
+.partner_container{
+  width:100%;
+  padding:0 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .partner_title{
+    width:100%;
+    font-size:0.48rem;
+    color:#333;
+    font-weight:bold;
+  }
+  .partner_list_box{
+    width:100%;
+    margin-top:0.5rem;
+    .list_box{
+      width:100%;
+      .flex_box;
+      justify-content:space-between;
+      -webkit-justify-content: space-between;
+      margin-bottom:0.77rem;
+      &:last-child{
+        margin-bottom:0;
+      }
+      .company_logo{
+        width:1.2rem;
+        height:1.2rem;
+        font-size:0;
+      }
+      .right_content{
+        position: relative;
+        width:5.36rem;
+        .pos{
+          width:100%;
+          .box_left_position(0);
+        }
+        .company_name{
+          font-size:0.28rem;
+          color:#333;
+          .text_hidden;
+        }
+        .company_text{
+          width:100%;
+          font-size:0.22rem;
+          color:#999;
+          .text_hidden;
+          margin-top:0.2rem;
+        }
+      }
+    }
+  }
+}
+.bottom_prompt_container{
+  position: relative;
+  width:100%;
+  padding:0.6rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .border_box{
+    width:100%;
+    border-bottom:#e5e5e5 1px solid;
+  }
+  .text{
+    .box_position;
+    font-size:0.22rem;
+    color:#999;
+    padding:0 0.2rem;
+    background:#fff;
+  }
+}

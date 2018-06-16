@@ -1,0 +1,1 @@
+require('./consume_payment_details.less');

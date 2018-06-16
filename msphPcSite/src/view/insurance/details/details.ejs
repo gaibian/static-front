@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保险详情页</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"insurance"}) %>
+<div class="page_top_infor_box">
+    <div class="left_img">
+        <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/insurance_details_top_img.jpg') %>">
+    </div>
+    <div class="middle_content">
+        <div class="title_box">
+            <h2 class="title">安联环游四海-全球旅行马哥波罗全年保障计划</h2>
+            <p class="look_num">查看次数：<span>2,500</span></p>
+        </div>
+        <div class="note_text">本保险对于被保险人在保险期间内因疾病或意外伤害发生的住院医疗费用、特殊门诊医疗费用、住院前后门急诊医疗费用等给予综合的保障。</div>
+        <div class="form_box">
+            <div class="form_input">
+                <label>保障期限：</label>
+                <p class="val">1年</p>
+            </div>
+            <div class="form_input">
+                <label class="day">被保人生日：</label>
+                <div class="input">
+                    <div class="input_box">
+                        <input type="text">
+                        <em>年</em>
+                    </div>
+                    <div class="input_box">
+                        <input type="text">
+                        <em>月</em>
+                    </div>
+                    <div class="input_box">
+                        <input type="text">
+                        <em>日</em>
+                    </div>
+                </div>
+            </div>
+            <div class="form_input">
+                <label>购买份数：</label>
+                <p class="val">1份</p>
+            </div>
+            <div class="form_input">
+                <label class="price_tit">保费价格：</label>
+                <p class="price">588.00<span>元</span></p>
+            </div>
+        </div>
+        <button class="apply_btn">立即申请</button>
+    </div>
+    <div class="right_content">
+        <div class="img_box">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/insurance_company_logo.jpg') %>">
+        </div>
+        <p class="company_brief">德国安联集团是欧洲司全球最大的保险和资产管理集团之一。安联保险集团于1890年在德国柏林成立，至今已有120年的悠久历史，总部设于德国巴伐利亚州首府慕尼黑市，是目前德国最大的金融集团，也是欧洲最大的金融集团之一，2012年位居世界500强第28位。</p>
+        <p class="tel">客服热线：400-800-2020</p>
+    </div>
+</div>
+<!--产品说明-->
+<div class="page_product_explain">
+    <div class="content_header_box">产品说明<span>expatiation</span><a class="more_btn"></a></div>
+    <div class="explain_content">
+        <ul class="nav_btn_box">
+            <li class="tab_btn active">保险详情</li>
+            <li class="tab_btn">投保须知</li>
+            <li class="tab_btn">理赔指南</li>
+            <li class="tab_btn">常见问题</li>
+        </ul>
+        <!--保险详情-->
+        <div class="explain_list_box">
+            <div class="explain_list details">
+                <table class="table" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>意外身故及伤残</td>
+                        <td>100,000</td>
+                        <td>300,000</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>公共交通工具意外身故及伤残</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <td>医疗费用（含门诊和住院，境内旅行的<br>疾病医疗费用限额，1000元</td>
+                        <td>10,000</td>
+                        <td>300,000</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>每日住院津贴（30天为限）</td>
+                        <td>100/天</td>
+                        <td>100/天</td>
+                        <td>100/天</td>
+                    </tr>
+                    <tr>
+                        <td>猝死保障</td>
+                        <td>10,000</td>
+                        <td>30,000</td>
+                        <td>50,000</td>
+                    </tr>
+                    <tr>
+                        <td>紧急医疗运送和送返</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <td>身故遗体送返（丧葬费用以16,000元为限）</td>
+                        <td>15,000</td>
+                        <td>30,000</td>
+                        <td>50,000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--投保须知-->
+        <div class="explain_list_box">
+            <div class="explain_list insure">
+                <div class="list_val_box">
+                    <i class="num">1</i>
+                    <p>本产品承保的被保险人投保时年龄为出生满60天至90周岁。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">2</i>
+                    <p>本产品承保的被保险人投保时年龄为出生满60天至90周岁。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">3</i>
+                    <p>保单生效时年满71-80周岁的被保险人，其涉及的身故、伤残及医疗费用相关保险的保险金额为上述保障计划中所载保险金额的一半(50%)，保险费
+                        维持不变。保单生效时年满81-90周岁的被保险人，其涉及的身故、伤残及医疗费用相关保险的保险金额为上述保障计划中所载保险金额的四分之一
+                        (25%)，保险费维持不变。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">4</i>
+                    <p>本产品每一被保险人限投一份，若同一个被保险人就同一旅行同时投保本保险公司2份（或以上）任何旅行险或航意险产品（不包括团体保险），且
+                        在不同产品中有相同保险利益的，则本保险公司仅按所投保产   品中保额最高者进行理赔。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">5</i>
+                    <p>如保险期间为一年，每次承保旅程最长期限为183天。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">6</i>
+                    <p>本保单仅承保被保险人从中国大陆境内出发的旅行，且必须于出行前投保。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">7</i>
+                    <p>本保单仅承保目的地为中国大陆以外地区的旅行，具体以本保单明细和条款中所载明或约定的旅行目的地为准。</p>
+                </div>
+                <div class="list_val_box">
+                    <i class="num">8</i>
+                    <p>被保险人因投保前已患有的心脑血管疾病、高血压或糖尿病或前述疾病并发症申请索赔，属于除外责任。</p>
+                </div>
+            </div>
+
+        </div>
+        <!--理赔须知-->
+        <div class="explain_list_box">
+            <div class="explain_list financ">
+                <div class="list_val_box">
+                    <i class="num">1</i>
+                    <p>出险后24小时内，拨打400-800-2020客服电话进行报案，对保单信息、保险事故进行简要说明。</p>
+                </div>
+            </div>
+        </div>
+        <!--常见问题-->
+        <div class="explain_list_box">
+            <div class="explain_list problem">
+                <div class="problem_list">
+                    <p class="ask">问：何为申根签证?</p>
+                    <p class="answer"><span>答：</span>申根签证(Schengen Visa):指根据申根协议而签发的签证。这项协议由于在卢森堡的申根签署而得名,它规定了成员国的单一签证政策。据此协议,任何一个申根成员国签发的签证,在所有其他成员国也被视作有效,而无需另外申请签证。而实施这项协议的国家便是通常所说的申根国家。</p>
+                </div>
+                <div class="problem_list">
+                    <p class="ask">问：如何使用紧急救援服务?</p>
+                    <p class="answer"><span>答：</span>接通所在国电话接线员,请他(她)为您拨通24小时对方付费电话400-800-2020(境外:+86 20 8513 2999);告诉AGA工作人员您所需的服务并请提供您所在地详情、电话及您的保单号码,您就会获得国际支援服务人员的及时服务。</p>
+                </div>
+                <div class="problem_list">
+                    <p class="ask">问：本产品可以为未成年人购买吗?</p>
+                    <p class="answer"><span>答：</span>被保险人是未成年人时,投保人必须是其父母或监护人。</p>
+                </div>
+                <div class="problem_list">
+                    <p class="ask">问：如何查询验证保单?</p>
+                    <p class="answer"><span>答：</span>投保完成后,电子保单会直接发送至您邮箱,为保证您的合法权益,您可通过访问安联保险网址(http://www.allianz.cn/zh/e_service/)或拨打客户服务热线400-800-2020,对您所投保保单的相关信息进行查询。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+</html>

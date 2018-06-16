@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>保单查询结果</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="top_banner_box">
+        <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/query_result_banner_img.jpg') %>">
+    </section>
+    <section class="query_result_container">
+        <!--投保信息-->
+        <article class="policy_info_box">
+            <h1 class="title">投保信息</h1>
+            <div class="info_list_box">
+                <p class="info_title">保单状态:</p>
+                <p class="text ycb_status">已承保</p>
+                <!--<p class="text sxz_status">生效中</p>-->
+                <!--<p class="text ysx_status">已失效</p>-->
+                <!--<p class="text tk_status">退款</p>-->
+                <!--<p class=text dd_status>等待保险公司回执</p>-->
+            </div>
+            <div class="info_list_box">
+                <p class="info_title">投保险种:</p>
+                <p class="text">太平洋保险 学平险</p>
+            </div>
+            <div class="info_list_box">
+                <p class="info_title">保单号:</p>
+                <p class="text">PP0000000011111</p>
+            </div>
+            <div class="info_list_box">
+                <p class="info_title">保险期限:</p>
+                <p class="text">2018年9月1日至2019年8月31日</p>
+            </div>
+            <div class="info_list_box">
+                <p class="info_title">保费金额:</p>
+                <p class="text money"><span>109</span>元</p>
+            </div>
+        </article>
+        <!--被保险人(学生)信息-->
+        <article class="student_info_box">
+            <h1 class="title">被保险人(学生)信息</h1>
+            <div class="student_info_content">
+                <p class="info_text">学校：用户填入的信息</p>
+                <p class="info_text">班级：用户填入的信息</p>
+                <p class="info_text">被保险人：用户填入的信息</p>
+                <p class="info_text">性别：用户填入的信息</p>
+                <p class="info_text">身份证号：用户填入的信息</p>
+                <p class="info_text">身体状况：用户填入的信息</p>
+                <p class="info_text">孩子是否参与城乡居民基本医疗保险：是</p>
+            </div>
+        </article>
+        <!--被保险人(学生家长)信息-->
+        <article class="student_info_box">
+            <h1 class="title">被保险人(学生家长)信息</h1>
+            <div class="student_info_content">
+                <p class="info_text">投保人：用户填入信息</p>
+                <p class="info_text">手机号码：用户填入信息</p>
+                <p class="info_text">家庭住址：用户填入信息</p>
+            </div>
+        </article>
+    </section>
+    <section class="btm_btn_box">
+        <a class="xu_btn">一键续保</a>
+    </section>
+</section>
+</body>
+</html>

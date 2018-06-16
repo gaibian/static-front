@@ -1,0 +1,120 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#f6f5fa;
+}
+.page_container{
+  position: relative;
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+.policy_list_container{
+  width:100%;
+  background:#fff;
+  padding:0.4rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .policy_list_box{
+    width:100%;
+    height:3.8rem;
+    border-radius:0.06rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    margin-bottom:0.3rem;
+    .header_box{
+      width:100%;
+      height:0.79rem;
+      line-height:0.79rem;
+      overflow:hidden;
+      padding:0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background:url('../../../public-resource/imgs/policy_header_bg.jpg') no-repeat;
+      background-size:contain;
+      .name{
+        float:left;
+        width:50%;
+        font-size:0.34rem;
+        color:#fff;
+        font-weight:bold;
+      }
+      .status{
+        float:right;
+        width:50%;
+        text-align: right;
+        font-size:0.3rem;
+        color:#fff;
+      }
+    }
+    .policy_content_box{
+      width:100%;
+      padding:0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow:hidden;
+      border-bottom:#eee 1px solid;
+      .img_box{
+        float:left;
+        width:0.7rem;
+        height:0.7rem;
+        border-radius:50%;
+        overflow:hidden;
+        font-size:0;
+        margin-top:0.16rem;
+      }
+      .right_content_box{
+        float:left;
+        width:5rem;
+        margin-left:0.28rem;
+        .title{
+          width:100%;
+          font-size:0.34rem;
+          color:#333;
+          font-weight:bold;
+        }
+        .policy_plate_box{
+          width:100%;
+          padding:0.1rem 0;
+          font-size:0.3rem;
+          color:#333;
+        }
+        .time_box{
+          width:100%;
+          font-size:0.24rem;
+          color:#666;
+        }
+      }
+    }
+    .btm_btn_box{
+      width:100%;
+      padding:0.2rem 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow:hidden;
+      .btn{
+        display:block;
+        float:right;
+        width:1.54rem;
+        height:0.54rem;
+        line-height:0.54rem;
+        text-align: center;
+        border-radius:0.04rem;
+        font-size:0.28rem;
+        color:#4a92f8;
+        border:#4a92f8 1px solid;
+        margin-left:0.2rem;
+      }
+    }
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+}

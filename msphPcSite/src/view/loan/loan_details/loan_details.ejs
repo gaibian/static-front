@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贷款详情</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"loan"}) %>
+<div class="page_calc_box">
+    <div class="left_img_box">
+        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/loan_details_top_img.jpg') %>">
+    </div>
+    <div class="middle_form_box calc_content_box">
+        <div class="form_input">
+            <label class="title">贷款金额</label>
+            <div class="input_box">
+                <input type="text" id="all_money"/>
+                <em>元</em>
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title">贷款期数</label>
+            <div class="input_box">
+                <input type="text" id="month"/>
+                <em>月</em>
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title">贷款月利率</label>
+            <div class="input_box">
+                <input type="text" id="inter_month"/>
+                <em>‰</em>
+            </div>
+        </div>
+        <div class="form_input status_active">
+            <label class="title">还款方式</label>
+            <div class="status_box">
+                <div class="status inter_box">
+                    <span class="spot crl"><em class="pos"></em></span>
+                    <span class="text" data-id="b">等本等息</span>
+                </div>
+                <div class="status inter_box">
+                    <span class="spot crl"><em class="pos"></em></span>
+                    <span class="text" data-id="x">先息后本</span>
+                </div>
+            </div>
+        </div>
+        <p class="note_text">注：请按实际情况填写数据</p>
+    </div>
+    <div class="right_result_box data_show_box">
+        <div class="pos">
+            <ul class="result_ul">
+                <li class="result_li">
+                    <p class="title">每月还款：</p>
+                    <em>元</em>
+                    <span id="each_repayment">0.00</span>
+                </li>
+                <li class="result_li">
+                    <p class="title">末月还款：</p>
+                    <em>元</em>
+                    <span id="late_repayment">0.00</span>
+                </li>
+                <li class="result_li">
+                    <p class="title">总支付利息：</p>
+                    <em>元</em>
+                    <span id="all_interest">0.00</span>
+                </li>
+                <li class="result_li">
+                    <p class="title">本息合计：</p>
+                    <em>元</em>
+                    <span id="all_interest_money">0.00</span>
+                </li>
+            </ul>
+            <button class="apply_btn calc_btn">立即申请</button>
+        </div>
+    </div>
+</div>
+<!--申请表单弹窗-->
+<div class="apply_popup">
+    <div class="header_box">
+        贷款申请资料填写
+        <div class="close_btn"></div>
+    </div>
+    <form class="form" data-btn="submit_btn">
+        <div class="form_input">
+            <label class="title">姓名</label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="name">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>身份证</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="card">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>手机号</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="phone">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>车型</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="empty">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>车牌号</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="empty">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>车牌号</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="empty">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="title"><span>车牌号</span></label>
+            <div class="input_box">
+                <input type="text" data-toggle="true" checkType="empty">
+            </div>
+        </div>
+        <p class="note_text">附：请按实际情况写数据</p>
+    </form>
+    <button class="submit_btn">提交</button>
+</div>
+
+<div class="page_explain_box">
+    <div class="left_explain_content">
+        <div class="content_header_box">产品说明<span>expatiation</span><a class="more_btn"></a></div>
+        <div class="explain_content">
+            <div class="product_explain_box tab_box">
+                <div class="top_nav_box">
+                    <ul class="nav_box">
+                        <li class="tab_btn active">产品详情</li>
+                        <li class="tab_btn">申请资料</li>
+                    </ul>
+                </div>
+                <div class="content_box">
+                    <div class="tab_content">
+                        <span class="top_spot spot"></span>
+                        <div class="t_content_box">
+                            <div class="blue_box"><i class="bg"></i>产品详情</div>
+                            <div class="text_box">
+                                <p>1.浙江省内牌照</p>
+                                <p>2.车龄8年内。</p>
+                            </div>
+                        </div>
+                        <span class="bottom_spot spot"></span>
+                    </div>
+                    <div class="tab_content">
+                        <span class="top_spot spot"></span>
+                        <div class="t_content_box">
+                            <div class="blue_box"><i class="bg"></i>申请资料</div>
+                            <div class="text_box">
+                                <p>非营运车辆一次抵押、二次抵押均可办理，无需押车压证。</p>
+                            </div>
+                        </div>
+                        <span class="bottom_spot spot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_explain_content">
+        <div class="content_header_box">相关文章<span>articles</span><a class="more_btn"></a></div>
+        <div class="text_list_box">
+            <a class="text_list"><i class="spot"></i>归还银行贷款也需有学问</a>
+            <a class="text_list"><i class="spot"></i>五大技巧提升信用贷款额度提升信用贷款额度</a>
+            <a class="text_list"><i class="spot"></i>没钱了怎么办？这些方式可</a>
+            <a class="text_list"><i class="spot"></i>月薪三千，欠下很多网贷</a>
+            <a class="text_list"><i class="spot"></i>整治网贷已经落实到限制暴</a>
+            <a class="text_list"><i class="spot"></i>归还银行贷款也需有学问</a>
+            <a class="text_list"><i class="spot"></i>五大技巧提升信用贷款额度</a>
+        </div>
+    </div>
+    <div class="clean"></div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+<script>
+  $(function(){
+    console.log(verify);
+    verify.init([{
+      el:'.form',
+      success:function(){
+        console.log('通过前端验证');
+      }
+    }])
+  });
+</script>
+</html>

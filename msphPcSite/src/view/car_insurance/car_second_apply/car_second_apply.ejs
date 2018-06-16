@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>险企报价</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"car_insurance"}) %>
+
+<!--页面内容导航-->
+<div class="page_address_box">
+    <div class="address_content">
+        <a class="car_index">车险</a>><span>车险投保</span>
+    </div>
+</div>
+<!--主体内容-->
+<div class="page_main_container">
+    <div class="main_left_container">
+        <!--顶部导航-->
+        <div class="header_nav_box">
+            <ul class="nav_ul">
+                <li class="nav_li finish_active">
+                    <span class="spot"></span>
+                    <span class="title">填写信息</span>
+                </li>
+                <li class="nav_li finish_active">
+                    <span class="spot"></span>
+                    <span class="title">选择方案</span>
+                </li>
+                <li class="nav_li active">
+                    <span class="spot"></span>
+                    <span class="title">险企报价</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">核保审核</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">支付订单</span>
+                </li>
+            </ul>
+        </div>
+        <!--主要内容-->
+        <div class="car_apply_list_container">
+            <ul class="apply_header_container">
+                <li class="apply_title_li first">保险公司</li>
+                <li class="apply_title_li active">
+                    <div class="title">
+                        总保费(元)
+                        <div class="btn">
+                            <span class="up_btn"></span>
+                            <span class="down_btn active"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="apply_title_li">交强险(元)</li>
+                <li class="apply_title_li">商业险(元)</li>
+                <li class="apply_title_li">查询结果</li>
+                <li class="apply_title_li last">操作</li>
+            </ul>
+            <div class="apply_list_content">
+                <ul class="list_content offer_error">
+                    <li class="list_li first">紫金保险</li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">10,000元</p>
+                            <p class="text">总保费</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">交强险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">商业险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="error_text">报价失败</p>
+                        </div>
+                    </li>
+                    <li class="list_li last">
+                        <a href="car_submit_infor.html" class="look_details_btn">查看详情</a>
+                    </li>
+                </ul>
+                <ul class="list_content offer_have">
+                    <li class="list_li first">紫金保险</li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">10,000元</p>
+                            <p class="text">总保费</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">交强险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">商业险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <span class="have_text">正在报价</span><br>
+                            <a class="have_text">点击刷新</a>
+                        </div>
+                    </li>
+                    <li class="list_li last">
+                        <a class="look_details_btn">查看详情</a>
+                    </li>
+                </ul>
+                <ul class="list_content offer_obtain">
+                    <li class="list_li first">紫金保险</li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">-</p>
+                            <p class="text">总保费</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">-</p>
+                            <p class="text">交强险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">-</p>
+                            <p class="text">商业险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+
+                    </li>
+                    <li class="list_li last">
+                        <a class="obtain_btn">获取报价</a>
+                    </li>
+                </ul>
+                <ul class="list_content offer_success">
+                    <li class="list_li first">紫金保险</li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">10,000元</p>
+                            <p class="text">总保费</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">交强险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">商业险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="success_text">报价成功</p>
+                        </div>
+                    </li>
+                    <li class="list_li last">
+                        <a class="look_details_btn">查看详情</a>
+                    </li>
+                </ul>
+                <ul class="list_content offer_success">
+                    <li class="list_li first">紫金保险</li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">10,000元</p>
+                            <p class="text">总保费</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">交强险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="num">5,000元</p>
+                            <p class="text">商业险</p>
+                        </div>
+                    </li>
+                    <li class="list_li">
+                        <div class="pos">
+                            <p class="success_text">报价成功</p>
+                        </div>
+                    </li>
+                    <li class="list_li last">
+                        <a class="look_details_btn">查看详情</a>
+                    </li>
+                </ul>
+            </div>
+            <%= listPaging() %>
+        </div>
+
+    </div>
+    <div class="main_right_container">
+        <div class="car_plate_number">
+            <div class="pos">
+                <p class="title">车牌号</p>
+                <p class="plate_number">浙JB9G96</p>
+                <button class="click_modify">点击修改</button>
+            </div>
+        </div>
+        <div class="car_plate_infor_box">
+            <div class="pos">
+                <p class="tit_name"><span>车主</span>杨修</p>
+                <p class="tit_name"><span>投保人</span>杨修</p>
+                <p class="tit_name"><span>被保险人</span>杨修</p>
+                <p class="tit_name"><span>权益索赔人</span>杨修</p>
+                <button class="click_modify">点击修改</button>
+            </div>
+        </div>
+        <div class="car_tb_plan_box">
+            <h3 class="title">投保方案</h3>
+            <p class="text">交强险(2018-02-02)</p>
+            <p class="text">车船使用税</p>
+            <p class="text">商业险(2018-02-02)</p>
+            <p class="text">动车损失保险</p>
+            <p class="text">第三者责任险(不计免赔)</p>
+            <p class="text">驾驶员责任险(不计免赔)</p>
+            <p class="text">乘客责任险</p>
+            <button class="click_modify">点击修改</button>
+        </div>
+        <div class="side_time_box">
+            <div class="pos">
+                <p class="time">工作时间：09：00-17：30</p>
+                <p class="tel">客服热线：400-880-2068</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+</html>

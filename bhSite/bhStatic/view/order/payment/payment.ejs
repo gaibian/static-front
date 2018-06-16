@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付</title>
+    <%= layout %>
+    <link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+    <link href="http://cdn.msphcn.com/dist/bin/mui.picker.min.css" rel="stylesheet">
+    <script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+    <script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+</head>
+<body>
+<section class="page_container">
+    <section class="page_title_container">
+        <a class="page_return_btn">
+            <i></i>
+        </a>
+        <h1 class="title">支付</h1>
+        <i class="right_bg_box"></i>
+    </section>
+    <section class="page_content_container">
+        <section class="count_down_time">
+            <div class="time_text">
+                <span class="time_bg"></span>
+                <span>支付剩余时间:</span>
+                <div class="count_time">
+                    <span class="h_time">12</span>
+                    <span>:</span>
+                    <span class="m_time">12</span>
+                    <span>:</span>
+                    <span class="s_time">12</span>
+                </div>
+            </div>
+        </section>
+        <!--基本信息-->
+        <section class="page_base_content_box">
+            <div class="header_title_box">
+                <h2 class="title">基本信息</h2>
+                <p class="plate_num">任务号：15251132154</p>
+            </div>
+            <div class="info_content_box">
+                <div class="info_list_text">
+                    投保地区：<span class="val">宁波</span>
+                </div>
+                <div class="info_list_text">
+                    车牌号码：<span class="val">浙B11111</span>
+                </div>
+                <div class="info_list_text">
+                    车主姓名：<span class="val">阿宝</span>
+                </div>
+                <div class="info_list_text">
+                    联系电话：<span class="val">13056471241</span>
+                </div>
+            </div>
+        </section>
+        <!--报价详情-->
+        <section class="page_details_content_box">
+            <div class="details_title_box">
+                <h2 class="title">报价详情</h2>
+                <div class="right_num_box">收益积分:<span>2,000</span></div>
+            </div>
+            <div class="time_details_box">
+                <div class="time_list_box">
+                    <p class="time_title">交强险生效时间</p>
+                    <p class="time_val">2018-02-02</p>
+                </div>
+                <div class="time_list_box">
+                    <p class="time_title">商业险生效时间</p>
+                    <p class="time_val">2018-02-02</p>
+                </div>
+            </div>
+            <div class="insurance_content_box">
+                <div class="insurance_list_box">
+                    <p class="insurance_title">交强险</p>
+                    <p class="val_text">900.00</p>
+                </div>
+                <div class="insurance_list_box">
+                    <p class="insurance_title">车船税</p>
+                    <p class="val_text">200.00</p>
+                </div>
+                <div class="insurance_list_box">
+                    <p class="insurance_title">乘客责任险</p>
+                    <div class="f_pos t_right">
+                        <p class="f_num">1,100.00</p>
+                        <p class="text">30.00</p>
+                    </div>
+                    <div class="f_pos t_center">
+                        <p class="f_num">5万</p>
+                        <p class="text">不计免赔</p>
+                    </div>
+                </div>
+                <div class="insurance_list_box">
+                    <p class="insurance_title">机动车损失险</p>
+                    <div class="f_pos t_right">
+                        <p class="f_num">1,100.00</p>
+                        <p class="text">30.00</p>
+                    </div>
+                    <div class="f_pos t_center">
+                        <p class="f_num">5万</p>
+                        <p class="text">不计免赔</p>
+                    </div>
+                </div>
+                <div class="insurance_list_box">
+                    <p class="insurance_title">第三者责任险</p>
+                    <div class="f_pos t_right">
+                        <p class="f_num">1,100.00</p>
+                    </div>
+                    <div class="f_pos t_center">
+                        <p class="f_num">50万</p>
+                    </div>
+                </div>
+            </div>
+            <!--总金额-->
+            <div class="all_price_box">
+                <p class="price_title">合计总额:</p>
+                <div class="all_price_num">￥4480.00</div>
+            </div>
+        </section>
+        <!--保单寄送信息-->
+        <section class="page_form_address_box">
+            <div class="address_title_box">
+                保单寄送信息
+            </div>
+            <form class="form" data-btn="payment_btn">
+                <div class="form_input">
+                    <label class="title">收件人：</label>
+                    <input class="input" type="text" data-toggle="true" checkType="name" data-error="收件人格式不正确" data-null-error="请输入收件人">
+                </div>
+                <div class="form_input">
+                    <label class="title">手机号：</label>
+                    <input class="input" type="text" data-toggle="true" checkType="phone">
+                </div>
+                <div class="form_input" id="address_picker">
+                    <label class="title">所在地区：</label>
+                    <p class="select_val" id="pick_val">请输入地址</p>
+                    <input type="hidden" id="cityCode" name="cityCode">
+                    <i class="right_icon_bg"></i>
+                </div>
+                <div class="form_input">
+                    <label class="title">详细地址：</label>
+                    <input class="input" type="text" data-toggle="true" checkType="empty">
+                </div>
+            </form>
+        </section>
+    </section>
+    <!--悬浮支付按钮-->
+    <section class="btm_fixed_box">
+        <div class="price_box">合计金额：￥<span>4480.00</span></div>
+        <div class="payment_btn">去支付</div>
+    </section>
+</section>
+</body>
+<script src="http://cdn.msphcn.com/wap-public/js/city.data-3.js"></script>
+<script>
+  $(function(){
+    var cityPicker3 = new mui.PopPicker({
+      layer: 3
+    });
+    cityPicker3.setData(cityData3);
+
+    var addressPicker = document.getElementById('address_picker');
+    var selectVal = document.getElementById('pick_val');
+    var cityCode = document.getElementById('cityCode');
+    addressPicker.addEventListener('touchstart',function(){
+      cityPicker3.show(function(res){
+        console.log(res);
+        var val = res[0].text + ' ' + res[1].text + ' ' + res[2].text;
+        selectVal.style.color = '#333';
+        selectVal.innerText = val;
+        cityCode.value = (res[0] || {}).text + " " + (res[1] || {}).text + " " + (res[2] || {}).text;
+      })
+    },false);
+  })
+</script>
+</html>

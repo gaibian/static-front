@@ -1,0 +1,187 @@
+@import "../../../public-resource/less/init.less";
+
+.page_container{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+  padding-bottom:1rem;
+}
+.clause_content_box{
+  width:100%;
+  padding:0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .title{
+    width:100%;
+    font-size:0.32rem;
+    color:#333;
+    font-weight:bold;
+    padding:0.38rem 0;
+  }
+  .text_content_box{
+    display:block;
+    width:100%;
+    p{
+      width:100%;
+      font-size:0.26rem;
+      color:#333;
+      line-height:0.36rem;
+      text-align: justify;
+      margin-bottom:0.3rem;
+    }
+  }
+}
+.btm_btn_box{
+  position: fixed;
+  left:50%;
+  bottom:0;
+  width:7.5rem;
+  max-width:7.5rem;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  padding:0.5rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:#fff;
+  .agree_btn{
+    display:block;
+    width:100%;
+    height:1rem;
+    line-height:1rem;
+    text-align: center;
+    font-size:0.36rem;
+    color:#fff;
+    border-radius:0.06rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    background:url('../../../public-resource/imgs/agree_btn_bg.jpg') no-repeat;
+    background-size:cover;
+  }
+}
+
+/*签字弹窗*/
+.sign_popup{
+  position: fixed;
+  left:50%;
+  top:0;
+  width:7.5rem;
+  max-width:7.5rem;
+  height:100%;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  z-index:99;
+  display:none;
+  .popup_content{
+    width:100%;
+    position: absolute;
+    left:0;
+    bottom:0;
+    z-index:2;
+    background:#fff;
+    -webkit-transition: transform 0.6s;
+    -moz-transition: transform 0.6s;
+    -ms-transition: transform 0.6s;
+    -o-transition: transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: translate(0,100%);
+    -moz-transform: translate(0,100%);
+    -ms-transform: translate(0,100%);
+    -o-transform: translate(0,100%);
+    transform: translate(0,100%);
+    &.bottom_move{
+      -webkit-transform: translate(0,0);
+      -moz-transform: translate(0,0);
+      -ms-transform: translate(0,0);
+      -o-transform: translate(0,0);
+      transform: translate(0,0);
+    }
+    .sign_header_title_container{
+      position: relative;
+      width:100%;
+      height:1.1rem;
+      line-height:1.1rem;
+      padding:0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-bottom:#cccccc 1px solid;
+      .reset_btn{
+        .box_left_position(0.3rem);
+        width:0.4rem;
+        height:0.4rem;
+        background:url('../../../public-resource/imgs/icons/reset_name_btn_bg.png') no-repeat;
+        background-size:cover;
+      }
+      .sign_title{
+        width:100%;
+        font-size:0.32rem;
+        color:#333;
+        text-align: center;
+      }
+      .close_btn{
+        .box_right_position(0.3rem);
+        width:0.32rem;
+        height:0.32rem;
+        background:url('../../../public-resource/imgs/icons/close_btn_bg.png') no-repeat;
+        background-size:cover;
+        cursor: pointer;
+      }
+    }
+    .sign_img_content_box{
+      width:100%;
+      height:4.4rem;
+      border-bottom:#ccc 1px solid;
+      .jSignature{
+        width:7.5rem !important;
+        height:4.4rem !important;
+        display:block;
+        background:url('../../../public-resource/imgs/x_bg.png') no-repeat;
+        background-size:cover;
+      }
+    }
+    .image_box{
+      width:100%;
+      height:100%;
+      img{
+        display:block;
+        width:100%;
+        height:100%;
+      }
+    }
+    .sign_btn_box{
+      width:100%;
+      padding:0.5rem 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background:#fff;
+      .sign_next_btn{
+        display:block;
+        width:100%;
+        height:1rem;
+        line-height:1rem;
+        text-align: center;
+        font-size:0.36rem;
+        color:#fff;
+        border-radius:0.06rem;
+        overflow:hidden;
+        -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        background:url('../../../public-resource/imgs/agree_btn_bg.jpg') no-repeat;
+        background-size:cover;
+      }
+    }
+  }
+}

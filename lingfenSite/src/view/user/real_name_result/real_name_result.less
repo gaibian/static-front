@@ -1,0 +1,119 @@
+@import "../../../public-resource/less/init.less";
+@import "../../../public-resource/less/custom.less";
+body{
+  overflow-x: hidden;
+}
+.page{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  background:#fff;
+  padding:0.4rem 0.4rem 1rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.return_page_btn{
+  display:block;
+  width:0.4rem;
+  height:0.38rem;
+  background:url('../../../public-resource/imgs/icons/return_page_btn.png') no-repeat;
+  background-size:contain;
+  margin-bottom:0.45rem;
+}
+.page_header_container{
+  width:100%;
+  font-size:0.6rem;
+  color:#333;
+  font-weight:bold;
+  background:#fff;
+}
+.result_base_container{
+  width:100%;
+  height:3.5rem;
+  border-radius:0.08rem;
+  overflow:hidden;
+  background:url('../../../public-resource/imgs/result_base_bg.jpg') no-repeat;
+  background-size:contain;
+  margin-top:0.8rem;
+  .flex_box;
+  align-items: center;
+  .header_img_box{
+    width:1.2rem;
+    height:1.2rem;
+    border-radius:0.52rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    margin-left:0.4rem;
+  }
+  .right_content_box{
+    width:3.7rem;
+    margin-left:0.5rem;
+    .title{
+      width:100%;
+      font-size:0.42rem;
+      color:#333;
+      font-weight:bold;
+    }
+    .name{
+      width:100%;
+      font-size:0.28rem;
+      color:#333;
+      margin:0.25rem 0;
+    }
+    .card_plate{
+      width:100%;
+      font-size:0.28rem;
+      color:#333;
+    }
+  }
+}
+.result_status_container{
+  position: relative;
+  width:100%;
+  height:0.9rem;
+  background:#f8f8f8;
+  border-radius:0.9rem;
+  margin-top:0.4rem;
+  padding:0 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .result_left_box{
+    .box_left_position(0.4rem);
+    .flex_box;
+    align-items: center;
+    .left_bg{
+      display:block;
+      width:0.48rem;
+      height:0.48rem;
+      background:url('../../../public-resource/imgs/icons/result_bg1.png') no-repeat;
+      background-size:contain;
+      &.shz_bg{
+        background:url('../../../public-resource/imgs/icons/result_bg2.png') no-repeat;
+        background-size:contain;
+      }
+      &.sfz_bg{
+        width:0.48rem;
+        height:0.36rem;
+        background:url('../../../public-resource/imgs/icons/result_bg3.png') no-repeat;
+        background-size:contain;
+      }
+    }
+    .val_text{
+      display:block;
+      margin-left:0.12rem;
+      font-size:0.28rem;
+      color:#333;
+    }
+  }
+  .right_bg{
+    .box_right_position(0.4rem);
+    width:0.14rem;
+    height:0.24rem;
+    background:url('../../../public-resource/imgs/icons/result_right_bg.png') no-repeat;
+    background-size:contain;
+  }
+}

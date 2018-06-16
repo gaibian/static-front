@@ -1,0 +1,100 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#fff;
+}
+.page_container{
+  position: relative;
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+.class_info_box{
+  width:100%;
+  padding:0.4rem 0.3rem 0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom:#eee 1px solid;
+  &:last-child{
+    border-bottom:none;
+  }
+  .header_title_box{
+    position: relative;
+    width:100%;
+    margin-bottom:0.22rem;
+    .title{
+      position: relative;
+      font-size:0.34rem;
+      color:#333;
+      padding:0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .left_bg{
+        display:block;
+        .box_left_position(0);
+        width:0.1rem;
+        height:0.26rem;
+        border-radius:0.1rem;
+        background:#398ef9;
+      }
+    }
+    .per_num{
+      .box_right_position(0);
+      font-size:0.26rem;
+      color:#398ef9;
+    }
+  }
+  .text{
+    width:100%;
+    font-size:0.3rem;
+    color:#398ef9;
+    padding-bottom:0.36rem;
+  }
+  .info_list_container{
+    width:100%;
+    border-top:#eee 1px solid;
+    margin-top:0.36rem;
+    .list_title_box{
+      width:100%;
+      overflow:hidden;
+      border-bottom:#eee 1px solid;
+      padding:0.26rem 0;
+      .title_li{
+        float:left;
+        width:1.3rem;
+        text-align: center;
+        font-size:0.26rem;
+        color:#333;
+        font-weight:bold;
+        .text_hidden;
+        &.right{
+          float:right;
+          width:1.7rem;
+          text-align: center;
+        }
+        &:first-child{
+          margin-right:0.6rem;
+        }
+        &:nth-child(2){
+          width:1.7rem;
+        }
+      }
+      &:last-child{
+        border-bottom:none;
+      }
+      &.info_list{
+        .title_li{
+          font-weight:normal;
+        }
+      }
+    }
+  }
+  &:last-child{
+    .header_title_box{
+      margin-bottom:0;
+    }
+  }
+}

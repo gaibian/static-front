@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>出险报案</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="policy_list_container">
+        <a class="policy_list_box">
+            <div class="policy_img_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/report_img.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h1 class="title">我的保单</h1>
+                <p class="policy_num_box">保单数量:22</p>
+            </div>
+        </a>
+        <a class="policy_list_box other_query_box">
+            <div class="policy_img_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/report_img1.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h1 class="title">替他人报案</h1>
+            </div>
+        </a>
+        <a class="policy_list_box other_query_box">
+            <div class="policy_img_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/report_img2.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h1 class="title">紧急报案</h1>
+            </div>
+        </a>
+    </section>
+</section>
+</body>
+</html>

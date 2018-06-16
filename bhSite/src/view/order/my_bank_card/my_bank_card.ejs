@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的银行卡</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="page_title_container">
+        <a class="page_return_btn">
+            <i></i>
+        </a>
+        <h1 class="title">我的银行卡</h1>
+    </section>
+
+    <section class="page_info_box">
+        <h1 class="title">实名认证信息</h1>
+        <div class="form">
+            <div class="form_input">
+                <label class="label_title">真实姓名:</label>
+                <input type="text" value="胡**"/>
+            </div>
+            <div class="form_input">
+                <label class="label_title">身份证号:</label>
+                <input type="text" value="330***************00"/>
+            </div>
+        </div>
+        <div class="page_card_container">
+            <div class="card_box">
+                <div class="pos">
+                    <div class="logo_box">
+                        <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/zh_bank_img.jpg') %>">
+                    </div>
+                    <div class="right_info_content">
+                        <p class="name">*杰伦</p>
+                        <p class="bank_name">中国银行</p>
+                        <div class="card_num">****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+</body>
+</html>

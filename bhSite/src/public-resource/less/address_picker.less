@@ -1,0 +1,113 @@
+
+.address_picker_popup{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  z-index:9999;
+  -webkit-transform: translate(0,100%);
+  -moz-transform: translate(0,100%);
+  -ms-transform: translate(0,100%);
+  -o-transform: translate(0,100%);
+  transform: translate(0,100%);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  &.active{
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+  .picker_title{
+    position: relative;
+    width:100%;
+    border-bottom:#eee 1px solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .title{
+      width:100%;
+      font-size:0.32rem;
+      color:#333;
+      text-align: center;
+      padding:0.3rem 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin:0;
+    }
+    .close_btn{
+      width:0.35rem;
+      height:0.35rem;
+      position: absolute;
+      right:0.3rem;
+      top:50%;
+      -webkit-transform: translate(0,-50%);
+      -moz-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+      -o-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+      font-size:0.24rem;
+      color:#333;
+      background:url("../imgs/icons/close_bg.png") no-repeat;
+      background-size:cover;
+    }
+  }
+  .popup_content{
+    width:100%;
+    .picker_view_box{
+      width:100%;
+      border-bottom:#eee 1px solid;
+      display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+      display: -moz-box; /* Firefox 17- */
+      display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+      display: -moz-flex; /* Firefox 18+ */
+      display: -ms-flexbox; /* IE 10 */
+      display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+      li{
+        padding:0.3rem 0 0.3rem 0.3rem;
+        font-size:0.32rem;
+        color:#333;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-right:0.3rem;
+        &:last-child{
+          margin-right:0;
+        }
+        &.active{
+          color:#378efb;
+        }
+      }
+    }
+    .picker_content{
+      width:100%;
+      height:5rem;
+      max-height:5rem;
+      overflow:hidden;
+      .wheel_scroll{
+        width:100%;
+        .wheel_item{
+          width:100%;
+          font-size:0.32rem;
+          color:#333;
+          padding:0.16rem 0.3rem;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          &.active{
+            color:#378efb;
+            background:#f7f7f7;
+          }
+        }
+      }
+    }
+  }
+}

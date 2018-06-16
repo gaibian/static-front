@@ -1,0 +1,85 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#f6f5fa;
+}
+.page_container{
+  position: relative;
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+
+.report_list_container{
+  width:100%;
+  padding:0.4rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:#fff;
+  .report_list_box{
+    width:100%;
+    height:2.2rem;
+    background:#fff;
+    border-radius:0.06rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    margin-bottom:0.3rem;
+    .logo_img_box{
+      float:left;
+      width:1.73rem;
+      height:100%;
+      font-size:0;
+    }
+    .right_content_box{
+      float:left;
+      width:4.7rem;
+      margin-left:0.28rem;
+      .company_name{
+        width:100%;
+        font-size:0.28rem;
+        color:#333;
+        font-weight:bold;
+        padding-top:0.36rem;
+        margin:0;
+      }
+      .report_tel_box{
+        width:100%;
+        margin-top:0.18rem;
+        font-size:0.24rem;
+        color:#ff8421;
+        span{
+          font-size:0.32rem;
+          font-weight:bold;
+        }
+      }
+      .tel_box{
+        width:100%;
+        margin-top:0.14rem;
+        .btn{
+          display:block;
+          float:right;
+          width:2.15rem;
+          height:0.53rem;
+          line-height:0.53rem;
+          text-align: center;
+          font-size:0.28rem;
+          color:#fff;
+          border-radius:0.08rem;
+          overflow:hidden;
+          background:url('../../../public-resource/imgs/tel_bg.jpg') no-repeat;
+          background-size:cover;
+          -webkit-box-shadow: 0 0 5px rgba(239,82,24,0.27);
+          -moz-box-shadow: 0 0 5px rgba(239,82,24,0.27);
+          box-shadow: 0 0 5px rgba(239,82,24,0.27);
+        }
+        .clear{
+          clear: both;
+        }
+      }
+    }
+  }
+}

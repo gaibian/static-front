@@ -1,0 +1,279 @@
+@import "../../less/custom.less";
+.address_content_box{
+  width:708px;
+  margin:0 auto;
+  .address_title_box{
+    position: relative;
+    width:100%;
+    overflow:hidden;
+    margin-bottom:20px;
+    .title{
+      float:left;
+      width:50%;
+      font-size:18px;
+      color:#333;
+    }
+    .gl_address{
+      .box_right_position(0);
+      text-align: right;
+      font-size:14px;
+      color:#238fea;
+      cursor: pointer;
+    }
+  }
+  .address_list_container{
+    width:100%;
+    overflow:hidden;
+    .address_list{
+      position: relative;
+      float:left;
+      width:228px;
+      height:150px;
+      margin-right:12px;
+      padding:0 14px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-bottom:20px;
+      cursor: pointer;
+      background:url('../../../public-resource/imgs/car_address_bg.jpg') no-repeat;
+      .default_status{
+        position: absolute;
+        top:0;
+        right:0;
+        display:none;
+        background:rgba(0,0,0,0.2);
+        font-size:14px;
+        color:#fff;
+        padding:2px 4px;
+        &.gl_active{
+          background:#ff5500;
+          color:#fff;
+        }
+      }
+      .ads_tit{
+        width:100%;
+        padding:16px 0;
+        font-size:14px;
+        color:#333;
+        border-bottom:#e5e5e5 1px solid;
+        span{
+          font-weight:bold;
+        }
+      }
+      .ads_text{
+        width:100%;
+        font-size:14px;
+        color:#333;
+        line-height:22px;
+        margin-top:18px;
+        .text_d_hidden(2);
+      }
+      .btn_box{
+        width:100%;
+        overflow:hidden;
+        margin-top:7px;
+      }
+      .modify_btn{
+        float:left;
+        font-size:14px;
+        color:#238fea;
+        line-height:14px;
+        height:14px;
+        cursor: pointer;
+        padding-right:4px;
+      }
+      .delete_btn{
+        float:left;
+        font-size:14px;
+        color:#238fea;
+        line-height:14px;
+        cursor: pointer;
+        padding-left:4px;
+        //border-left:#238fea 1px solid;
+        display:none;
+      }
+      &:nth-child(3n){
+        margin-right:0;
+      }
+      &.active{
+        background:url('../../../public-resource/imgs/car_address_active_bg.jpg') no-repeat;
+      }
+
+    }
+  }
+  .add_address_btn{
+    display:block;
+    font-size:14px;
+    color:#238fea;
+    cursor: pointer;
+  }
+}
+
+.add_address_popup{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  z-index:999;
+  display:none;
+  .popup_content{
+    .box_position;
+    width:900px;
+    background:#fff;
+    padding:40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index:3;
+    .close_btn{
+      position: absolute;
+      top:12px;
+      right:12px;
+      width:30px;
+      height:30px;
+      background:url('../../imgs/popup_close_bg.jpg') no-repeat;
+      cursor: pointer;
+    }
+    .content_container{
+      width:670px;
+      overflow:hidden;
+      margin:0 auto;
+      .left_title{
+        float:left;
+        font-size:18px;
+        color:#333;
+        font-weight:bold;
+      }
+      .right_content{
+        float:right;
+        width:544px;
+        .form_content{
+          width:100%;
+          .form_input{
+            float:left;
+            width:260px;
+            margin-right:24px;
+            margin-bottom:38px;
+            &.address_form_box{
+              width:100%;
+            }
+            .input_title{
+              display:block;
+              width:100%;
+              font-size:14px;
+              color:#333;
+              margin-bottom:10px;
+            }
+            .select_box{
+              position: relative;
+              width:100%;
+              height:64px;
+              line-height:64px;
+              background:#f9f9f9;
+              border-radius:4px;
+              padding:0 20px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              font-size:14px;
+              color:#999;
+              .down_bg{
+                display:block;
+                .box_right_position(12px);
+                width:12px;
+                height:8px;
+                background:url('../../../public-resource/imgs/icons/address_down_bg.png') no-repeat;
+              }
+            }
+            .input_box{
+              position:relative;
+              width:100%;
+              height:64px;
+              line-height:64px;
+              background:#f9f9f9;
+              border-radius:4px;
+              border:#f9f9f9 1px solid;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              input{
+                display:block;
+                width:100%;
+                height:100%;
+                padding:20px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size:14px;
+                color:#999;
+              }
+            }
+            &:nth-child(2n){
+              margin-right:0;
+            }
+            &.address_box{
+              width:100%;
+            }
+          }
+          .clear{
+            clear: both;
+          }
+          .last{
+            margin-bottom:0;
+          }
+        }
+        .default_choice_box{
+          position: relative;
+          width:100%;
+          overflow:hidden;
+          padding-left:22px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-top:40px;
+          margin-bottom:60px;
+          input{
+            .box_left_position(0);
+            display:block;
+            width:16px;
+            height:16px;
+            border:#333 1px solid;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+          }
+          .text{
+            font-size:14px;
+            color:#333;
+          }
+        }
+        .address_popup_btn{
+          width:100%;
+          height:64px;
+          line-height:64px;
+          text-align: center;
+          border-radius:4px;
+          color:#fff;
+          cursor: pointer;
+          background-image:-webkit-linear-gradient(to right,#2cb1f9,#238ee9);
+          background-image:-moz-linear-gradient(to right,#2cb1f9,#238ee9);
+          background-image:linear-gradient(to right,#2cb1f9,#238ee9);
+        }
+      }
+    }
+  }
+  .mask_box{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1;
+  }
+}

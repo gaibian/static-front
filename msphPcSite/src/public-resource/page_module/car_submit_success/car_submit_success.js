@@ -1,0 +1,1 @@
+require('./car_submit_success.less');

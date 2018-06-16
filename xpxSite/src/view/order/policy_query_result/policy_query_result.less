@@ -1,0 +1,143 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#f6f5fa;
+}
+.page_container{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+.top_banner_box{
+  width:100%;
+  height:3.04rem;
+  font-size:0;
+}
+.query_result_container{
+  width:100%;
+  .policy_info_box{
+    width:100%;
+    background:#fff;
+    padding:0 0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:0.2rem;
+    .title{
+      width:100%;
+      font-size:0.34rem;
+      color:#333;
+      font-weight:bold;
+      padding-top:0.34rem;
+    }
+    .info_list_box{
+      width:100%;
+      padding:0.46rem 0;
+      border-bottom:#e5e5e5 1px solid;
+      overflow:hidden;
+      .info_title{
+        float:left;
+        width:30%;
+        font-size:0.3rem;
+        color:#333;
+      }
+      .text{
+        float:right;
+        max-width:5rem;
+        .text_hidden;
+        text-align: right;
+        font-size:0.3rem;
+        color:#333;
+        &.money{
+          font-size:0.3rem;
+          color:#f47f26;
+          span{
+            font-size:0.4rem;
+            font-weight:bold;
+          }
+        }
+        &.ycb_status{
+          font-weight:bold;
+          color:#4a92f7;
+        }
+        &.sxz_status{
+          font-weight:bold;
+          color:#66cc99;
+        }
+        &.ysx_status{
+          font-weight:bold;
+          color:#cccccc;
+        }
+        &.tk_status{
+          font-weight:bold;
+          color:#cc3333;
+        }
+        &.dd_status{
+          font-weight:bold;
+          color:#f47e24;
+        }
+      }
+      &:last-child{
+        border-bottom:none;
+      }
+    }
+  }
+
+  .student_info_box{
+    width:100%;
+    background:#fff;
+    padding:0 0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:0.2rem;
+    .title{
+      width:100%;
+      font-size:0.34rem;
+      color:#333;
+      font-weight:bold;
+      border-bottom:#e5e5e5 1px solid;
+      padding:0.44rem 0;
+    }
+    .student_info_content{
+      width:100%;
+      padding:0.36rem 0;
+      .info_text{
+        width:100%;
+        font-size:0.28rem;
+        color:#666;
+        margin-bottom:0.26rem;
+        .text_hidden;
+        &:last-child{
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+}
+.btm_btn_box{
+  width:7.5rem;
+  max-width:7.5rem;
+  padding:0.3rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow:hidden;
+  .xu_btn{
+    display:block;
+    width:100%;
+    height:1rem;
+    line-height:1rem;
+    text-align: center;
+    font-size:0.36rem;
+    color:#fff;
+    border-radius:0.06rem;
+    overflow:hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    background:url('../../../public-resource/imgs/agree_btn_bg.jpg') no-repeat;
+    background-size:cover;
+  }
+}

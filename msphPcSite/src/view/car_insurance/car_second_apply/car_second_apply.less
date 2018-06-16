@@ -1,0 +1,427 @@
+@import "../../../public-resource/less/custom.less";
+.paging_box{
+  padding-right:38px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page_address_box{
+  width:100%;
+  height:40px;
+  line-height:40px;
+  background:#fff;
+  .address_content{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    font-size:14px;
+    color:#333;
+    a{
+      display:inline-block;
+      color:#333;
+      margin-right:6px;
+    }
+    span{
+      display:inline-block;
+      color:#999;
+      margin-left:6px;
+    }
+  }
+}
+
+.page_main_container{
+  width:1200px;
+  margin:40px auto 58px auto;
+  .clear{
+    clear: both;
+  }
+}
+.main_left_container{
+  float:left;
+  width:900px;
+  .header_nav_box{
+    width:100%;
+    border:#e5e5e5 1px solid;
+    border-bottom:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .nav_ul{
+      width:100%;
+      height:50px;
+      line-height:50px;
+      border-bottom:#e5e5e5 1px solid;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow:hidden;
+      .nav_li{
+        float:left;
+        width:20%;
+        line-height:50px;
+        text-align: center;
+        font-size:0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right:#e5e5e5 1px solid;
+        background:#f6f8fc;
+        &:last-child{
+          border-right:none;
+        }
+        span.spot{
+          position: relative;
+          top:3px;
+          display:inline-block;
+          width:16px;
+          height:16px;
+          border-radius:50%;
+          border:#9c9c9c 2px solid;
+          margin-right:14px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        span.title{
+          display:inline-block;
+          font-size:14px;
+          color:#999;
+        }
+        &.finish_active{
+          span.spot{
+            width:16px;
+            height:16px;
+            border:none;
+            background:url('../../../public-resource/imgs/icons/verify_success_bg.png') no-repeat;
+          }
+          span.title{
+            color:#333;
+          }
+        }
+        &.active{
+          background:#238fea;
+          span.spot{
+            border:#fff 2px solid;
+          }
+          span.title{
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+  /*主要内容样式*/
+  .car_apply_list_container{
+    width:100%;
+    background:#fff;
+    border:#e5e5e5 1px solid;
+    border-top:none;
+    padding:0 40px 20px 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .apply_header_container{
+      width:100%;
+      height:52px;
+      line-height:52px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-bottom:#e5e5e5 1px solid;
+      .apply_title_li{
+        float:left;
+        width:18.6%;
+        text-align: center;
+        font-size:14px;
+        color:#333;
+        .title{
+          position: relative;
+          display:inline-block;
+          font-size:14px;
+          color:#333;
+        }
+        .btn{
+          width:8px;
+          height:10px;
+          position: absolute;
+          top:50%;
+          right:-18px;
+          margin-top:-5px;
+          span{
+            position: absolute;
+            left:0;
+            display:inline-block;
+            width:8px;
+            height:4px;
+            cursor: pointer;
+          }
+          .up_btn{
+            top:0;
+            background:url('../../../public-resource/imgs/icons/up_btn.png') no-repeat;
+          }
+          .up_btn.active{
+            background:url('../../../public-resource/imgs/icons/up_active_btn.png') no-repeat;
+          }
+          .down_btn{
+            bottom:0;
+            background:url('../../../public-resource/imgs/icons/down_btn.png') no-repeat;
+          }
+          .down_btn.active{
+            background:url('../../../public-resource/imgs/icons/down_active_btn.png') no-repeat;
+          }
+        }
+        &.active{
+          color:#ff5501;
+        }
+        &.first{
+          width:100px;
+          text-align: left;
+        }
+        &.last{
+          float:right;
+          width:90px;
+        }
+      }
+    }
+    .apply_list_content{
+      width:100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .list_content{
+        width: 100%;
+        height:116px;
+        line-height:116px;
+        border-bottom:#e5e5e5 1px dashed;
+        .list_li{
+          position: relative;
+          float:left;
+          width:18.6%;
+          height:100%;
+          text-align: center;
+          font-size:14px;
+          color:#333;
+          .pos{
+            .box_position;
+            width:100%;
+            line-height:normal;
+            .num{
+              font-size:18px;
+              color:#333;
+              line-height:normal;
+              margin-bottom:6px;
+            }
+            .text{
+              font-size:14px;
+              color:#999;
+              line-height:normal;
+            }
+          }
+
+          &.first{
+            width:100px;
+            text-align: left;
+          }
+          &.last{
+            float:right;
+            width:90px;
+          }
+        }
+        &.offer_error{
+          .error_text{
+            color:#999;
+            display:inline;
+            padding-bottom:2px;
+            border-bottom:#238fea 1px dashed;
+          }
+          .look_details_btn{
+            .box_position;
+            display:block;
+            width:100%;
+            height:32px;
+            line-height:32px;
+            font-size:14px;
+            color:#999;
+            background:#ededed;
+            border-radius:3px;
+          }
+        }
+        &.offer_have{
+          .have_text{
+            font-size:14px;
+            display:inline;
+            color:#238fea;
+            border-bottom:#238fea 1px solid;
+            line-height:24px;
+          }
+          .look_details_btn{
+            .box_position;
+            display:block;
+            width:100%;
+            height:32px;
+            line-height:32px;
+            font-size:14px;
+            color:#999;
+            background:#ededed;
+            border-radius:3px;
+          }
+        }
+        &.offer_success{
+          .success_text{
+            font-size:14px;
+            color:#ff5501;
+          }
+          .look_details_btn{
+            .box_position;
+            display:block;
+            width:100%;
+            height:32px;
+            line-height:32px;
+            font-size:14px;
+            color:#fff;
+            background:#238fea;
+            border-radius:3px;
+          }
+        }
+        &.offer_obtain{
+          .obtain_btn{
+            .box_position;
+            display:block;
+            width:100%;
+            height:32px;
+            line-height:32px;
+            text-align: center;
+            font-size:14px;
+            color:#238fea;
+            border-radius:3px;
+            border:#238fea 1px solid;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+}
+.main_right_container{
+  float:right;
+  width:280px;
+  .car_plate_number{
+    position: relative;
+    width:100%;
+    height:214px;
+    background:#fff;
+    border:#e5e5e5 1px solid;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .pos{
+      width:100%;
+      .box_position;
+      .title{
+        font-size:14px;
+        color:#333;
+        margin-bottom:5px;
+      }
+      .plate_number{
+        font-size:30px;
+        color:#238fea;
+      }
+      .click_modify{
+        font-size:14px;
+        color:#238fea;
+        cursor: pointer;
+        margin-top:54px;
+      }
+    }
+  }
+  .car_plate_infor_box{
+    width:100%;
+    background:#fff;
+    text-align: center;
+    padding:32px 0;
+    border:#e5e5e5 1px solid;
+    border-top:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .tit_name{
+      width:100%;
+      font-size:14px;
+      color:#238fea;
+      line-height:32px;
+      font-weight:bold;
+      span{
+        display:inline-block;
+        width:90px;
+        color:#333;
+        text-align: left;
+        font-weight:normal;
+      }
+    }
+    .click_modify{
+      font-size:14px;
+      color:#238fea;
+      margin-top:34px;
+      cursor: pointer;
+    }
+  }
+  .car_tb_plan_box{
+    width:100%;
+    background:#fff;
+    border:#e5e5e5 1px solid;
+    border-top:none;
+    padding:38px 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .title{
+      font-size:14px;
+      color:#333;
+      margin-bottom:16px;
+    }
+    .text{
+      font-size:14px;
+      color:#238fea;
+      margin-bottom:16px;
+      font-weight:bold;
+    }
+    .click_modify{
+      display:block;
+      width:100%;
+      font-size:14px;
+      color:#238fea;
+      margin-top:55px;
+    }
+  }
+  .side_time_box{
+    width:100%;
+    height:107px;
+    border:#e5e5e5 1px solid;
+    margin-top:20px;
+    position: relative;
+    background:#fff url('../../../public-resource/imgs/car_tel_bg.jpg') no-repeat;
+    background-size:100% 100%;
+    .pos{
+      width:100%;
+      padding-left:20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .box_position;
+      .text{
+        font-size:14px;
+        color:#999;
+      }
+      .time{
+        .text;
+        margin-bottom:18px;
+      }
+      .tel{
+        .text;
+      }
+    }
+  }
+}

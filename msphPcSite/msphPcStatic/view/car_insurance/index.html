@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车险</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<link href="http://cdn.upingou.com/msphPcStatic/css/car_insurance\index.css?7e698828d747f3c000d7" rel="stylesheet"></head>
+<body>
+<div class="page_top_nav_box">
+    <div class="top_nav_content">
+        <div class="top_left_content"><i class="index_bg"></i>新华网首页</div>
+        <div class="top_right_content">
+            <span class="wel_text">您好,欢迎来到民商普惠金融商城!</span>
+            <a class="login_btn">登录</a>
+            <a class="register_btn">注册</a>
+            <div class="contact_custom hover_box" data-class="active">
+                <div class="custom hover_btn">
+                    <i class="phone_bg"></i>联系客服<i class="up_down"></i>
+                </div>
+                <div class="contact_popup hover_popup">
+                    <p class="tel">客服热线：<span>400-880-2068</span></p>
+                    <p class="time">周一至周五：9:00-17:30</p>
+                    <div class="qq_bg"></div>
+                </div>
+            </div>
+            <a class="help_center">帮助中心</a>
+            <div class="wx hover_box">
+                <div class="hover_btn wx_bg"></div>
+                <div class="wx_popup hover_popup">
+                    <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/1502265ee43454ecc6c8867216e349b9.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page_nav_box">
+    <div class="nav_box">
+        <div class="img_box">
+            <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/2c3ada2d0c235ced38e65f4cba7a183f.jpg">
+        </div>
+        <div class="account_btn hover_box">
+            <div class="account hover_btn">
+                <i class="preson_bg"></i>我的账户<i class="up_down_bg"></i>
+            </div>
+            <div class="account_popup hover_popup">
+                <div class="no_login">
+                    <div class="pad_box">
+                        <div class="header_box">
+                            <div class="img_box">
+                                <img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBBMzdDODRFNkVEMTFFNzg4MUJDMEU4NzI2MUYxQTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzBBMzdDODVFNkVEMTFFNzg4MUJDMEU4NzI2MUYxQTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3MEEzN0M4MkU2RUQxMUU3ODgxQkMwRTg3MjYxRjFBMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3MEEzN0M4M0U2RUQxMUU3ODgxQkMwRTg3MjYxRjFBMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkINFCYAAAVWSURBVHjaxFo9UFtHEF49gf7RDxIS/7/GYDwee5ikcJVxkqHIDFWGYE8KT7q4iSu3LuLSTdLESZPxMJM/Z9IkVZgk7pIiTuLKDnEAGQzGkkBCEgIEiOw+HbYivwd3905iZ75Gene7393t3e7e2X78+VdQJF2IC4hXEEOIXkQE4UXYEHlEChFHzCDuIe4iFlUob7DYvhtxGXERMXLEt80MJxFjFb8/QHyNmEI8ljVEk2x3FnEHMY/4kIPEYTLC+phjfZ6tB5Eo4jbiL8SEhYEws2WC9X2b6aoJkQm2ti+zNV8rsTEdM0ynMiIOxCds2oNQPwkynbeYDZac3Yf4rso5DxWX0wEBvxf8TV5wuRzgaGwEm80Ge3t7UNjchrV0FpKrGRFC7yP6EW+znU+YiAcxjTjPo83haITujhiEm/2G/9vtmv5NMOCDlkgQ/p17AsWdXV4yY8yWNxEFESI0lT/wkggFm+BEXydoGp/rNPk8cO7MIGRzBUik0voscQjZ8j3iLUSR10c+QrzO0zstoZMDXdwknns0LjdagoP9ndDT1crb7A3Ex7zOPom4wmvM0Iluy17dGm2GtlhYxGcuHkWkHfEpb48dbS3CM2EaInTGoLGBO9C4xWw1JXKTd4ul2RAYRS6JRUMiW/NNMyKjiEu8PXk9LmWzUblpCMglZvNLRK6LnNget0v5Ceh0OPSZFogArlcToZB7XEips1E5ETprnA6hfsnmvkoi74oGgJqmQS2kocEuGiu+V01ESPZL+7WJGG3Cfjd5QIQyu1OirYu7uzUhQjGZoFCi1q/xnuDVsrW1rZzE/v4+bBd3ZJpe0FiOLSy5fEFXrFI2Cls4IyWZpuc0NjXiTmm3g2IeYMcNRMJHSIaIyIBMSwr0VB+IbrdTj7skRPeRFqnDy+moibNLnk9BIuKXWs8bmzUhkssVZJo1SZ9qlBCplhI63VomJ12Cyco0zOOMPF5cUUaC0t6HM3HZnTBPRJKyylcSa5BezykhsriU0AdHUtJEZNaKASvPVtUsqfS6lS7miMg/VnqgAkJq1ZIR8Gh2EUrWYrcZInLP6ojOxpf0k15GniwnIbOet2rCfSLyi4o1/gAdNZPlN4icmvxi6WlShfq7RITuJx6q6G12fok/6NwuwvJKSoXaRwc+QvKFmgzPDscg31QmVkSkZLVHm63uJMjmzyuJxKFcIq2b2NSwJpvnq6soN8gHrfQqUGDTq/RW8zAo33S9VA76A/GVlZ67OvgvmSgF6O1us6KObP3TiAjJNURGtEe3ywnDgz16lV1EYi0hGOht168bBCXDbH2R6FV9sAzlAjbXzJDh0UgIIuGA9LBGwkEINwcgmcpAam2d92C9wmw1JUJCV8WvQbnqbZjFhUN+XblLUXJFjh/F2SHQ+bK6ltXvTAqbW0aff8ZshKOIkFxlufzzCgvVZSkNpfuQWgoNTkdbREc2twGJZBpWX1wEURTygWENwSw9gHI58ifs+HxPdysE/b66HxI0aIQIxmLxhae/bRd3xsHgtsrI2Sul4PW4x86MDEwfB4n/JeQB3zTaMeZxOwuHZYjG+zzuJKeHe/O4TY6zdXlcQrrH7XYtf3q4Ty8ZCRGhuz12+haZ478jszVbENI1yXQXy2ePBn097fxEaFv1ed3VP38L5Vc/U1YjAI4Te4rpulP9p9n1tyGR5pBphSgB5ecVo4xYSSGBEutzlOlIGH5kkkka7lqhwJHOfZ8ttYNnTnQNdkqSwN+IL4HzmZNZdbPBLB7nLCYvsGDzBiNFD89eZWdQL5Qfnh2MSuXDM6oT/A7lh2cLIqz3SsZ2/SfAAEuNVyiZuvtqAAAAAElFTkSuQmCC">
+                            </div>
+                            <div class="name_right_box">
+                                <div class="name_box">
+                                    <p class="name">尊敬的用户</p>
+                                    <p class="note_text">欢迎来到民商普惠</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--没用登录-->
+                    <p class="no_login_box">
+                        请您先<a>登录</a> <a>注册</a>
+                    </p>
+                    <!--已经登录-->
+                    <ul class="nav_list_box">
+                        <li>个人中心</li>
+                        <li>我的车险</li>
+                        <li>活期理财</li>
+                        <li>定期理财</li>
+                        <li>我的贷款</li>
+                        <li>保险产品</li>
+                        <li>账户卡包</li>
+                        <li>个人设置</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav_content">
+            <a href="../index/index.html" class="">首页</a>
+            <a href="../car_insurance/index.html" class="active">车险</a>
+            <a href="../insurance/leading.html">保险</a>
+            <a href="../credit_card/index.html" class="">信用卡</a>
+            <a href="../loan/index.html" class="">贷款</a>
+            <a href="../financ/live_financ.html" class="">活期理财</a>
+            <a href="../financ/regular_financ.html" class="">定期理财</a>
+        </div>
+    </div>
+</div>
+<div class="page_insure_box">
+    <div class="insure_title">
+        车险投保<span>车险分期 一年零利率</span>
+    </div>
+    <form class="form">
+        <a href="car_info.html" class="offer_btn">获取车险报价</a>
+        <div class="car_cord_box">
+            <div class="input_box">
+                <label class="address_val">浙B</label>
+                <input class="car_input" type="text" placeholder="请输入车牌号">
+                <div class="state_box">
+                    <input type="checkbox">
+                    <p class="text">尚未取得车牌</p>
+                </div>
+            </div>
+        </div>
+        <div class="address_box city_select">
+            <div class="address_input">
+                <input class="val" type="text" placeholder="请选择车辆行驶地区">
+                <input type="hidden" id="citycode" name="citycode" class="citycode">
+                <i class="down_bg"></i>
+            </div>
+            <!--地址弹窗列表-->
+            <div class="address_menu_popup tab_box">
+                <ul class="nav_btn">
+                    <li class="tab_btn hot_city_btn active">热门城市</li>
+                    <li class="tab_btn">ABCDEFGH</li>
+                    <li class="tab_btn">JKLMNP</li>
+                    <li class="tab_btn">QRSTWXYZ</li>
+                </ul>
+                <div class="tab_content hot_tab_content">
+                    <div class="content_ul">
+
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="content_ul">
+
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="content_ul">
+
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="content_ul">
+
+                    </div>
+                </div>
+            </div>
+            <!--字母搜索弹窗-->
+            <ul class="search_letter_popup">
+
+            </ul>
+        </div>
+    </form>
+</div>
+<!--页面banner-->
+<div class="page_banner_box">
+    <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/31686f2ebd2722ee4210d90f9b1eeb88.jpg">
+</div>
+<!--购买流程-->
+<div class="page_process_box">
+    <div class="header_box">
+        <h2 class="title">车险购买流程</h2>
+        <div class="note_box"><<<<span>一步步教您，如何轻松购买车险</span>>>></div>
+    </div>
+    <div class="process_list_box">
+        <ul class="list_box">
+            <li class="list">
+                <div class="img_box bg1"></div>
+                <i class="san"></i>
+                <i class="num">1</i>
+                <p class="text_box">
+                    <span class="title">车辆信息</span><br>
+                    <span class="text">验证车辆信息</span>
+                </p>
+            </li>
+            <li class="list">
+                <div class="img_box bg2"></div>
+                <i class="san"></i>
+                <i class="num">2</i>
+                <p class="text_box">
+                    <span class="title">投保方案</span><br>
+                    <span class="text">勾选投保方案</span>
+                </p>
+            </li>
+            <li class="list">
+                <div class="img_box bg3"></div>
+                <i class="san"></i>
+                <i class="num">3</i>
+                <p class="text_box">
+                    <span class="title">车险询价</span><br>
+                    <span class="text">进行车险价格询问</span>
+                </p>
+            </li>
+            <li class="list">
+                <div class="img_box bg4"></div>
+                <i class="san"></i>
+                <i class="num">4</i>
+                <p class="text_box">
+                    <span class="title">核验保单</span><br>
+                    <span class="text">核对投保单信息</span>
+                </p>
+            </li>
+            <li class="list">
+                <div class="img_box bg5"></div>
+                <i class="san"></i>
+                <i class="num">5</i>
+                <p class="text_box">
+                    <span class="title">下单购买</span><br>
+                    <span class="text">立刻下单进行购买</span>
+                </p>
+            </li>
+            <li class="list">
+                <div class="img_box bg6"></div>
+                <i class="san"></i>
+                <i class="num">6</i>
+                <p class="text_box">
+                    <span class="title">保单生效</span><br>
+                    <span class="text">购买成功保单生效</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--车险保障详情-->
+<div class="car_guarantee_details_box">
+    <div class="a_text_box a1">
+        <div class="text_box">
+            <span>司机座位责任险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">司机座位:</h3>
+                <p class="text">发生意外事故，造成本车驾驶员本人的人身伤亡，如果本车负有责任，保险公司按条款规定赔偿。司机座位责任险属于车上人员责任险的司机座位部分。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">新手或经常开车的人士，出险几率较大，建议购买，更好保障自身的安全。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a2">
+        <div class="text_box">
+            <span>乘客座位责任险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">乘客座位负责保险什么？</h3>
+                <p class="text">发送意外事故，造成本车上乘客（非驾驶员本人）的人身伤亡，如果本车负有责任，保险公司按条款规定赔偿。乘客座位责任险属于车上人员责任险的乘客座位部分。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、车辆经常使用来载人，以及家庭车辆。<br>2、新手上路，经验有限，容易发生交通意外，十分有必要购买。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a3">
+        <div class="text_box">
+            <span>自燃损失险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">自燃损失险:</h3>
+                <p class="text">因本车电器、线路、油路、供油系统、供气系统、货物自身发生问题，机动车运转摩擦起火引起火灾，造成车辆自身的损失，保险公司按条款规定赔偿。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、车辆使用超过2年，油路和电路都有所老化。<br>2、车行驶里程超过3万公里。<br>3、公司或单位车子，驾驶员不固定，行驶区域不固定。<br>4、夏季高温，车辆自燃概率较高，有必要购买。<br>5、新上市的车型，有可能存在设计缺陷发生自燃。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a4">
+        <div class="text_box">
+            <span>车辆损失险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">车辆损失险:</h3>
+                <p class="text">发生保险事故时，补仓您自己车辆的损失。例如发生以下事故，保险公司可以按照条款赔偿您的车辆维修费用：汽车撞到护栏、柱子；您不小心撞了别人车辆，自己的车子受损。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、新手上路，经验有限，容易发生交通意外，十分有必要购买。<br>2、该险种性价比高，目前车价10万左右车辆，一两个配件的维修费用可能超过千元。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a5">
+        <div class="text_box">
+            <span>商业第三者责任险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">商业第三者责任险:</h3>
+                <p class="text">若发生保险事故，保险公司可按条款赔偿您对第三方（人或者物）造成的损失。比如发生以下事故，如果您负有责任，保险公司按照条款赔偿。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、如果不幸撞坏豪车或驾车致人重伤，赔偿可能高达几十万。<br>2、交强险最多赔12.2万，显然是杯水车薪，投保了商业第三者责任险，交强险赔付不足的部分，由保险公司赔偿。<br>3、保障越高越好，建议至少选择20-50万的保障额度。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a6">
+        <div class="text_box">
+            <span>涉水行驶损失险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">涉水行驶损失险:</h3>
+                <p class="text">可通俗的理解为发动机损失险，负责赔偿车辆因遭水淹或因涉水行驶造成发动机损坏的。比如，在积水路面涉水行驶、在水中启动造成发动机损坏。保险公司在出险当时的保险车辆实际价值范围内负责赔偿发动机的修复费用，但最高以车辆损失险的保险金额为限。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">发动机是汽车的心脏，也是车辆最昂贵的一个组成部分。经常暴雨、内涝地区，以及城市排水不好的地区，建议购买。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a7">
+        <div class="text_box">
+            <span>全车盗抢险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">全车盗抢险:</h3>
+                <p class="text">如果整车发生被偷被盗，保险公司按条款进行赔偿。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、无固定车库，一般停在露天停车场。<br>2、经常在外出差，无固定停车地点。<br>3、车型属于被盗车型。例如广本雅阁、微型面包车。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a8">
+        <div class="text_box">
+            <span>不计免赔率特约条款险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">不计免赔率特约条款:</h3>
+                <p class="text">保险事故发生后，按照投保人选择投保险种的事故责任免赔率和绝对免赔率计算的，应当由被保险人自行承担的金额部分，保险公司负责赔偿。比如您开车撞倒柱子，根据条款自行承担15%的损失，如果买了这个险种，应当由您承担的免赔金额部分，保险公司也是赔偿的。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">该险种价格便宜，投保后能获得更全面的保障，最大程度地为您规避风险，非常推荐您购买。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a9">
+        <div class="text_box">
+            <span>车身划痕险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">车身划痕险:</h3>
+                <p class="text">无明显碰撞痕迹的车身表面油漆单独划伤，保险公司负责赔偿。比如您的车停放期间，被人用钥匙、石头等划伤了，保险公司按条款负责您的维修的费用。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1.新手上路，经验有限，容易发生交通意外，十分有必要购买;<br>2.特别提醒：小划痕通常可以通过美容进行处理，如果报案理赔将算作一个案件，可能会对第二年的保费产生影响，建议酌情购买。</p>
+            </div>
+        </div>
+    </div>
+    <div class="a_text_box a10">
+        <div class="text_box">
+            <span>玻璃单独破碎险</span>
+            <div class="explan_text_box">
+                <div class="san_bg"></div>
+                <h3 class="title">玻璃单独破碎险</h3>
+                <p class="text">如果发生车窗、挡风玻璃的单独破碎，保险公司按实际损失赔偿。比如发生以下事故造成您车窗、挡风玻璃的破碎：高速上行驶被飞石击碎车窗、挡风玻璃；车辆停放被高空坠物砸坏车窗、挡风玻璃。</p>
+                <h3 class="title">我需要购买吗？</h3>
+                <p class="text">1、车辆经常跑高速公路<br>2、车辆经常停在露天停车场<br>3、行驶所在区域治安不好</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部列表-->
+<div class="footer_list_box">
+    <ul class="list_box">
+        <li class="list">
+            <div class="img_box">
+                <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/239d8b3253b0b43ecf9de91729d7e1a4.png">
+            </div>
+            <h2 class="tit">价格更透明</h2>
+            <p class="note_text">同时询价,横向比较</p>
+        </li>
+        <li class="list">
+            <div class="img_box">
+                <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/9269240ae782cfea9cc20807931fd4b2.png">
+            </div>
+            <h2 class="tit">投保无干扰</h2>
+            <p class="note_text">免去被电话骚扰</p>
+        </li>
+        <li class="list">
+            <div class="img_box">
+                <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/6494359092bd86094b4cfef440622bc1.png">
+            </div>
+            <h2 class="tit">到期提醒</h2>
+            <p class="note_text">你即时续保更省心</p>
+        </li>
+        <li class="list">
+            <div class="img_box">
+                <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/926d1edb04466bd96d84edb9775b0183.png">
+            </div>
+            <h2 class="tit">理赔无忧</h2>
+            <p class="note_text">享受保险公司线下理赔服务</p>
+        </li>
+    </ul>
+</div>
+<div class="footer-contact">
+    <ul>
+        <li>
+            <a href="javascript:;" class="contact-kf">
+                <span>客服<br/>热线</span>
+                <div class="contact-bor">
+                    <em></em>
+                    <dl>
+                        <dt>客服热线</dt>
+                        <dd>400-880-2068</dd>
+                    </dl>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank" class="contact-tc"><span>我要<br/>吐槽</span></a>
+        </li>
+        <li>
+            <a href="javascript:;" class="contact-up"><span>返回<br/>顶部</span></a>
+        </li>
+        <li class="footer-phone">
+            <a href="javascript:;" class="contact-download">
+                <div class="contact-bor">
+                    <em></em>
+                    <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAIAAAAI7H7bAAAXuElEQVR4nO3de3Qc1X0H8N+dfUqrpyXLsmRjQLbBljF2HLuObBxiiEMcIIQQ09CEUNJy2jTUuFUMpTUkhOQkjqO6SU7SNoH2nEKbPhI4RpYwD0OMAwQM+P2W30bv50r7nJlf/9iVtFrt2ruaOzNr8/0cxVmJndm7o/3qzvzmzh3BzAQAxih2NwDgcoAgAUiAIAFIgCABSIAgAUiAIAFI4Ez5UyGExe3IRMpKvfGmmrHarE4qZP5amTc1XQMyf3JWq82cwQbYLt0WQI8EIAGCBCABggQgAYIEIAGCBCABggQgQeryd0pWjhO3svps0hrMaEDmm8WkswJZMaOAnrMfQvRIABIgSAASIEgAEiBIABIgSAASIEgAEmRR/k4pF8qs45k0cBijpLNi2ebKhQ8heiQACRAkAAkQJAAJECQACRAkAAkQJAAJjJa/bWdSodngM7NixoDodE21stBs+wh6K6FHApAAQQKQAEECkABBApAAQQKQAEECkOCSL3+bJPPSbcqKsO3jkbOa+9tgAz5SZe500CMBSIAgAUiAIAFIgCABSIAgAUiAIAFIgCABSGD0PJLt5xBMmm0n89WadBWDSbcRuITmbMqc7R9CQo8EIAWCBCABggQgAYIEIAGCBCABggQgQRblb9urnCYx426tWV3FYPCCBZPK+sbPK5gx5X/OfgjRIwFIgCABSIAgAUiAIAFIgCABSIAgAUiQuvydC8NpjbByEh8rS9LGWXkbXINsb0BW0CMBSIAgAUiAIAFIgCABSIAgAUiAIAFIYHTyE5MKzWaMks6K7beLNWn2lcxbZeUWMGmml5RMei30SAASIEgAEiBIABIgSAASIEgAEiBIABIIg+VI20cT5+ZsGCbdwtWkDWv778vKgd4mNQA9EoAECBKABAgSgAQIEoAECBKABAgSgASmjP42aTRx5mOfjTNYp7aSlZOPW3mywXid2uAE7ilh9DeAiRAkAAkQJAAJECQACRAkAAkQJAAJECQACbKYRN/2iXVSMn4GwOCpMCtPrdh+wsf4PWTNYLwBxs9ZoUcCkABBApAAQQKQAEECkABBApAAQQKQIHX52/aLCGyfG8ikLWDGwP6UjE9jZHzxj9SnCD0SgAQIEoAECBKABAgSgAQIEoAECBKABKkn0Te6UsM3MLWSlRPr2D4gOiWTBuDbfn8GK+vvRqfjgkS2/1EYkUlLbD9ZdzlBkIzKnfBk69JteQ7CMRKABAgSgAQIEoAECBKABFkUGwyWiU0aj2y8SJptpfuyP0a/wNu0csL+lIxvfDOK8oQeCUAKBAlAApxHynW7+9UtrdEyt/jqdE+RC6dQcxSClB2LD5D+0KM2tISiTMR0MqA/dk2eBVliZgx6yBZ27XLX2z3qpuOhkE6azhrz0UHt24cD/VHd7nZBCghSjnqrJ7rxWDCosaazyhT7OuzXNxwMIks5KPXob4PTYRufD8SM1zI+IFoIUwbLj/dmd/QHR0NRJiYmothrxl6YiWb7lO/X5he7zP0jaPzuwGZ8tDJ/IYuhR8o5v++Ofu9IMKizqrOqk6qTyhRlUnWK6qzqfMCvPbw/ENLs//TACAQpt/y+O/rEoWBAI1XnKHNUj38Nf0uxr30D2vt9qt2NhVGo2uWQnV3Rxw8FIjy6L8c0vHsX+3b454qgKR78EcwhCFKu2NkV/fuDQ2GdiBKDFA9TPEtMTCSI/u6a/JoCh32NhWQIUk7Y0RV5ZH8goo8JDI3phTgWKiL6h2vzvzTNM7KszhzWKc+BMz92wu6B/X7XGanfNzSkckSnqM4RnSM6xx9oww90imoc1fnRa/Lvnu5NXFwR4l9OBPsiqInbCUGy2WudkYf2Dg5G40WFiE4J4Rl9ENE4qtOGOb4vX+FNWoOqc1Nb+J53BnqRJftYdGIkW2bMNZPVGlKSfh5pe0fkr/f4wxrR8BFRYplh9DETET1Z6/valXlJa9CZH90/+NTJEBMtLHH899KSSW4JfxylDBEy4xSfSSeyMl88HQTJtiC90h755m5/SOPEw6GExzxSbCCi780r+PpVKVL08L7Bfz0RHKlJfKzU+VxdqfEsIUjpFk8HQbInSNvawn/1gT+oxasIw0kYW10YztUPrit44Or8pDXozPV7/L84EaThBMYW+Xipq+mG0lJjWUKQ0i2eDoJkQ5C2tYUfeH8goMZywjwSIUqMU/yFfjS/8C9qUqTood3+n7cEhsPGo/0a8dJJrqZPlhnJEoKUbvF0ECSrg7StLXzfu/1BbTQwiSXvxB6JiP7x+sJvzPQlrUFjfuj9gZ8dH6KRJSlhL5CZiJaWuZtWTp5wlhCkdIungyBZGqQX28Jf+UNfQEvsf5gTUjQyTFUQbV5Y9OCsFCmqf79/8+HB4afS6APmhH+pvrboR4snTaydCFK6xdPBCVnrNLWG//jt3liKRgIznIWEXoVJIdq8qDh1inb1bj7kH7/I+J/0BDEYzzpGg2TSYHsr55rJ/C0YaVVza+hLb/YG1It8+olIYd68uPTB2QVJa9CY69/p3nzQP26RFKuq8DrqryuZcGutnBgoqzXY3oB00CNZYev54JqdPQEt5ed+zBGOwtSwZNKD1xYmrUFjrn+7a/P+/uRFxuzdxb8t9ygvfa56Tqk7cXEHrh43E4Jkuq3nAmt2dAfU2HBUGi4J0PhEKUQNS8vWzi1KWoPGXP9m5+Z9vWkOisb8pNzreOn26deXjxkAsfP80PzyvFIvxrmaBUOEzLX1bGDN9o5AWCVNI1WL/5vqS1H1hiWT1tYm749pzPU7Ozbv7iZVH15cT7eScie9dMeMhZOTT90e7Q7d+n8tvSEcNZnFaBnKpGMkK5m0201E284F7ny5LaDpafflhn+uEDUsr1g7P7nIpjHX72jbvLt7/CLjV1We53hpTc3CiuSTTu1D0RufOXK4O1RX7Wu8e1apd+K7IeZtK8saYNJbQJDM2rLNZ4buevnDQGwqrdR7YsPVBeKGGyrXLihLWoPGvH5Ha8N7XRct0BFRRb7jxbtnLZySIkWrnjm8tyMYW6Rumq/xy9eW5k0wSwhS2tUiSGZs2ebTg3e9eC6gpq2qjRztKEwNN05du7A8aQ0a8/rXzjfs6hy7yNhVDT+oyHM2fXn2oqnJ5fL2weiq/zi4ty2Q+Op10wsavzp3YllCkNKu1rL5eqy80ae993VtPuW/q+lsir5oXKIU4oZPVa9dNDlpDRrz+u3nGt7puGiBjpgrfM6mP5mTKkWRW/794O62wfElirorihrvm3eBLEn5q3cJTRhkvAEIkuTfTfPJgbteOD3aF1Ha/kRh2nRT9brFU5LWoDGvf+Vsw9ttsadeoEBHRBX5rqZ75yyqSj7p1D4YueXpfbtbh9K9et0VRY1/Nr80z5XyXSBI2TYAQZL5u9nXGax79thgVLvwpz/WF228afrfLq1MWoOm8/qXzzS81XrhukLsJ+X5zqb75i2elnzSye/vefDZ1/u6z092h71ORVc8fbrvbKjwsL+gM+QcWdWttWUv/PnClG8EQcq2ATiPJA0zv7p3z2DQFfsm4V9K7ouINn76itQp2naq4c0PL1qgI6LyfGfT10ZTpId6Ih++pZ5/Q3S+6/af/Ld8nYqLyFVErmLyFJOnWHiKQ86S9/0VPz1Y9j/HvLpOL+3vMHFzfMQgSNKIgZba1mfd6t0Rcl/g2EYh2vSZK9d9YmrS4prO65tPNOw8n7xg8uBuIuLyfFfT/dd9vDpf72+JntsROftqpG2XFuoXrHocitOpkMMlWGdmIp04/uVVtLqKwCeqlbtrvF99sfCW2uQ2wIQhSJKoAfafmEMnfqj94GH+VoRcKffuFMGbPnv1urqqpKU1nR9pPtHwu7NjDmkodaLK8kXzmvwFg7+JvPaG2ntciwZ0NUh6VAgR3/OI/4+JdME6kU7ExPEvQXxHTbj5i64FS+dbsGE+IhAkSYbOCuK8shk3t/zXD5kfVv82won7eBTvi26tWbesOmlRTedHt7Zsev30hU83uYVWV9p2Z9WZO6e1Vbb26tEgM4uSGuo7TWpIkBDuQkdlHZ3ZykTMLFgXrA/nJxYnnViPrXp55SCpHeRJjjRMTOogmXFYb/z41eAw7XQNkFKZ4FAvkSiesaj9g+dvyTtVMqP1L3dND6n6aHVB8KbbZq1bPi1pQU3nRxuPb3z1VLoCXb4junLSqS9UHl9debYyT2PFLRweXfGpU27k6ptCA53i0C9EqJOEYDUUbnvPO3pUFXt1neKJ0ol1Jp2YBRETi4ET5EsdJJZxiyTjl4rZC9cj2UBoQ0zkzCu+8ua13gXfvNbtK5zZ8ZVnDoTU2G4Vbfz8rHUrpictpen86JajG185Ob6uUO4aXF126PaKIzeXny5ys3B42F2iO4uFHiFm1iKq7yotNCQcbqVqBfXsJRJEuhJqZUUwcURX9g9U7R66+nCg6nykJMKeIq+YViy+uKD4+qlMukpEFOm3dBtd1hAkSXRdEJFw5Oe5+OSvqeaeL86vUL5C9z+7PxTRv//52es+NSNpCU3nR547vOnlkyN9kVNoiwtP31x64JbS/UtKPnQ6nOTwkOJmz1S1dq2meFXPFOXAz/PUTkG6a/C45i5XSOfSebq3gtQzgkR3tGBbz/XNPQt29s0cUj1EY8K5cm7F+j9aTh6F+45R+zvEmqWb6LKGIMnBioNYJeEgxSW63uPW12j2/XfMW7H6ezfqzHmu5OsXNJ0f+c2hf95+eH5Bf21h1/zC1kVFZ5YUnigS/aRrrHiFw6c7C0TUT8xqXnVYKXW63VrYrxVe6+3tECREsE2PDlGwg85vF6HunT1XPXV6UXPn3IjuHN4tjOUkvqO4ct6U57+1vNDrYl3tOtCsnt1Rufwbl8xuVs4zZaxdViy7OtLceQg636VIH2thGjpLfYeodz+HujSHS5R/XCm5RnjLhTOfiEkNcnSAIv3hwa7u7vYKT8DJQWKdooNCC7MW5rKPadWrw57prGvOY0/l9b9HiidaPC901b3RYJ/bN9mp+b2nnmVyqKoajUaCoaHfnJz282Pz9/RVENFoqX1sq1fWTvltfZ0ncGqwZXvvB8+EO48Ih+vaP33OUb0sq80lYUyasd+ClSdkcYxkA/ZOFpE+IRQSTlJcLFxEgkKd+pnn6LxLcbqFw02KmxW3EB5yeDzeyikf+3qU3VHhUPIrnTvudZIgEqG8mVw0V/QcEL5quvIO2rOLiF3+I0LvofxynUTEUeJlJkEfDrl/efDqp47WtAVjVx+N3LMi3qKRR0t8RzcW/Pj8z7r0yODIc1iLqq4SXOgnC4IkSX4V+U8SqSQcJFykOEkoQigJMzeSYBZMJJiYmfWoe6qjf59wF0W1ct1ZSGpYCOFxqMFAp+IuEAXT2OHRyaUQE5FofV1xTXX27nEq3OmavfaVst+2VIQ1R+xk0XAjRsp9o98uKTj2kxm/9MTvF0NMFPvbW1R7h3vyHAs30GUuiyBZOSDKYFU9q6lLpOzyCYebimdT735WnKS4hOIiIYiU+HlRImImQewuYXe5CLWLqJ+Eog2106RFzg+3ieIa6u5mItH5B1G8SBROUwdbPRRQXWUutZuIld69vrx2mvHprpJPfabh2Acne4loOELjOqLhHywpOPaTGb/yOcKj7SQixTFp0X2Vq54U4kLXR5s0z5nB1Uq5EXCGz8wKeiR5fNWkBSnUTYqTFBeRQkKJd0DEgpiIueDqaP4sT9tWZlVRSM2b5tJDEVUo7goXEZFQBk8LYrFrg1cdiPpmeiOt5CoSU+p4xm1csbQroKx+8tUPTvaMDQyP/WjE/9PigmM/ufLpfEd45ImKK69w5s3ldQ/mT1ts2Vb5iECQpCqaSaRQoJUVV2zXjgTFxxbEzoH27HL37WXFQ8SKOuAsvlI//qx7zgNq1wFu20pCsBDuPY85wl3C6XOW1IhF36Gqm8hbJoi6BkKf++7L77V0D8dmTJbGtoMXF5/72cxfF7jzHHlVrpIrvBVz86cv8c1Y5vQlX/sEUmRRtcvNXTvjDZB/zUXUz6dfoJZndP8JLdorhFCcLsXhIYebhFsoblY8pHgiFav0/hZv5Lyq+Cjc69T61Wi0O1o4pWa5mFJHU+rIUzqyyq6B0OonXtrV0pXYlrH/P9qwG+dNfW79DQVeRXF6hSLzb6V5U9hOqDkTaYD9l5ojSFmtmbUw9ezVO97i/gMicE4Jtws9SsJJipsULzu8AdXdHio473e19HmO9vr2dBefDlU+/a07l8xK7jS6BkKrn9i263gsRalKcwlZWlFb2bjhswVprtgzCEFKB0Gy7ipAVoOkhQRrJBzscP/v2233/tMbETVecyvxuZo2fGbpNRVJS3UNhFY/0RxPUYoducQs8YraqVs2fLYo303mQJDSwTGSdYQzj5zxGecE0ZrlNUTi3s2vR1R9UoGnccOqVCkKrv5OLEVjAjP2WfFvV8w1N0VwAfbfjcKyC5Jzcxqj3Se63j7SsWrhtKsrkydY7fGHbnl8667jncM/GNsRjWk1r6it2vLY52SlSMr9HcwYs2L7LAbpIEg2BymdHn9o9bcb3znWkRSYxMdi+Lsbaqu2PH6rxL4IQcoWdu1yUY8/tPrbL7xzNDanwmhgUuzUMd0wr2rL49L6IpgYBCnn9PhDqx/f8u7R9oQ/p4k7cmOy9Mnrqp/fcFtRvsey5kFKCFLOqf/VG+8eaUvZ+Yw+JiKiG+ZVP7/htiIfUmQ/BCnnnGrrJ77IIDoiXlZb/fxjtyNFOQK3dck5D92xwOWgkTm0hr+GJzBhnVhfNreq8TtfKCnwXnx1YAkEKefc/omZT//NKpeD4uEZl6VltVMbn7gTfVFOMWXK4tSvZPesNMbvi2r8ruaZ+8/tB+//cVNU1ZN28JbVTmv87pdyKkVWjkswCaYsvmzds3IuEd+/aauqcqzOIIjqci9FEINdu9x1z8rap+tXO53x46W62urGJ9cgRbkJu3Y5ums3YsubR3763Ls1VaUbH7g5N1OEXTtCkNKt4QKvlZtDimyEIBF27QCkQJAAJDBatbN+z2rCpIxoJpuOlKxnfHqmzFdrcPFc+HWgR5qIS+iWCmANBAlAAgRpgoQQ6JdgBIJkCLIEMRgiZFRilnLhqDdzIy2/tJqdmxAkmS7aQVk5QVRK6EJNYnReO9unsDOJpXMLmnDfp1z4vdg+r13mjG8uHCMBSIAgAUiAIAFIgCABSIAgAUiAIAFIYPTCPiunVzboI1XPTSc3fwu21/qNQ48EIAGCBCABggQgAYIEIAGCBCABggQggdHLKDKviRufe8SkKqfBt5DVfCCWva+s6u85W6w3yMpSO3okAAkQJAAJECQACRAkAAkQJAAJECQACRAkAAkupUn0M2d8nbZfMWH79QK2bwHjrHwL6JEAJECQACRAkAAkQJAAJECQACRAkAAkMDqLUBavZOFN5G2/v0NWtf6UzLiLLmQlqw8MeiQACRAkAAkQJAAJECQACRAkAAkQJAAJsriHbG7KzYqw7VvVpDsGWHkOI3NZTVBlEvRIABIgSAASIEgAEiBIABIgSAASIEgAEqSe/OQSqimbNMGFScVf2zes7dOnZL4FjA/hxyT6AJcYBAlAAgQJQAIECUACBAlAAgQJQIIs5v62snJqsExs5YQkxlk50bnBN5tVRdvgL9H41jap0p0SeiQACRAkAAkQJAAJECQACRAkAAkQJAAJjM79beUkG7k5zbdJbN/alwEz3ixGfwOYCEECkABBApAAQQKQAEECkABBApAAQQKQIIvLKC4hxq8syPxMlPF5bTJ/pu1TJuXmJD5ZXcdh0jlG9EgAEiBIABIgSAASIEgAEiBIABIgSAASXJ7l75Ry4RoEg8XfzOu5xmv9Vl6KYnDGIpOK8phEH8BqCBKABAgSgAQIEoAECBKABAgSgARGy99WzqxvZQOsnFnfyjmbLiHGN4uVZX30SAASIEgAEiBIABIgSAASIEgAEiBIABJkUf6+hGqvJo3ItrIBtt9GwPgJACvnOcmcSR9j9EgAEiBIABIgSAASIEgAEiBIABIgSAASpL6HLABkBT0SgAQIEoAECBKABAgSgAQIEoAECBKABAgSgAT/D6VoIcgNqtZhAAAAAElFTkSuQmCC" alt=""></p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--底部内容-->
+<div class="footer_nav_box" style="background:#fff" >
+    <div class="footer_nav_content">
+        <div class="pos">
+            <ul class="a_box">
+                <li><a href="">关于我们</a></li>
+                <li>|</li>
+                <li><a href="">帮助中心</a></li>
+                <li>|</li>
+                <li><a href="">联系我们</a></li>
+                <li>|</li>
+                <li><a href="">市场合作</a></li>
+                <li>|</li>
+                <li><a href="">投诉与建议</a></li>
+            </ul>
+            <p class="record_text">Copyright © 2017 xinhuanet.com Inc. All Rights Reserved. 浙ICP备12000680号-1</p>
+            <p class="page_note_text">新华网-钱江金融商城  版权所有  理财有风险，投资需谨慎</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://cdn.upingou.com/msphPcStatic/js/car_insurance\index.js?7e698828d747f3c000d7"></script></body>
+</html>

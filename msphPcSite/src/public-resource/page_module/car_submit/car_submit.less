@@ -1,0 +1,425 @@
+@import "../../less/custom";
+/*主要内容样式*/
+.main_content_box{
+  width:100%;
+}
+.remarks_container{
+  display:none;
+}
+.main_form_box{
+  width:708px;
+  margin:0 auto;
+  padding-top:77px;
+  &.add_address_box{
+    display:block;
+  }
+  .chear{
+    clear: both;
+  }
+  .form_title{
+    float:left;
+    font-size:18px;
+    color:#333;
+    font-weight:bold;
+  }
+  .form_right_content{
+    float:right;
+    width:544px;
+    .form_content{
+      width:100%;
+      .car_infor_box{
+        float:left;
+        width:260px;
+        margin-right:24px;
+        margin-bottom:38px;
+        &:nth-child(2n){
+          margin-right:0;
+        }
+        .car_infor_title{
+          display:block;
+          width:100%;
+          font-size:14px;
+          color:#333;
+          margin-bottom:10px;
+          &.problem_title{
+            position: relative;
+            padding-left:20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            .problem_bg{
+              .box_left_position(0);
+              display:inline-block;
+              width:16px;
+              height:16px;
+              cursor: pointer;
+              background:url('../../../public-resource/imgs/icons/car_problem_bg.png') no-repeat;
+            }
+            .problem_popup{
+              position: absolute;
+              top:-103px;
+              left:-222px;
+              background:#eff6fe;
+              border:#3f92e0 1px solid;
+              font-size:12px;
+              line-height:22px;
+              padding:6px 8px;
+              color:#3f92e0;
+              display:none;
+            }
+          }
+        }
+        .input_box{
+          position: relative;
+          width:100%;
+          height:64px;
+          line-height:64px;
+          border-radius:4px;
+          background:#f9f9f9;
+          border:#f9f9f9 1px solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          input{
+            display:block;
+            width:100%;
+            height:100%;
+            padding:20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size:14px;
+            color:#999;
+          }
+          .time_icon_bg{
+            .box_right_position(12px);
+            display:block;
+            width:20px;
+            height:22px;
+            cursor:pointer;
+            background:url('../../../public-resource/imgs/icons/time_icon_bg.png') no-repeat;
+          }
+        }
+        .status_box{
+          width:100%;
+          height:64px;
+          border-radius:4px;
+          overflow:hidden;
+          .status{
+            float:left;
+            width:50%;
+            line-height:64px;
+            height:100%;
+            font-size:14px;
+            text-align: center;
+            color:#333;
+            background:#f9f9f9;
+            cursor: pointer;
+            &.active{
+              background:#e5e5e5;
+            }
+          }
+        }
+      }
+      .form_input{
+        float:left;
+        width:260px;
+        margin-right:24px;
+        margin-bottom:38px;
+        &.address_form_box{
+          width:100%;
+        }
+        .input_title{
+          display:block;
+          width:100%;
+          font-size:14px;
+          color:#333;
+          margin-bottom:10px;
+        }
+        .select_box{
+          position: relative;
+          width:100%;
+          height:64px;
+          line-height:64px;
+          background:#f9f9f9;
+          border-radius:4px;
+          padding:0 20px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size:14px;
+          color:#999;
+          .down_bg{
+            display:block;
+            .box_right_position(12px);
+            width:12px;
+            height:8px;
+            cursor: pointer;
+            background:url('../../../public-resource/imgs/icons/address_down_bg.png') no-repeat;
+          }
+        }
+        .input_box{
+          position:relative;
+          width:100%;
+          height:64px;
+          line-height:64px;
+          background:#f9f9f9;
+          border-radius:4px;
+          border:#f9f9f9 1px solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          input{
+            display:block;
+            width:100%;
+            height:100%;
+            padding:20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size:14px;
+            color:#999;
+          }
+        }
+        &:nth-child(2n){
+          margin-right:0;
+        }
+        &.address_box{
+          width:100%;
+        }
+      }
+      .clear{
+        clear: both;
+      }
+    }
+    /*填写备注*/
+    .textarea_box{
+      position: relative;
+      width:100%;
+      height:120px;
+      background:#f9f9f9;
+      border-radius:4px;
+      overflow:hidden;
+      padding-bottom:20px;
+      input{
+        opacity: 0;
+        visibility: hidden;
+      }
+      textarea{
+        display:block;
+        width:100%;
+        height:100%;
+        max-height:120px;
+        font-size:14px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        color:#999;
+        overflow-y: auto;
+        padding:16px 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .num_show_box{
+        position: absolute;
+        right:20px;
+        bottom:16px;
+        font-size:14px;
+        color:#999;
+      }
+    }
+    /*上传行驶证*/
+    .form_note_text{
+      width:100%;
+      font-size:14px;
+      color:#333;
+      span{
+        color:#333;
+        font-weight:bold;
+      }
+      em{
+        color:#999;
+      }
+    }
+    .loading_img_container{
+      position:relative;
+      width:100%;
+      overflow:hidden;
+      margin:10px 0;
+      height:64px;
+      line-height:64px;
+      input{
+        display:block;
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:9;
+      }
+      .loading_img_box{
+        position: absolute;
+        top:0;
+        left:0;
+        width:260px;
+        height:64px;
+        text-align: center;
+        border:#e5e5e5 1px dashed;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index:99;
+        background:#f9f9f9;
+        cursor: pointer;
+        .text{
+          font-size:14px;
+          color:#333;
+        }
+      }
+      .loading_note_text{
+        float:left;
+        font-size:14px;
+        color:#999;
+        padding-left:20px;
+      }
+    }
+    .img_show_box{
+      position: relative;
+      width:260px;
+      height:190px;
+      border-radius:6px;
+      overflow:hidden;
+      margin-bottom:38px;
+      display:none;
+      .btm_box{
+        position: absolute;
+        left:0;
+        bottom:0;
+        width:100%;
+        height:36px;
+        line-height:36px;
+        background:rgba(0,0,0,0.5);
+        .delete_img_btn{
+          .box_right_position(12px);
+          width:22px;
+          height:22px;
+          background:url('../../../public-resource/imgs/icons/car_delete_bg.png') no-repeat;
+          cursor: pointer;
+        }
+      }
+    }
+    .car_form_container{
+      width:100%;
+      .clear{
+        clear:both;
+      }
+      .car_infor_box{
+        float:left;
+        width:260px;
+        margin-right:24px;
+        margin-bottom:38px;
+        &:nth-child(2n){
+          margin-right:0;
+        }
+        .car_infor_title{
+          display:block;
+          width:100%;
+          font-size:14px;
+          color:#333;
+          margin-bottom:10px;
+          &.problem_title{
+            position: relative;
+            padding-left:20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            .problem_bg{
+              .box_left_position(0);
+              display:inline-block;
+              width:16px;
+              height:16px;
+              cursor: pointer;
+              background:url('../../../public-resource/imgs/icons/car_problem_bg.png') no-repeat;
+            }
+            .problem_popup{
+              position: absolute;
+              top:-103px;
+              left:-222px;
+              background:#eff6fe;
+              border:#3f92e0 1px solid;
+              font-size:12px;
+              line-height:22px;
+              padding:6px 8px;
+              color:#3f92e0;
+              display:none;
+            }
+          }
+        }
+        .input_box{
+          position: relative;
+          width:100%;
+          height:64px;
+          line-height:64px;
+          border-radius:4px;
+          background:#f9f9f9;
+          border:#f9f9f9 1px solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          input{
+            display:block;
+            width:100%;
+            height:100%;
+            padding:20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size:14px;
+            color:#999;
+          }
+          .time_icon_bg{
+            .box_right_position(12px);
+            display:block;
+            width:20px;
+            height:22px;
+            cursor:pointer;
+            background:url('../../../public-resource/imgs/icons/time_icon_bg.png') no-repeat;
+          }
+        }
+        .status_box{
+          width:100%;
+          height:64px;
+          border-radius:4px;
+          overflow:hidden;
+          .status{
+            float:left;
+            width:50%;
+            line-height:64px;
+            height:100%;
+            font-size:14px;
+            text-align: center;
+            color:#333;
+            background:#f9f9f9;
+            cursor: pointer;
+            &.active{
+              background:#e5e5e5;
+            }
+          }
+        }
+      }
+    }
+    .next_btn{
+      display:block;
+      width:100%;
+      height:64px;
+      line-height:64px;
+      background:#2babf7;
+      text-align: center;
+      font-size:16px;
+      color:#fff;
+      border-radius:4px;
+      margin-top:48px;
+    }
+
+  }
+}

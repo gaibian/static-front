@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学平险投保平台</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="/xpxStatic/css/\order\buy_order\buy_order.css?51d6558ac02221d5e8f1" rel="stylesheet"></head>
+<body>
+<section class="page_container form" data-btn="next_btn">
+    <section class="info_content_box">
+        <div class="title"><i class="left_bg"></i>被保险人(学生)信息</div>
+        <form class="form_box">
+            <div class="form_input">
+                <label class="label_title">学校</label>
+                <div class="input_box js_search_popup">
+                    <p class="p_val">选择学校</p>
+                    <i class="down_bg"></i>
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="label_title">被保险人</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入被保险人姓名" data-toggle="true" checkType="name" data-error="请输入正确的被保险人信息">
+                </div>
+            </div>
+            <div class="form_input js_input">
+                <label class="label_title">性别</label>
+                <div class="input_box">
+                    <p class="p_val">选择性别</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list">男</div>
+                    <div class="val_list">女</div>
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="label_title">身份证号</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入被保险人身份证号" data-toggle="true" checkType="card" data-error="请输入正确的被保险人身份证号">
+                </div>
+            </div>
+            <div class="form_input js_input">
+                <label class="label_title">身体状况</label>
+                <div class="input_box">
+                    <p class="p_val">请选择</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list" data-status="true">健康</div>
+                    <div class="val_list" data-status="false">不健康</div>
+                </div>
+                <div class="s_input">
+                    <input type="text" placeholder="请输入其他身体状况">
+                </div>
+            </div>
+            <div class="form_input js_input">
+                <label class="label_title">孩子是否参与城乡居民基本医疗保险</label>
+                <div class="input_box">
+                    <p class="p_val">请选择</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list">男</div>
+                    <div class="val_list">女</div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="info_content_box">
+        <div class="title"><i class="left_bg"></i>投保人(学生家长)信息</div>
+        <form class="form_box">
+            <div class="form_input">
+                <label class="label_title">投保人</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入投保人姓名" data-toggle="true" checkType="name" data-error="请输入正确的投保人姓名">
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="label_title">手机号码</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入手机号码" data-toggle="true" checkType="phone">
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="label_title">家庭住址</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入家庭住址" data-toggle="true" checkType="empty" data-error="请填写家庭住址">
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="btm_btn_box">
+        <a class="next_btn">下一步</a>
+    </section>
+    <!--学校选择弹窗-->
+    <section class="school_popup">
+        <div class="search_container popup_form" data-btn="choice_btn">
+            <div class="local_box">
+                <i class="local_bg"></i>
+                <span class="city_val">宁波</span>
+                <a class="reset_local_btn">重新获取定位</a>
+            </div>
+            <div class="form_input js_input">
+                <label class="label_title">学领段</label>
+                <div class="input_box">
+                    <p class="p_val">选择学龄段</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list">幼儿园</div>
+                    <div class="val_list">小学</div>
+                    <div class="val_list">初中</div>
+                    <div class="val_list">高中</div>
+                    <div class="val_list">大学</div>
+                </div>
+            </div>
+            <!--搜索-->
+            <div class="search_box">
+                <div class="search_input_box">
+                    <input class="search_input" type="text" placeholder="输入学校名称搜索">
+                </div>
+                <div class="search_result_popup ss_search">
+                    <ul class="search_ul">
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                            <p class="address_val">浙江,宁波</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--系-->
+            <div class="form_input js_input xi_input">
+                <label class="label_title">系</label>
+                <div class="input_box">
+                    <p class="p_val">选择系</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list">幼儿园</div>
+                    <div class="val_list">小学</div>
+                    <div class="val_list">初中</div>
+                    <div class="val_list">高中</div>
+                    <div class="val_list">大学</div>
+                </div>
+            </div>
+            <!--班级-->
+            <div class="form_input bj_input">
+                <label class="label_title">班级</label>
+                <div class="input_box">
+                    <input type="text" placeholder="输入班名" data-toggle="true" checkType="empty" data-error="请输入正确的班级名">
+                </div>
+                <div class="search_result_popup bj_search">
+                    <ul class="search_ul">
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                        <li class="search_li">
+                            <p class="text_val">宁波外国语小学</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--入学年份-->
+            <div class="form_input js_input year_input">
+                <label class="label_title">入学年份</label>
+                <div class="input_box">
+                    <p class="p_val">选择入学年份</p>
+                    <i class="down_bg"></i>
+                </div>
+                <div class="popup_box">
+                    <div class="val_list" data-id="1">幼儿园</div>
+                    <div class="val_list" data-id="1">小学</div>
+                    <div class="val_list" data-id="1">初中</div>
+                    <div class="val_list" data-id="1">高中</div>
+                    <div class="val_list" data-id="1">大学</div>
+                </div>
+            </div>
+            <!--选择结果-->
+            <div class="result_content_box">
+                宁波外国语学校 高中2018届 高三(1)班
+            </div>
+        </div>
+        <section class="btm_btn_box">
+            <button class="choice_btn" id="sure_btn">确定选择</button>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="/xpxStatic/js/\order\buy_order\buy_order.js?51d6558ac02221d5e8f1"></script></body>
+<script>
+  $(function(){
+    mp.verify([{
+      el:'.form',
+      success:function(){
+        console.log('通过前端验证');
+      }
+    },{
+      el:'.popup_form',
+      success:function(){
+        console.log('通过前端验证');
+      }
+    }])
+  })
+</script>
+<script>
+  $(function(){
+    var jsSearchPopup = $('.js_search_popup');
+    var pVal = jsSearchPopup.find('.p_val');
+    var schoolPopup = $('.school_popup');
+    var winHeight = $(window).height();
+    var resultPopup = $('.ss_search');
+    var xiInput = $('.xi_input');
+    var xiValList = xiInput.find('.val_list');
+    var bjInput = $('.bj_input').find('input');
+    var yearInput = $('.year_input');
+    var searchInputDom = schoolPopup.find('.search_input');
+    var ss_search_li = resultPopup.find('.search_li');
+    var bjResultPopup = $('.bj_search');
+    var bj_search_li = bjResultPopup.find('.search_li');
+    schoolPopup.css({
+      height:winHeight
+    });
+    jsSearchPopup.on('click',function(){
+      schoolPopup.show();
+      $('html,body').css({
+        overflow:'hidden',
+        height:100 + '%'
+      });
+      searchInputDom.focus();
+    });
+
+    searchInputDom.on('keyup',function(){
+      resultPopup.show();
+    });
+
+    bjInput.on('keyup',function(){
+      console.log('选择班级');
+      bjResultPopup.show();
+    });
+
+    bj_search_li.on('click',function(){
+      var val = $(this).find('.text_val').text();
+      console.log('ss');
+      console.log(val);
+      bjInput.val(val);
+      bjResultPopup.hide();
+    });
+
+
+    ss_search_li.on('click',function(){
+      var val = $(this).find('.text_val').text();
+      searchInputDom.val(val);
+      resultPopup.hide();
+      xiInput.show();
+    });
+
+    xiValList.on('click',function(){
+      yearInput.show();
+    });
+
+    $('#sure_btn').on('click',function(){
+      schoolPopup.hide();
+      var val = $('.result_content_box').text();
+      pVal.text(val);
+    });
+
+  })
+</script>
+</html>

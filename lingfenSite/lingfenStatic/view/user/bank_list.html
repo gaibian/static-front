@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>银行卡</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="http://cdn.upingou.com/lingfenStatic/css/user\bank_list.css?44bf26fa50817c7ddd88" rel="stylesheet"></head>
+<body>
+<main class="page">
+    <section class="top_base_container">
+        <a class="return_page_btn"></a>
+        <section class="page_header_container">
+            银行卡
+            <div class="location_box">
+                <i class="location_bg"></i>
+                <span class="val">添加银行卡</span>
+            </div>
+        </section>
+    </section>
+    <section class="bank_list_container">
+        <div class="bank_list_box">
+            <div class="title_box">
+                <div class="bank_logo">
+                    <img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MEY2NzhCRDU0MTUxMUU4QjkzM0E4Q0NGMDI1NDBCNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MEY2NzhCRTU0MTUxMUU4QjkzM0E4Q0NGMDI1NDBCNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgwRjY3OEJCNTQxNTExRThCOTMzQThDQ0YwMjU0MEI3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgwRjY3OEJDNTQxNTExRThCOTMzQThDQ0YwMjU0MEI3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+6LK+xwAACSNJREFUeNq8WQtwVNUZ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">
+                </div>
+                <p class="bank_name">中国银行信用卡</p>
+            </div>
+            <div class="bank_num">****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+        </div>
+
+        <div class="bank_list_box ny">
+            <div class="title_box">
+                <div class="bank_logo">
+                    <img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMThDRDdEODU0MTYxMUU4QjBGNEJGNEU3MzIyODJDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMThDRDdEOTU0MTYxMUU4QjBGNEJGNEU3MzIyODJDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYxOENEN0Q2NTQxNjExRThCMEY0QkY0RTczMjI4MkMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYxOENEN0Q3NTQxNjExRThCMEY0QkY0RTczMjI4MkMxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+NLC7GwAABwlJREFUeNq8WQtQlFUU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">
+                </div>
+                <p class="bank_name">农业银行储蓄卡</p>
+            </div>
+            <div class="bank_num">****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+        </div>
+    </section>
+    <section class="relieve_bank_popup">
+        <div class="mask_box"></div>
+        <div class="content_box">
+            <h2 class="title">解除绑定</h2>
+            <p class="content">确定解除绑定该张银行卡?</p>
+            <div class="btn_box">
+                <button class="cancel_btn">取消</button>
+                <button class="sure_btn">确定</button>
+            </div>
+        </div>
+    </section>
+</main>
+<script type="text/javascript" src="http://cdn.upingou.com/lingfenStatic/js/user\bank_list.js?44bf26fa50817c7ddd88"></script></body>
+</html>

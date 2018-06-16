@@ -1,0 +1,66 @@
+@import "../../../public-resource/less/init.less";
+
+body{
+  background:#f6f5fa;
+}
+.page_container{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+
+.policy_list_container{
+  width:100%;
+  background:#fff;
+  padding:0.4rem 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .policy_list_box{
+    width:100%;
+    height:2.2rem;
+    background:#fff;
+    margin-bottom:0.3rem;
+    border-radius:0.06rem;
+    overflow:hidden;
+    display:block;
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    .policy_img_box{
+      float:left;
+      width:1.74rem;
+      height:100%;
+      font-size:0;
+    }
+    .right_content_box{
+      float:left;
+      width:4.58rem;
+      height:100%;
+      position: relative;
+      margin-left:0.3rem;
+      .title{
+        .box_left_position(0);
+        width:60%;
+        .text_hidden;
+        font-size:0.4rem;
+        color:#333;
+        font-weight:bold;
+      }
+      .policy_num_box{
+        width:40%;
+        .text_hidden;
+        .box_right_position(0);
+        font-size:0.28rem;
+        color:#333;
+        text-align: right;
+      }
+    }
+    &.other_query_box{
+      .title{
+        width:100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+body{
+  padding-bottom:1.2rem;
+}
+.nav_bottom_box{
+  position: fixed;
+  left:50%;
+  bottom:0px;
+  width:7.5rem;
+  max-width:7.5rem;
+  height:1rem;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  text-align: center;
+  background:#fff;
+  border-top:#e5e5e5 1px solid;
+  z-index:997;
+  .nav_list_box{
+    display:block;
+    float:left;
+    width:33.33%;
+    height:1rem;
+    position: relative;
+    a{
+      display:block;
+      position: absolute;
+      top:50%;
+      left:50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    span{
+      display:block;
+      margin:0 auto;
+      font-size:0.22rem;
+      color:#aaa;
+    }
+    .nav_text{
+      margin-top:0.06rem;
+    }
+    .home{
+      width:0.36rem;
+      height:0.32rem;
+      background:url('../../imgs/icons/index_icon.png') no-repeat;
+      background-size:cover;
+    }
+    .cx{
+      width:0.38rem;
+      height:0.32rem;
+      background:url('../../imgs/icons/cx_icon.png') no-repeat;
+      background-size:cover;
+    }
+    .my{
+      width:0.34rem;
+      height:0.34rem;
+      background:url('../../imgs/icons/my_icon.png') no-repeat;
+      background-size:cover;
+    }
+  }
+  .active{
+    .home{
+      background:url('../../imgs/icons/index_active_icon.png') no-repeat;
+      background-size:cover;
+    }
+    .nav_text{
+      color:#333;
+    }
+    .cx{
+      background:url('../../imgs/icons/cx_active_icon.png') no-repeat;
+      background-size:cover;
+    }
+    .my{
+      background:url('../../imgs/icons/my_active_icon.png') no-repeat;
+      background-size:cover;
+    }
+  }
+}

@@ -1,0 +1,283 @@
+@import "../../../public-resource/less/custom.less";
+
+.page_address_box{
+  width:100%;
+  height:40px;
+  line-height:40px;
+  background:#fff;
+  border-top:#e5e5e5 1px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .address_content{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    font-size:14px;
+    color:#333;
+    a{
+      display:inline-block;
+      color:#333;
+      margin-right:6px;
+    }
+    span{
+      display:inline-block;
+      color:#999;
+      margin-left:6px;
+    }
+  }
+}
+.page_main_container{
+  width:1200px;
+  margin:40px auto 58px auto;
+  .clear{
+    clear: both;
+  }
+}
+.main_left_container{
+  float:left;
+  width:900px;
+  border:#e5e5e5 1px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:#fff;
+  padding-bottom:80px;
+  .header_nav_box{
+    width:100%;
+    .nav_ul{
+      width:100%;
+      height:50px;
+      line-height:50px;
+      border-bottom:#e5e5e5 1px solid;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow:hidden;
+      .nav_li{
+        float:left;
+        width:20%;
+        line-height:50px;
+        text-align: center;
+        font-size:0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right:#e5e5e5 1px solid;
+        background:#f6f8fc;
+        &:last-child{
+          border-right:none;
+        }
+        span.spot{
+          position: relative;
+          top:3px;
+          display:inline-block;
+          width:16px;
+          height:16px;
+          border-radius:50%;
+          border:#9c9c9c 2px solid;
+          margin-right:14px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        span.title{
+          display:inline-block;
+          font-size:14px;
+          color:#999;
+          font-weight:bold;
+        }
+        &.finish_active{
+          span.spot{
+            width:16px;
+            height:16px;
+            border:none;
+            background:url('../../../public-resource/imgs/icons/verify_success_bg.png') no-repeat;
+          }
+          span.title{
+            color:#333;
+          }
+        }
+        &.active{
+          background:#238fea;
+          span.spot{
+            border:#fff 2px solid;
+          }
+          span.title{
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+  /*地址管理*/
+  .user_address_container{
+    width:100%;
+    background:#fff;
+    padding-top:80px;
+  }
+
+
+
+}
+.main_right_container{
+  float:right;
+  width:280px;
+  .car_plate_number{
+    position: relative;
+    width:100%;
+    height:214px;
+    background:#fff;
+    border:#e5e5e5 1px solid;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .pos{
+      width:100%;
+      .box_position;
+      .title{
+        font-size:14px;
+        color:#333;
+        margin-bottom:5px;
+      }
+      .plate_number{
+        font-size:30px;
+        color:#238fea;
+      }
+      .click_modify{
+        font-size:14px;
+        color:#238fea;
+        cursor: pointer;
+        margin-top:54px;
+      }
+    }
+  }
+  .car_plate_infor_box{
+    width:100%;
+    background:#fff;
+    text-align: center;
+    padding:32px 0;
+    border:#e5e5e5 1px solid;
+    border-top:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .tit_name{
+      width:100%;
+      font-size:14px;
+      color:#238fea;
+      line-height:32px;
+      font-weight:bold;
+      span{
+        display:inline-block;
+        width:90px;
+        color:#333;
+        text-align: left;
+        font-weight:normal;
+      }
+    }
+    .click_modify{
+      font-size:14px;
+      color:#238fea;
+      margin-top:34px;
+      cursor: pointer;
+    }
+  }
+  .car_tb_plan_box{
+    width:100%;
+    background:#fff;
+    border:#e5e5e5 1px solid;
+    border-top:none;
+    padding:38px 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .title{
+      font-size:14px;
+      color:#333;
+      margin-bottom:16px;
+    }
+    .text{
+      font-size:14px;
+      color:#238fea;
+      margin-bottom:16px;
+      font-weight:bold;
+    }
+    .click_modify{
+      display:block;
+      width:100%;
+      font-size:14px;
+      color:#238fea;
+      margin-top:55px;
+    }
+  }
+  .side_time_box{
+    width:100%;
+    height:107px;
+    border:#e5e5e5 1px solid;
+    margin-top:20px;
+    position: relative;
+    background:#fff url('../../../public-resource/imgs/car_tel_bg.jpg') no-repeat;
+    background-size:100% 100%;
+    .pos{
+      width:100%;
+      padding-left:20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .box_position;
+      .text{
+        font-size:14px;
+        color:#999;
+      }
+      .time{
+        .text;
+        margin-bottom:18px;
+      }
+      .tel{
+        .text;
+      }
+    }
+  }
+}
+.upload_multi_box{
+  width:100%;
+  overflow:hidden;
+  display:none;
+  .img_box{
+    float:left;
+    position: relative;
+    width:260px;
+    height:190px;
+    border-radius:6px;
+    overflow:hidden;
+    margin-bottom:38px;
+    margin-right:20px;
+    &:nth-child(2n){
+      margin-right:0;
+    }
+    .btm_box{
+      position: absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:36px;
+      line-height:36px;
+      background:rgba(0,0,0,0.5);
+      .delete_img_btn{
+        .box_right_position(12px);
+        width:22px;
+        height:22px;
+        background:url('../../../public-resource/imgs/icons/car_delete_bg.png') no-repeat;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <section class="page_header_container">用户登录</section>
+    <section class="form_container">
+        <form class="form" data-btn="sign_btn">
+            <div class="form_input">
+                <div class="input_box phone_box">
+                    <input type="text" placeholder="手机号" data-toggle="true" checkType="phone" data-error="请输入正确的手机号">
+                </div>
+                <div class="obtain_btn" data-time="10">获取验证码</div>
+            </div>
+            <div class="form_input">
+                <div class="input_box">
+                    <input type="text" placeholder="图片验证码" data-toggle="true" checkType="empty" data-error="请输入验证码">
+                    <div class="img_box"></div>
+                </div>
+            </div>
+            <div class="form_input">
+                <div class="input_box">
+                    <input type="text" placeholder="短信验证码" data-toggle="true" checkType="empty" data-error="请输入验证码">
+                </div>
+            </div>
+        </form>
+        <div class="btn_box">
+            <button class="sign_btn">登录</button>
+        </div>
+    </section>
+</main>
+</body>
+<script>
+    $(function(){
+      verify([{
+        el:'.form',
+        success:function(){
+          console.log('通过');
+        }
+      }]);
+      $('.obtain_btn').on('click',function(){
+        console.log('ssssssss')
+        downTime('.obtain_btn',()=>{
+          console.log('daodi')
+        });
+      })
+    })
+</script>
+</html>

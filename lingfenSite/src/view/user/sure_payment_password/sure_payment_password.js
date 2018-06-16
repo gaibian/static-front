@@ -1,0 +1,1 @@
+require('./sure_payment_password.less');

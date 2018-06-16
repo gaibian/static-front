@@ -1,0 +1,134 @@
+@import "../../../public-resource/less/init.less";
+@import "../../../public-resource/less/custom.less";
+body{
+  overflow-x: hidden;
+}
+.page{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  background:#fff;
+  padding:0.4rem 0.4rem 1rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page_header_container{
+  width:100%;
+  font-size:0.6rem;
+  color:#333;
+  font-weight:bold;
+}
+.user_base_container{
+  width:100%;
+  height:1.8rem;
+  margin-top:0.58rem;
+  background:#f8f8f8;
+  border-radius:0.08rem;
+  .flex_box;
+  padding:0.3rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .user_header_img{
+    width:1.2rem;
+    height:1.2rem;
+    font-size:0;
+    &.active{
+      overflow:hidden;
+      border-radius:50%;
+    }
+  }
+  .base_content_box{
+    width:4rem;
+    position: relative;
+    margin-left:0.2rem;
+    .pos{
+      width:100%;
+      .box_left_position(0);
+      .name{
+        font-size:0.28rem;
+        color:#333;
+        font-weight:bold;
+      }
+      .account{
+        font-size:0.22rem;
+        color:#999;
+        margin-top:0.2rem;
+      }
+    }
+  }
+}
+.user_list_container{
+  width:100%;
+  .list_ul{
+    width:100%;
+    .list_a{
+      display:block;
+      width:100%;
+      position: relative;
+      padding:0.58rem 0 0.58rem 1.07rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size:0.28rem;
+      color:#333;
+      border-bottom:#e5e5e5 1px solid;
+      .f_bg{
+        .box_left_position(0);
+        display:inline-block;
+        width:0.72rem;
+        height:0.72rem;
+        &.sm{
+          background:url('../../../public-resource/imgs/icons/user_sm_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.yhk{
+          background:url('../../../public-resource/imgs/icons/user_yhk_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.sj{
+          background:url('../../../public-resource/imgs/icons/user_sj_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.mm{
+          background:url('../../../public-resource/imgs/icons/user_mm_bg.png') no-repeat;
+          background-size:contain;
+        }
+        &.gr{
+          background:url('../../../public-resource/imgs/icons/user_gr_bg.png') no-repeat;
+          background-size:contain;
+        }
+      }
+      .right_content_box{
+        .box_right_position(0);
+        padding-right:0.26rem;
+        .val{
+          font-size:0.26rem;
+          color:#999;
+        }
+        .right_bg{
+          display:inline-block;
+          .box_right_position(0);
+          width:0.14rem;
+          height:0.24rem;
+          background:url('../../../public-resource/imgs/icons/right_bg.png') no-repeat;
+          background-size:contain;
+        }
+      }
+    }
+  }
+}
+.edit_btn{
+  display:block;
+  width:6rem;
+  height:0.9rem;
+  line-height:0.9rem;
+  background:#fcec62;
+  text-align: center;
+  border-radius:0.9rem;
+  font-size:0.28rem;
+  color:#333;
+  cursor: pointer;
+  margin:0.8rem auto 0.4rem;
+}

@@ -1,0 +1,113 @@
+/*自定义样式*/
+@font-color:#333; /*字体主色*/
+@font-fcolor:#999; /*字体副色*/
+@border-color:#e5e5e5;  /*边框颜色*/
+@main-color:#378efb; /*网站主色-蓝色*/
+.flex_box{
+  display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box; /* Firefox 17- */
+  display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex; /* Firefox 18+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+.input_placeholder(@size,@color){
+  input::-webkit-input-placeholder {
+    color:@color !important;
+    font-size:@size !important;
+  }
+  input:-moz-placeholder {
+    color:@color !important;
+    font-size:@size !important;
+  }
+  input::-moz-placeholder {
+    color:@color !important;
+    font-size:@size !important;
+  }
+  input:-ms-input-placeholder {
+    color:@color !important;
+    font-size:@size !important;
+  }
+}
+.textarea_placeholder(@size,@color){
+  textarea::-webkit-input-placeholder {
+    color:@color;
+    font-size:@size;
+  }
+  textarea:-moz-placeholder {
+    color:@color;
+    font-size:@size;
+  }
+  textarea::-moz-placeholder {
+    color:@color;
+    font-size:@size;
+  }
+  textarea:-ms-input-placeholder {
+    color:@color;
+    font-size:@size;
+  }
+}
+.text_hidden{  //单行字体超出宽度省略号...
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.text_d_hidden(@num){  //多行文字超出宽度省略号
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @num;
+  overflow: hidden;
+}
+.box_position{
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.box_left_position(@left){
+  position: absolute;
+  top:50%;
+  left:@left;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+.box_right_position(@right){
+  position: absolute;
+  top:50%;
+  right:@right;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+.mask_box{  //弹窗透明底层
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  opacity:1;
+  display:block;
+  -webkit-transition:opacity 0.5s;
+  -moz-transition:opacity 0.5s;
+  -ms-transition:opacity 0.5s;
+  -o-transition:opacity 0.5s;
+  transition:opacity 0.5s;
+  background:rgba(0,0,0,0.75);
+}
+.ts{  //css3 运动的时间
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}

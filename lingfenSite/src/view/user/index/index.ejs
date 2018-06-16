@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <section class="page_header_container">我的</section>
+    <section class="user_base_container">
+        <div class="user_header_img">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/icons/user_default_header_img.png') %>">
+        </div>
+        <div class="base_content_box">
+            <div class="pos">
+                <h1 class="name">用户12138</h1>
+                <p class="account">账户：183****5678</p>
+            </div>
+        </div>
+    </section>
+    <section class="user_list_container">
+        <div class="list_ul">
+            <a class="list_a">
+                <i class="f_bg sm"></i>
+                实名认证
+                <div class="right_content_box">
+                    <span class="val">未实名</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                <i class="f_bg yhk"></i>
+                银行卡
+                <div class="right_content_box">
+                    <span class="val">0张</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                <i class="f_bg sj"></i>
+                修改绑定手机
+                <div class="right_content_box">
+                    <span class="val">183****5678</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                <i class="f_bg mm"></i>
+                支付密码
+                <div class="right_content_box">
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                <i class="f_bg gr"></i>
+                完善个人资料
+                <div class="right_content_box">
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+    <a class="edit_btn">安全退出</a>
+    <%= footerNav({"active":'wd'}) %>
+</main>
+</body>
+</html>

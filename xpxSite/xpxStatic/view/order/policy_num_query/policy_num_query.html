@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>保单号查询</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="/xpxStatic/css/\order\policy_num_query\policy_num_query.css?51d6558ac02221d5e8f1" rel="stylesheet"></head>
+<body>
+<section class="page_container">
+    <section class="form_container">
+        <form class="form" data-btn="query_btn">
+            <div class="form_input">
+                <label class="input_title">身份证号</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入被保险人身份证号" data-toggle="true" checkType="card" value="330226198909266554">
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="input_title">手机号</label>
+                <div class="input_box">
+                    <input type="number" placeholder="填入投保人手机号" data-toggle="true" checkType="phone" value="15968939669">
+                </div>
+            </div>
+            <div class="form_input verify_input">
+                <label class="input_title">图形验证码</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入图片验证码">
+                    <div class="verify_img">
+                        <img width="100%" height="100%" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMqaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEEwRDVCNEMyNDBGMTFFODg3NzY4OEJCQUYyRDREMEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEEwRDVCNEQyNDBGMTFFODg3NzY4OEJCQUYyRDREMEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQTBENUI0QTI0MEYxMUU4ODc3Njg4QkJBRjJENEQwRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQTBENUI0QjI0MEYxMUU4ODc3Njg4QkJBRjJENEQwRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgID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">
+                    </div>
+                </div>
+            </div>
+            <div class="form_input verify_input">
+                <label class="input_title">短信验证码</label>
+                <div class="input_box">
+                    <input type="text" placeholder="填入短信验证码">
+                    <div class="send_dx_btn active">
+                        发送短信
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="btm_btn_box">
+        <button class="query_btn">查询</button>
+    </section>
+</section>
+<script type="text/javascript" src="/xpxStatic/js/\order\policy_num_query\policy_num_query.js?51d6558ac02221d5e8f1"></script></body>
+<script>
+  $(function(){
+    mp.verify([{
+      el:'.form',
+      success:function(){
+        console.log('前端验证通过')
+      }
+    }])
+  })
+</script>
+</html>

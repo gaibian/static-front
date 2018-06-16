@@ -1,0 +1,337 @@
+@import "../../../public-resource/less/custom.less";
+
+.page_top_apply_box{
+  width:1200px;
+  height:300px;
+  margin:40px auto;
+  background:#fff;
+  .left_img{
+    float:Left;
+    width:360px;
+    height:100%;
+    font-size:0;
+    -webkit-box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    -moz-box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+  }
+  .content_box{
+    position: relative;
+    float:left;
+    width:540px;
+    height:100%;
+    margin-left:68px;
+    padding:40px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .carousel_box{
+      position: relative;
+      float:left;
+      width:238px;
+      height:100%;
+      .img_box{
+        width:100%;
+        height:149px;
+        border-radius:6px;
+        overflow:hidden;
+        font-size:0;
+      }
+      .carousel_list{
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:44px;
+        .pos_box{
+          position: relative;
+          width:100%;
+          height:100%;
+          .hidden_box{
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            margin:0 auto;
+            .carousel_ul{
+              position: relative;
+              overflow: hidden;
+              li{
+                float:left;
+                width:70px;
+                height:100%;
+                font-size:0;
+                border-radius:4px;
+                margin-right:14px;
+                cursor: pointer;
+                overflow:hidden;
+              }
+              li:last-child{
+                margin-right:0;
+              }
+            }
+          }
+          .btn{
+            position: absolute;
+            top:50%;
+            margin-top:-11px;
+            width:22px;
+            height:22px;
+            cursor: pointer;
+          }
+          .prev_btn{
+            .btn;
+            left:-32px;
+            background:url('../../../public-resource/imgs/icons/card_carousel_prev_btn.png') no-repeat;
+          }
+          .next_btn{
+            .btn;
+            right:-32px;
+            background:url('../../../public-resource/imgs/icons/card_carousel_next_btn.png') no-repeat;
+          }
+        }
+      }
+    }
+    .title_box{
+      float:left;
+      width:248px;
+      height:100%;
+      margin-left:38px;
+      .title{
+        width:100%;
+        .text_hidden();
+        font-size:18px;
+        color:@color3;
+        font-weight:bold;
+        margin-bottom:24px;
+
+      }
+      .text_ul{
+        width:100%;
+        li{
+          font-size:14px;
+          color:@color9;
+          margin-bottom:8px;
+          .spot{
+            display:inline-block;
+            width:7px;
+            height:7px;
+            border-radius:50%;
+            background:#999;
+            margin-right:6px;
+          }
+        }
+      }
+    }
+
+  }
+  .apply_btn{
+    float:right;
+    display:block;
+    width:163px;
+    height:48px;
+    border-radius:3px;
+    background:#238fea;
+    line-height:48px;
+    text-align: center;
+    font-size:16px;
+    color:#fff;
+    margin-top:212px;
+    margin-right:68px;
+  }
+}
+
+/*产品说明*/
+.page_product_explain_box{
+  width:1200px;
+  margin:40px auto;
+  .explain_content{
+    width:100%;
+    overflow:hidden;
+  }
+  .hot_card_box{
+    float:right;
+    width:270px;
+    height:1187px;
+    background:#fff;
+    max-height:1187px;
+    .header_title{
+      width:100%;
+      height:53px;
+      line-height:53px;
+      text-align: center;
+      font-size:22px;
+      color:#fff;
+      font-weight:bold;
+      text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+      background:url('../../../public-resource/imgs/hot_card_header_bg.jpg') no-repeat;
+      background-size:cover;
+    }
+    .ul_img_box{
+      width:100%;
+      max-height:1134px;
+      overflow-y:auto;
+      padding-top:50px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .list_content{
+        width:188px;
+        margin:0 auto 60px auto;
+        .img_box{
+          width:100%;
+          height:117px;
+          font-size:0;
+          border-radius:4px;
+          overflow:hidden;
+        }
+        .title{
+          width:100%;
+          font-size:16px;
+          color:@color3;
+          margin-top:20px;
+          margin-bottom:8px;
+          font-weight:bold;
+          .text_hidden;
+        }
+        .note_text{
+          font-size:14px;
+          color:@color9;
+          .text_hidden;
+        }
+      }
+      .list_content:last-child{
+        margin-bottom:0;
+      }
+    }
+
+  }
+  .product_explain_box{
+    float:left;
+    width:910px;
+    min-height:1187px;
+    background:#fff;
+    .top_nav_box{
+      position: relative;
+      width:100%;
+      height:54px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-bottom:#e5e5e5 1px solid;
+      .nav_box{
+        position: absolute;
+        width:100%;
+        height:54px;
+        line-height:54px;
+        .tab_btn{
+          float:left;
+          width:154px;
+          height:54px;
+          text-align: center;
+          font-size:16px;
+          color:@color6;
+          border-bottom:#e5e5e5 1px solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          cursor: pointer;
+          border-top:#fff 2px solid;
+          border-right:#fff 1px solid;
+          border-left:#fff 1px solid;
+        }
+
+        .tab_btn.active{
+          border-bottom:#fff 1px solid;
+          border-top:#238fea 2px solid;
+          border-right:#e5e5e5 1px solid;
+          border-left:#e5e5e5 1px solid;
+          color:#238fea;
+        }
+        .tab_btn:first-child.active{
+          border-left:#fff 1px solid;
+        }
+      }
+    }
+    .content_box{
+      width:100%;
+      margin-top:50px;
+      padding-bottom:84px;
+      .tab_content{
+        position: relative;
+        width:100%;
+        padding:0 52px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size:0;
+        .spot{
+          display:inline-block;
+          width:8px;
+          height:8px;
+          border-radius:50%;
+          background:#0066cc;
+          margin-left:-3px;
+        }
+        .t_content_box{
+          width:100%;
+          border-left:#0066cc 2px solid;
+          padding-top:18px;
+          .blue_box{
+            display:inline;
+            position: relative;
+            left:-14px;
+            padding: 5px 15px 5px 22px;
+            height:27px;
+            line-height:27px;
+            font-size:16px;
+            line-height:normal;
+            color:#fff;
+            background:#238fea;
+            -webkit-box-shadow: 0px 5px 16px rgba(0,0,0,0.25);
+            -moz-box-shadow: 0px 5px 16px rgba(0,0,0,0.25);
+            box-shadow: 0px 5px 16px rgba(0,0,0,0.25);
+            .bg{
+              position: absolute;
+              left:0px;
+              top:-8px;
+              display:inline-block;
+              width:12px;
+              height:8px;
+              background:url('../../../public-resource/imgs/icons/card_details_title_bg.png') no-repeat;
+            }
+          }
+          .text_box{
+            width:100%;
+            padding:20px 0 20px 40px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            .cost_p{
+              margin-bottom:34px;
+            }
+            .discount{
+              margin-bottom:0;
+            }
+            p{
+              width:100%;
+              font-size:16px;
+              color:@color6;
+              line-height:28px;
+              margin-bottom:12px;
+              .spot{
+                display:inline-block;
+                width:7px;
+                height:7px;
+                border-radius:50%;
+                background:#666666;
+                margin-right:6px;
+              }
+            }
+            p:last-child{
+              margin-bottom:0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

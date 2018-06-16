@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>填写车险信息</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"car_insurance"}) %>
+<!--页面内容导航-->
+<div class="page_address_box">
+    <div class="address_content">
+        <a class="car_index">车险</a>><span>车险投保</span>
+    </div>
+</div>
+<!--主体内容-->
+<div class="page_main_container">
+    <div class="main_left_container">
+        <!--顶部导航-->
+        <div class="header_nav_box">
+            <ul class="nav_ul">
+                <li class="nav_li active">
+                    <span class="spot"></span>
+                    <span class="title">填写信息</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">选择方案</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">险企报价</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">核保审核</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">支付订单</span>
+                </li>
+            </ul>
+        </div>
+        <!--主要内容-->
+        <div class="main_content_box form" data-btn="next_btn">
+            <div class="main_form_box">
+                <h2 class="form_title">车主信息</h2>
+                <div class="form_right_content">
+                    <!--车主基本信息填写-->
+                    <div class="form_content">
+                        <div class="form_input">
+                            <label class="input_title">车主姓名</label>
+                            <div class="input_box">
+                                <input type="text" data-toggle="true" checkType="name" placeholder="请输入您的姓名">
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <label class="input_title">身份证号</label>
+                            <div class="input_box">
+                                <input type="text" data-toggle="true" checkType="card" placeholder="请输入身份证号">
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <label class="input_title">手机号码</label>
+                            <div class="input_box">
+                                <input type="text" data-toggle="true" checkType="phone" placeholder="请输入11位手机号码">
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <label class="input_title">短信验证</label>
+                            <div class="input_box verify_input">
+                                <input type="text" placeholder="请输入验证码">
+                                <button class="ver_code_btn">获取验证码</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--状态选择-->
+                    <div class="car_status_container">
+                        <div class="status_list_box">
+                            <p class="label_title">投保人为车主</p>
+                            <div class="status_box">
+                                <div class="status active" data-check="true">是</div>
+                                <div class="status" data-check="false">否</div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="status_list_box">
+                            <p class="label_title">被保险人为车主</p>
+                            <div class="status_box">
+                                <div class="status" data-check="true">是</div>
+                                <div class="status active" data-check="false">否</div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="status_list_box">
+                            <p class="label_title">权益索赔人为车主</p>
+                            <div class="status_box">
+                                <div class="status" data-check="true">是</div>
+                                <div class="status active" data-check="false">否</div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chear"></div>
+            </div>
+            <div class="main_form_box">
+                <h2 class="form_title">车辆信息</h2>
+                <div class="form_right_content">
+                    <p class="form_note_text">上传行驶证图像<span>(选填，系统将自动帮您识别行驶证上的的信息)</span></p>
+                    <div class="loading_img_container">
+                        <img class="houImg">
+                        <input type="file" class="choose" id="xsz_file" multiple>
+                        <div class="loading_img_box" id="xsz_upload">
+                            <span class="text">选择文件</span>
+                        </div>
+                    </div>
+                    <div class="img_show_box">
+                        <img width="100%" height="100%" style="border-radius:50%;overflow:hidden" src="">
+                        <div class="btm_box">
+                            <i class="delete_img_btn"></i>
+                        </div>
+                    </div>
+                    <div class="car_form_container">
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">车牌号码</label>
+                            <div class="input_box">
+                                <input type="text" data-toggle="true" checkType="car_card" value="浙JB9G96" />
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">车辆识别号码</label>
+                            <div class="input_box">
+                                <input type="text" placeholder="请输入车辆识别号码" />
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">发动机号</label>
+                            <div class="input_box">
+                                <input type="text" placeholder="请输入发动机号" />
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">注册日期</label>
+                            <div class="input_box time_choice" data-popup="boxshaw">
+                                <div class="time_click">
+                                    <input type="text" disabled="disabled" placeholder="请选择注册日期" />
+                                    <i class="time_icon_bg"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">品牌型号</label>
+                            <div class="input_box">
+                                <input type="text" value="吉利美日牌MR123456789102862" />
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">车辆选择</label>
+                            <div class="input_box">
+                                <input type="text" placeholder="请选择车型" />
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title problem_title">
+                                <span class="problem_bg"></span>是否过户车
+                                <div class="problem_popup">
+                                    如果您的车是二手车，并属以下情况之一<br>
+                                    的，请选择“是”：<br>
+                                    1.过户时间在上年购买保险到今天之间；<br>
+                                    2.您的行驶证发证日期在一年内。
+                                </div>
+                            </label>
+                            <div class="status_box">
+                                <div class="status active" data-check="true">是</div>
+                                <div class="status" data-check="false">否</div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="car_infor_box">
+                            <label class="car_infor_title">过户日期</label>
+                            <div class="input_box time_choice" data-popup="boxshaw">
+                                <div class="time_click">
+                                    <input type="text" disabled="disabled" placeholder="请选择过户日期" />
+                                    <i class="time_icon_bg"></i>
+                                </div>
+                                <!--<div class="boxshaw schedule-box"></div>-->
+                            </div>
+                        </div>
+                        <div class="chear"></div>
+                    </div>
+                    <a href="car_first_plan.html" class="next_btn">下一步</a>
+                </div>
+                <div class="chear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main_right_container">
+        <div class="car_plate_number">
+            <div class="pos">
+                <p class="title">车牌号</p>
+                <p class="plate_number">浙JB9G96</p>
+            </div>
+        </div>
+        <div class="side_time_box">
+            <div class="pos">
+                <p class="time">工作时间：09：00-17：30</p>
+                <p class="tel">客服热线：400-880-2068</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+<script>
+    $(function(){
+      window.picUpLoad({
+        btn:'#xsz_upload',
+        input:'#xsz_file',
+        url:'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+        callback(res){
+          console.log(res);
+          let imgShowBox = document.querySelector('.img_show_box');
+          imgShowBox.style.display = 'block';
+          let imgDom = imgShowBox.querySelector('img');
+          imgDom.src = res[0].msg;
+        },
+      });
+    })
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>银行卡</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <section class="top_base_container">
+        <a class="return_page_btn"></a>
+        <section class="page_header_container">
+            银行卡
+            <div class="location_box">
+                <i class="location_bg"></i>
+                <span class="val">添加银行卡</span>
+            </div>
+        </section>
+    </section>
+    <section class="bank_list_container">
+        <div class="bank_list_box">
+            <div class="title_box">
+                <div class="bank_logo">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/icons/zgyh_logo.png') %>">
+                </div>
+                <p class="bank_name">中国银行信用卡</p>
+            </div>
+            <div class="bank_num">****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+        </div>
+
+        <div class="bank_list_box ny">
+            <div class="title_box">
+                <div class="bank_logo">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/icons/nyyh_logo.png') %>">
+                </div>
+                <p class="bank_name">农业银行储蓄卡</p>
+            </div>
+            <div class="bank_num">****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+        </div>
+    </section>
+    <section class="relieve_bank_popup">
+        <div class="mask_box"></div>
+        <div class="content_box">
+            <h2 class="title">解除绑定</h2>
+            <p class="content">确定解除绑定该张银行卡?</p>
+            <div class="btn_box">
+                <button class="cancel_btn">取消</button>
+                <button class="sure_btn">确定</button>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

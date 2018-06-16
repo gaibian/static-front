@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信用卡详情页</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"credit_card"}) %>
+<!--@@include('../common/page_nav.html',{"credit_card":"active"})-->
+<!--顶部申请-->
+<div class="page_top_apply_box">
+    <div class="left_img">
+        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/card_details_top_img.jpg') %>">
+    </div>
+    <div class="content_box">
+        <div class="carousel_box js_carousel">
+            <div class="img_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/card_product_img.jpg') %>">
+            </div>
+            <div class="carousel_list carousel" data-num="3">
+                <div class="pos_box">
+                    <div class="hidden_box">
+                        <ul class="carousel_ul">
+                            <li>
+                                <img width="100%" height="100%" data-img="11" src="<%= require('../../../public-resource/imgs/card_small_img.jpg') %>">
+                            </li>
+                            <li>
+                                <img width="100%" height="100%" data-img="22" src="<%= require('../../../public-resource/imgs/card_small_img.jpg') %>">
+                            </li>
+                            <li>
+                                <img width="100%" height="100%" data-img="33" src="<%= require('../../../public-resource/imgs/card_small_img.jpg') %>">
+                            </li>
+                            <li>
+                                <img width="100%" height="100%" data-img="44" src="<%= require('../../../public-resource/imgs/card_small_img.jpg') %>">
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="prev_btn"></button>
+                    <button class="next_btn"></button>
+                </div>
+            </div>
+        </div>
+        <div class="title_box">
+            <h2 class="title">Visa冬奥会主体信用金卡</h2>
+            <ul class="text_ul">
+                <li><i class="spot"></i>年轻白领时尚必备</li>
+                <li><i class="spot"></i>1积分兑换星巴克咖啡</li>
+                <li><i class="spot"></i>支付宝、财付通消费计积分</li>
+            </ul>
+        </div>
+    </div>
+    <a class="apply_btn">立即申请</a>
+</div>
+<!--产品说明-->
+<div class="page_product_explain_box">
+    <div class="content_header_box">产品说明<span>slogon</span><a class="more_btn"></a></div>
+    <!--@@include('../common/content_header.html',{"title":"产品说明","text":"slogon","more":""})-->
+    <div class="explain_content">
+        <div class="product_explain_box tab_box">
+            <div class="top_nav_box">
+                <ul class="nav_box">
+                    <li class="tab_btn active">基本信息</li>
+                    <li class="tab_btn">专享特权</li>
+                    <li class="tab_btn">相关费用</li>
+                    <li class="tab_btn">优惠活动</li>
+                </ul>
+            </div>
+            <div class="content_box">
+                <div class="tab_content">
+                    <span class="top_spot spot"></span>
+                    <div class="t_content_box">
+                        <div class="blue_box"><i class="bg"></i>年费政策</div>
+                        <div class="text_box">
+                            <p>免首年年费，刷卡6次免次年年费</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>积分规则</div>
+                        <div class="text_box">
+                            <p>每刷卡消费1元人民币即可累计1个万里通积分（1美元可累计7个万里通积分）</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>积分有效期</div>
+                        <div class="text_box">
+                            <p>1.同一持卡人账户内信用卡(钻石卡除外)交易所得的积分，有效期合并管理。每三年为一个累计周
+                                期，每个累计周期的次月底，该周期内的积分将清零。自2014年1月16日新规则生效之日起，如
+                                客户有新卡核发，则新卡核发月为账户积分累计起始月（包括但不限于新申请核发、挂失补卡、毁
+                                补卡、到期续卡、申办附属卡、申办其他卡种卡片）。
+                            </p>
+                            <p>2.钻石卡积分永久有效。</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>取现</div>
+                        <div class="text_box">
+                            <p>最高取现比例50%，取现手续费为取现金额的2.5%，最低境内收费25元</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>最低还款比例</div>
+                        <div class="text_box">
+                            <p>本月账单的10%，部分用户可享受5%，逾期客户规则另记免息期： 最短18天，最长50天</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>申请条件</div>
+                        <div class="text_box">
+                            <p>工作或生活地区有网点 具有完全民事行为能力 无信用不良纪录 从事收入稳定且非禁止推广的行业
+                                \职业 中华人民共和国公民（除港澳台地区）年龄须为18^65周岁（含） 港澳台及外籍人士年龄须
+                                为25^65周岁</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>申请材料</div>
+                        <div class="text_box">
+                            <p>身份证复印件 工作证或已持有的信用卡复印件</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>短信通知</div>
+                        <div class="text_box">
+                            <p>平安银行信用卡短信通知</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>失卡保障</div>
+                        <div class="text_box">
+                            <p>平安银行信用卡可享受72小时挂失前失卡保障服务</p>
+                        </div>
+                    </div>
+                    <span class="bottom_spot spot"></span>
+                </div>
+                <div class="tab_content">
+                    <span class="top_spot spot"></span>
+                    <div class="t_content_box">
+                        <div class="blue_box"><i class="bg"></i>专项活动</div>
+                        <div class="text_box">
+                            <p><i class="spot"></i>在挂失前72小时内发生的、因信用卡丢失造成的刷卡消费损失，可获得高额度的双重保障；刷卡消费
+                                （仅凭签名确认）损失保障+信用卡被抢劫取现（凭交易密码）损失保障；保障金额上限可达固定信用
+                                额度，最高人民币5万元。</p>
+                            <p><i class="spot"></i>全国JCB专属商户特惠全国JCB专属商户特惠</p>
+                            <p><i class="spot"></i>72小时失卡保障72小时失卡保障</p>
+                        </div>
+                    </div>
+                    <span class="bottom_spot spot"></span>
+                </div>
+                <div class="tab_content">
+                    <span class="top_spot spot"></span>
+                    <div class="t_content_box">
+                        <div class="blue_box"><i class="bg"></i>相关费用</div>
+                        <div class="text_box">
+                            <p class="cost_p">取现： 最高取现比例50%，取现手续费为取现金额的2.5%，最低境内收费25元</p>
+                            <p class="cost_p">还款： 日息0.05%</p>
+                            <p class="cost_p">违约金： 还款低于最低还款金额的部分需缴5%的违约金，最低收费3美元或20元</p>
+                            <p class="cost_p">超限费： 超过信用额度的5%，最低收费10元,目前优惠期暂不收取，如优惠终止将按监管规定提前公告</p>
+                            <p class="cost_p">溢缴费： 存入金额超出欠款的部分，取出时收取0.5%</p>
+                            <p class="cost_p">挂失费： 磁条卡：60元，IC卡：75元</p>
+                            <p class="cost_p">补卡费： 磁条卡：15元，IC：30元</p>
+                            <p class="cost_p">分期费率： 平安银行信用卡业务服务销售价格目录：按协议或约定，当持卡人使用分期功能时收取。</p>
+                        </div>
+                    </div>
+                    <span class="bottom_spot spot"></span>
+                </div>
+                <div class="tab_content">
+                    <span class="top_spot spot"></span>
+                    <div class="t_content_box">
+                        <div class="blue_box"><i class="bg"></i>购物</div>
+                        <div class="text_box">
+                            <p class="discount">1元买单，单单有礼</p>
+                            <p class="discount">2017.09.01~2017.12.31 周一至周日，使用平安口袋银行APP消费，平安银行卡支付满10元立减9元，更有单
+                                单消费送流量，更多精彩活动等你来参加。</p>
+                        </div>
+                        <div class="blue_box"><i class="bg"></i>其他</div>
+                        <div class="text_box">
+                            <p class="discount">绑定平安银行卡支付免费领流量</p>
+                            <p class="discount">2017.09.01~2017.12.31 平安信用卡用户绑定支付宝、微信支付、京东、Apple pay等进行绑卡支付，即可在
+                                平安口袋银行领取手机流量，联通电信移动通用。同时享有家乐福、国美在线、网易考拉支付随机立减100元。</p>
+                        </div>
+                    </div>
+                    <span class="bottom_spot spot"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hot_card_box">
+            <div class="header_title">热门信用卡</div>
+            <ul class="ul_img_box">
+                <li class="list_content">
+                    <div class="img_box">
+                        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/card_product_img.jpg') %>">
+                    </div>
+                    <h2 class="title">Visa冬奥会主体信用金卡</h2>
+                    <p class="note_text">年轻白领时尚必备</p>
+                </li>
+                <li class="list_content">
+                    <div class="img_box">
+                        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/card_product_img.jpg') %>">
+                    </div>
+                    <h2 class="title">Visa冬奥会主体信用金卡</h2>
+                    <p class="note_text">年轻白领时尚必备</p>
+                </li>
+                <li class="list_content">
+                    <div class="img_box">
+                        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/card_product_img.jpg') %>">
+                    </div>
+                    <h2 class="title">Visa冬奥会主体信用金卡</h2>
+                    <p class="note_text">年轻白领时尚必备</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+<!--@@include('../common/footer_nav.html',{"style":"background:#fff"});-->
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>钱包首页</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <section class="page_header_container">钱包</section>
+    <section class="wallet_base_container">
+        <div class="base_content">
+            <p class="text">可用额度</p>
+            <div class="money_val">8,623.07</div>
+        </div>
+        <div class="base_content">
+            <p class="text">总额度</p>
+            <div class="money_val">10,000.00</div>
+        </div>
+    </section>
+    <section class="user_list_container">
+        <div class="list_ul">
+            <a class="list_a">
+                3月账单
+                <div class="right_content_box">
+                    <span class="val">299.00(未出单)</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                全部待还
+                <div class="right_content_box">
+                    <span class="val">3901.63</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                消费还款记录
+                <div class="right_content_box">
+                    <span class="val">183****5678</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+            <a class="list_a">
+                自动还款
+                <div class="right_content_box">
+                    <span class="val">未开启</span>
+                    <i class="right_bg"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+    <%= footerNav({'active':'qb'}) %>
+</main>
+</body>
+</html>

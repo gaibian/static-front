@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>保费支付</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="policy_list_container">
+        <a class="policy_list_box">
+            <div class="policy_img_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/zh_pay_img.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h1 class="title">招行支付:2018030311111111</h1>
+                <p class="pay_num">支付金额:<span>109</span>元</p>
+            </div>
+        </a>
+    </section>
+    <section class="btm_btn_box">
+        <a class="pay_btn">确认支付</a>
+    </section>
+</section>
+</body>
+</html>

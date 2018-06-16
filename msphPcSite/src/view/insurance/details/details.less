@@ -1,0 +1,358 @@
+@import "../../../public-resource/less/custom.less";
+
+.page_top_infor_box{
+  width:1200px;
+  height:300px;
+  padding:34px 0;
+  background:#fff;
+  margin:20px auto 0;
+  .left_img{
+    float:left;
+    width:359px;
+    height:300px;
+    font-size:0;
+  }
+  .middle_content{
+    float:left;
+    width:512px;
+    height:300px;
+    margin-left:46px;
+    .title_box{
+      width:100%;
+      overflow:hidden;
+      .title{
+        width:370px;
+        height:26px;
+        .text_hidden;
+        font-size:18px;
+        color:@color3;
+        display:table-cell;
+        vertical-align: bottom;
+        padding-right:30px;
+      }
+      .look_num{
+        height:26px;
+        font-size:12px;
+        color:@color9;
+        display:table-cell;
+        vertical-align: bottom;
+      }
+    }
+    .note_text{
+      width:440px;
+      .text_d_hidden(2);
+      font-size:14px;
+      color:@color9;
+      margin:12px 0;
+    }
+    .form_box{
+      width:100%;
+      .form_input{
+        width:100%;
+        height:28px;
+        overflow:hidden;
+        margin:10px 0;
+        label{
+          display:inline-block;
+          width:90px;
+          height:28px;
+          line-height:28px;
+          font-size:14px;
+          color:@color3;
+        }
+        .right_width{
+          display:inline-block;
+          width:400px;
+        }
+        .val{
+          display:inline-block;
+          .right_width;
+          height:28px;
+          line-height:28px;
+          font-size:14px;
+          color:@color3;
+        }
+        .input{
+          .right_width;
+          .input_box{
+            position: relative;
+            display:inline-block;
+            width:80px;
+            height:28px;
+            line-height:28px;
+            text-align: center;
+            border:#cccccc 1px solid;
+            border-radius:3px;
+            margin-right:18px;
+            font-size:14px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            input{
+              display:block;
+              width:100%;
+              text-align: center;
+              padding:4px 20px 4px 12px;
+              height:28px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              color:@color9;
+            }
+            em{
+              .box_right_position(4px);
+              font-size:14px;
+              color:@color9;
+            }
+          }
+          input:last-child{
+            margin-right:0;
+          }
+        }
+        .price_tit{
+          display:table-cell;
+          vertical-align: bottom;
+        }
+        .price{
+          .right_width;
+          display:table-cell;
+          font-size:24px;
+          height:28px;
+          color:@orange;
+          vertical-align: bottom;
+          span{
+            font-size:14px;
+            margin-left:4px;
+          }
+        }
+      }
+    }
+    .apply_btn{
+      width:163px;
+      height:48px;
+      line-height:48px;
+      text-align: center;
+      font-size:16px;
+      color:#fff;
+      background:@blue;
+      border-radius:4px;
+      margin-left:90px;
+      cursor: pointer;
+      margin-top:12px;
+    }
+  }
+  .right_content{
+    float:right;
+    width:188px;
+    height:300px;
+    padding:0 28px;
+    .img_box{
+      width:100%;
+      height:56px;
+      margin-bottom:12px;
+      font-size:0;
+    }
+    .company_brief{
+      height:188px;
+      max-height: 188px;
+      font-size:12px;
+      color:@color6;
+      line-height:21px;
+      margin-bottom:19px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .tel{
+      width:100%;
+      text-align: center;
+      font-size:14px;
+      color:@blue;
+    }
+  }
+}
+
+/*产品说明*/
+.page_product_explain{
+  width:1200px;
+  margin:40px auto 180px auto;
+  .explain_content{
+    width:100%;
+    background:#fff;
+    .nav_btn_box{
+      width:100%;
+      height:54px;
+      line-height:54px;
+      border-bottom:#e5e5e5 1px solid;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .tab_btn{
+        float:left;
+        width:158px;
+        height:54px;
+        text-align: center;
+        font-size:16px;
+        color:@color6;
+        cursor: pointer;
+        border-top:#fff 2px solid;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .tab_btn.active{
+        border-top:@blue 2px solid;
+        border-right:#e5e5e5 1px solid;
+        border-bottom:#fff 1px solid;
+        border-left:#e5e5e5 1px solid;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color:@blue;
+      }
+      .tab_btn:first-child.active{
+        border-left:none;
+      }
+    }
+    .explain_list_box{
+      width:100%;
+      height:870px;
+      max-height: 870px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin-top:40px;
+      display:none;
+      .explain_list{
+        width:100%;
+      }
+      .details{
+        width:100%;
+        padding:0 80px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .table{
+          width:100%;
+          font-size:0;
+          border-collapse: collapse;
+          border: none;
+          tr{
+            display:inline-block;
+            width:100%;
+            td{
+              display:inline-block;
+              width:20%;
+              height:54px;
+              text-align: center;
+              vertical-align: middle;
+              font-size:14px;
+              border:#e5e5e5 1px solid;
+              color:@color3;
+            }
+            td:first-child{
+              width:38%;
+              font-weight:bold;
+            }
+          }
+        }
+      }
+      .insure{
+        padding:0 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .list_val_box{
+          position: relative;
+          width:100%;
+          padding-left:30px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom:42px;
+          .num{
+            position: absolute;
+            top:0;
+            left:0;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            line-height:20px;
+            text-align: center;
+            font-size:14px;
+            color:@blue;
+            border:@blue 1px solid;
+            font-style: normal;
+          }
+          p{
+            font-size:16px;
+            color:@color6;
+          }
+        }
+      }
+      .financ{
+        padding:0 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .list_val_box{
+          position: relative;
+          width:100%;
+          padding-left:30px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom:42px;
+          .num{
+            position: absolute;
+            top:0;
+            left:0;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            line-height:20px;
+            text-align: center;
+            font-size:14px;
+            color:@blue;
+            border:@blue 1px solid;
+            font-style: normal;
+          }
+          p{
+            font-size:16px;
+            color:@color6;
+          }
+        }
+      }
+      .problem{
+        padding:0 50px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .problem_list{
+          width:100%;
+          padding:22px 27px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom:30px;
+          background:#f3f4f5;
+          border-radius:6px;
+          .ask{
+            font-size:16px;
+            color:@blue;
+            margin-bottom:35px;
+          }
+          .answer{
+            font-size:16px;
+            color:@color9;
+            line-height:30px;
+            span{
+              color:@orange;
+            }
+          }
+        }
+        .problem_list:last-child{
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+}

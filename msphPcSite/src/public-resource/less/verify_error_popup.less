@@ -1,0 +1,39 @@
+
+.form_input{
+  &.error_active{
+    border:#ff5501 1px solid !important;
+  }
+}
+.input_box{
+  &.error_active{
+    border:#ff5501 1px solid !important;
+  }
+}
+.passport_error_text{
+  position: absolute;
+  width:100%;
+  line-height:normal;
+  color:#ff5501;
+  font-size:0;
+  padding:6px 0 6px 22px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  i{
+    position: absolute;
+    left:0;
+    top:50%;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    display:inline-block;
+    width:16px;
+    height:16px;
+    background:url('../imgs/icons/verify_error_bg.png') no-repeat;
+  }
+  span{
+    font-size:12px;
+  }
+}

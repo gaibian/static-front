@@ -1,0 +1,100 @@
+<div class="address_content_box">
+    <div class="address_title_box">
+        <h1 class="title">提交地址信息</h1>
+        <p class="gl_address">管理配送地址</p>
+    </div>
+    <ul class="address_list_container">
+        <li class="address_list active default">
+            <div class="default_status">默认地址</div>
+            <h2 class="ads_tit">浙江<span>宁波</span>(杨修 收)</h2>
+            <p class="ads_text">鄞州区天童北路933号和邦大厦A座1701室 18312345678</p>
+            <div class="btn_box">
+                <button class="modify_btn">修改</button>
+                <button class="delete_btn">删除</button>
+            </div>
+        </li>
+        <li class="address_list">
+            <div class="default_status">设置默认</div>
+            <h2 class="ads_tit">浙江<span>宁波</span>(杨修 收)</h2>
+            <p class="ads_text">鄞州区天童北路933号和邦大厦A座1701室 18312345678</p>
+            <div class="btn_box">
+                <button class="modify_btn">修改</button>
+                <button class="delete_btn">删除</button>
+            </div>
+        </li>
+        <li class="address_list">
+            <div class="default_status">设置默认</div>
+            <h2 class="ads_tit">浙江<span>宁波</span>(杨修 收)</h2>
+            <p class="ads_text">鄞州区天童北路933号和邦大厦A座1701室 18312345678</p>
+            <div class="btn_box">
+                <button class="modify_btn">修改</button>
+                <button class="delete_btn">删除</button>
+            </div>
+        </li>
+        <li class="address_list">
+            <div class="default_status">设置默认</div>
+            <h2 class="ads_tit">浙江<span>宁波</span>(杨修 收)</h2>
+            <p class="ads_text">鄞州区天童北路933号和邦大厦A座1701室 18312345678</p>
+            <div class="btn_box">
+                <button class="modify_btn">修改</button>
+                <button class="delete_btn">删除</button>
+            </div>
+        </li>
+    </ul>
+    <button class="add_address_btn">添加新地址</button>
+</div>
+
+<!--新增地址的弹窗-->
+<div class="add_address_popup">
+    <div class="popup_content">
+        <div class="close_btn"></div>
+        <div class="content_container">
+            <div class="left_title">新增地址</div>
+            <div class="right_content popup_form" data-btn="address_popup_btn">
+                <div class="form_content">
+                    <div class="form_input">
+                        <label class="input_title">收件人姓名</label>
+                        <div class="input_box">
+                            <input id="popup_name" type="text" data-toggle="true" checkType="name" placeholder="请输入您的姓名">
+                        </div>
+                    </div>
+                    <div class="form_input">
+                        <label class="input_title">手机号码</label>
+                        <div class="input_box">
+                            <input id="popup_phone" type="text" data-toggle="true" checkType="phone" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_content">
+                    <div class="form_input address_form_box">
+                        <label class="input_title">所在地区</label>
+                        <div class="select_box address_picker">
+                            <div class="picker_click">
+                                <p class="address_val">请选择所在地区</p>
+                                <i class="down_bg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_content">
+                    <div class="form_input address_form_box last">
+                        <label class="input_title">详细地址</label>
+                        <div class="input_box">
+                            <input id="popup_address" type="text" data-toggle="true" checkType="Address">
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="default_choice_box">
+                    <input type="checkbox">
+                    <p class="text">设置为默认地址</p>
+                </div>
+                <!--按钮-->
+                <div class="address_popup_btn">保存</div>
+            </div>
+        </div>
+    </div>
+    <div class="mask_box"></div>
+</div>

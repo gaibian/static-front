@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>险种确认</title>
+    <%= layout %>
+    <link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+    <link href="http://cdn.msphcn.com/dist/bin/mui.picker.min.css" rel="stylesheet">
+    <script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+    <script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+</head>
+<body>
+<section class="page_container">
+    <section class="policy_content_box">
+        <div class="policy_title_box">
+            <i class="left_bg"></i>
+            保险套餐
+        </div>
+        <div class="text_res_val">小学生学生平安险(有社保)</div>
+    </section>
+    <section class="policy_content_box">
+        <div class="policy_title_box">
+            <i class="left_bg"></i>
+            保费金额
+        </div>
+        <div class="text_res_val">120元</div>
+    </section>
+    <section class="policy_content_box">
+        <div class="policy_title_box">
+            <i class="left_bg"></i>
+            保险起期
+        </div>
+        <div class="time_box">
+            <div class="time" id="time_picker">
+                <span class="time_val">请选择起保时间</span>
+                <i class="down_bg"></i>
+            </div>
+        </div>
+        <p class="text">本产品的保险期限为<span>12个月</span></p>
+        <p class="text_val">即<span>2018年9月1日</span>至<span>2019年8月31日</span></p>
+    </section>
+    <section class="policy_content_box padding">
+        <div class="policy_title_box">
+            <i class="left_bg"></i>
+            保障方案
+        </div>
+        <div class="img_box">
+            <img width="100%" src="<%= require('../../../public-resource/imgs/insurance_policy_img.jpg') %>">
+        </div>
+    </section>
+    <section class="details_introduce">
+        <div class="introduce_text">
+            <div class="text_pos">
+                <span>套餐详细介绍</span><i></i>
+            </div>
+        </div>
+    </section>
+    <section class="insurance_clause_box">
+        <h2 class="title">保险条款</h2>
+        <div class="a_box">
+            <a class="clause_a">《投保须知》</a>
+            <a class="clause_a">《平安学生意外伤害保险（B款）条款》</a>
+            <a class="clause_a">《平安附加学生疾病身故保险条款》</a>
+        </div>
+    </section>
+    <section class="btm_btn_box">
+        <button class="next_btn">下一步</button>
+    </section>
+</section>
+</body>
+<script>
+  $(function(){
+    var timePick = $('#time_picker');
+    var timeVal = timePick.find('.time_val');
+    timePick.on('click',function(){
+      var dtPicker = new mui.DtPicker({
+        "type": "date",
+        "beginYear": '2018',
+        "endYear": '2050'
+      });
+      dtPicker.show(function(e) {
+        var y = Number(e.y.value) + 1;
+        var m = e.m.value;
+        var d = e.d.value;
+        var val = e.value +'至' + y + '-' + m + '-' + d;
+        timeVal.attr('data-time',e.value);
+
+        var myDate = new Date();
+        var dataArr = e.value.split('-');
+        var numVal = '';
+        for(var i=0;i<dataArr.length;i++){
+          numVal = numVal + dataArr[i];
+        }
+        var newYear = myDate.getFullYear();
+        var newMonth =myDate.getMonth() + 1;
+        var newDate = myDate.getDate();
+
+        if(newMonth < 10){
+          newMonth = '0' + newMonth;
+        }
+        if(newDate < 10){
+          newDate = '0' + newDate;
+        }
+        var newVal = parseInt(newYear.toString() + newMonth.toString() + newDate.toString());
+
+        if(parseInt(numVal) < newVal){
+          console.log('起始时间不对')
+        }else{
+          console.log('起始时间对')
+        }
+
+
+
+
+      })
+    });
+  })
+</script>
+</html>

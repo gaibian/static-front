@@ -1,0 +1,54 @@
+
+<div class="page_nav_box">
+    <div class="nav_box">
+        <div class="img_box">
+            <img width="100%" height="100%" src="<%= require('../../imgs/company_logo.jpg') %>">
+        </div>
+        <div class="account_btn hover_box">
+            <div class="account hover_btn">
+                <i class="preson_bg"></i>我的账户<i class="up_down_bg"></i>
+            </div>
+            <div class="account_popup hover_popup">
+                <div class="no_login">
+                    <div class="pad_box">
+                        <div class="header_box">
+                            <div class="img_box">
+                                <img width="100%" height="100%" src="<%= require('../../imgs/icons/user_init_header_img.png') %>">
+                            </div>
+                            <div class="name_right_box">
+                                <div class="name_box">
+                                    <p class="name">尊敬的用户</p>
+                                    <p class="note_text">欢迎来到民商普惠</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--没用登录-->
+                    <p class="no_login_box">
+                        请您先<a>登录</a> <a>注册</a>
+                    </p>
+                    <!--已经登录-->
+                    <ul class="nav_list_box">
+                        <li>个人中心</li>
+                        <li>我的车险</li>
+                        <li>活期理财</li>
+                        <li>定期理财</li>
+                        <li>我的贷款</li>
+                        <li>保险产品</li>
+                        <li>账户卡包</li>
+                        <li>个人设置</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav_content">
+            <a href="../index/index.html" class="nav_tit @@if (context.index==='active' ) {active}">首页</a>
+            <a href="../car_insurance/index.html" class="nav_tit @@if (context.car_Insurance==='active' ) {active}">车险</a>
+            <a href="../insurance/leading.html" class="nav_tit @@if (context.Insurance==='active' ) {active}">保险</a>
+            <a href="../credit_card/index.html" class="nav_tit @@if (context.credit_card==='active' ) {active}">信用卡</a>
+            <a href="../loan/index.html" class="nav_tit @@if (context.loan==='active' ) {active}">贷款</a>
+            <a href="../financ/live_financ.html" class="nav_tit @@if (context.live_financial==='active' ) {active}">活期理财</a>
+            <a href="../financ/regular_financ.html" class="nav_tit @@if (context.regular_financial==='active' ) {active}">定期理财</a>
+        </div>
+    </div>
+</div>

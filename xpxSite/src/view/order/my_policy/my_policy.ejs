@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的保单</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="policy_list_container">
+        <article class="policy_list_box">
+            <header class="header_box">
+                <p class="name">周某某</p>
+                <p class="status">生效中</p>
+            </header>
+            <div class="policy_content_box">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/my_policy_logo1.jpg') %>">
+                </div>
+                <div class="right_content_box">
+                    <h2 class="title">太平洋</h2>
+                    <div class="policy_plate_box">
+                        保单号：PP0000000011111
+                    </div>
+                    <p class="time_box">保险期限：2018年9月1日至2019年8月31日</p>
+                </div>
+            </div>
+            <div class="btm_btn_box">
+                <a class="btn">出险报案</a>
+                <a class="btn">查看订单</a>
+            </div>
+        </article>
+        <article class="policy_list_box">
+            <header class="header_box">
+                <p class="name">周某某</p>
+                <p class="status">已失效</p>
+            </header>
+            <div class="policy_content_box">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/my_policy_logo2.jpg') %>">
+                </div>
+                <div class="right_content_box">
+                    <h2 class="title">太平洋</h2>
+                    <div class="policy_plate_box">
+                        保单号：PP0000000011111
+                    </div>
+                    <p class="time_box">保险期限：2018年9月1日至2019年8月31日</p>
+                </div>
+            </div>
+            <div class="btm_btn_box">
+                <a class="btn">查看订单</a>
+                <a class="btn">一键续保</a>
+            </div>
+        </article>
+    </section>
+</section>
+</body>
+</html>

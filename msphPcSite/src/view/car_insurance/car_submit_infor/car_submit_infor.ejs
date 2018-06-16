@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>核保审核-提交信息</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"car_insurance"}) %>
+<!--页面内容导航-->
+<div class="page_address_box">
+    <div class="address_content">
+        <a class="car_index">车险</a>><span>车险投保</span>
+    </div>
+</div>
+<!--主体内容-->
+<div class="page_main_container">
+    <div class="main_left_container">
+        <!--地址管理页面-->
+        <div class="header_nav_box">
+            <ul class="nav_ul">
+                <li class="nav_li finish_active">
+                    <span class="spot"></span>
+                    <span class="title">填写信息</span>
+                </li>
+                <li class="nav_li finish_active">
+                    <span class="spot"></span>
+                    <span class="title">选择方案</span>
+                </li>
+                <li class="nav_li finish_active">
+                    <span class="spot"></span>
+                    <span class="title">险企报价</span>
+                </li>
+                <li class="nav_li active">
+                    <span class="spot"></span>
+                    <span class="title">核保审核-提交信息</span>
+                </li>
+                <li class="nav_li">
+                    <span class="spot"></span>
+                    <span class="title">支付订单</span>
+                </li>
+            </ul>
+        </div>
+        <div class="user_address_container">
+            <%= addressManage() %>
+        </div>
+        <!--提交信息-->
+        <%= carSubmit() %>
+        <!--核保审核-核保退回-->
+        <%= carError() %>
+        <!--核保审核-正在核保-->
+        <%= carSubmitSuccess() %>
+        <!--核保审核-核保通过-->
+        <%= carSuccess() %>
+    </div>
+    <div class="main_right_container">
+        <div class="car_plate_number">
+            <div class="pos">
+                <p class="title">车牌号</p>
+                <p class="plate_number">浙JB9G96</p>
+                <button class="click_modify">点击修改</button>
+            </div>
+        </div>
+        <div class="car_plate_infor_box">
+            <div class="pos">
+                <p class="tit_name"><span>车主</span>杨修</p>
+                <p class="tit_name"><span>投保人</span>杨修</p>
+                <p class="tit_name"><span>被保险人</span>杨修</p>
+                <p class="tit_name"><span>权益索赔人</span>杨修</p>
+                <button class="click_modify">点击修改</button>
+            </div>
+        </div>
+        <div class="car_tb_plan_box">
+            <h3 class="title">投保方案</h3>
+            <p class="text">交强险(2018-02-02)</p>
+            <p class="text">车船使用税</p>
+            <p class="text">商业险(2018-02-02)</p>
+            <p class="text">动车损失保险</p>
+            <p class="text">第三者责任险(不计免赔)</p>
+            <p class="text">驾驶员责任险(不计免赔)</p>
+            <p class="text">乘客责任险</p>
+            <button class="click_modify">点击修改</button>
+        </div>
+        <div class="side_time_box">
+            <div class="pos">
+                <p class="time">工作时间：09：00-17：30</p>
+                <p class="tel">客服热线：400-880-2068</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background: "background:#fff"}) %>
+</body>
+<script>
+  $(function () {
+    picUpLoad({
+      btn: '.xsz_upload1',
+      input: '.xsz_file1',
+      url: 'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+      callback(res) {
+        var imgShowBox = document.querySelector('.img_show_box1');
+        imgShowBox.style.display = 'block';
+        var imgDom = imgShowBox.querySelector('img');
+        imgDom.src = res[0].msg;
+      },
+    });
+
+    picUpLoad({
+      btn: '.xsz_upload2',
+      input: '.xsz_file2',
+      url: 'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+      uploadCount: 5,
+      callback(res) {
+        var uploadImgBox = $('.upload_multi_box');
+        uploadImgBox.find('.img_box').each(function (index) {
+          var $img = $(this);
+          $img.find('img').attr('src', res[index].msg);
+        });
+        uploadImgBox.show();
+      }
+    })
+  })
+</script>
+</html>

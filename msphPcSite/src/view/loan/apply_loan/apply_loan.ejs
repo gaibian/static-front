@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贷款申请</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"loan"}) %>
+<div class="page_main_content_box">
+    <div class="header_title_box">
+        <img class="lazy" width="100%" height="100%" data-src="<%= require('../../../public-resource/imgs/apply_loan_header_img.jpg') %>">
+    </div>
+    <div class="content_box">
+        <div class="label_box">
+            <h2 class="title">产品信息</h2>
+            <ul class="label_ul">
+                <li class="label_li">产品名称：车抵贷</li>
+                <li class="label_li">一般月费率：8‰</li>
+                <li class="label_li">产品描述：非营运车辆一次抵押、二次抵押均可办理，无需押车押证</li>
+                <li class="label_li">产品描述：1.浙江省内牌照   2.车龄8年以内</li>
+            </ul>
+        </div>
+        <div class="label_box">
+            <h2 class="title1">申请信息</h2>
+            <form class="form" data-btn="apply_btn">
+                <div class="form_input">
+                    <label class="input_title">姓名：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="name">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">身份证号：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="card">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">手机号：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="phone">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">预贷款金额：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="empty">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">车牌号：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="car_card">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">具体车型：</label>
+                    <div class="input_box">
+                        <input type="text" placeholder="" data-toggle="true" checkType="empty">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="note_text">注：请按实际情况填写数据</p>
+            </form>
+            <a class="apply_btn">立即申请</a>
+        </div>
+    </div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+<script>
+    $(function(){
+      verfiy.init([{
+        el:'.form',
+        success:function(){
+
+        }
+      }])
+    })
+</script>
+</html>

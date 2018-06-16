@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>出险报案</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="/xpxStatic/css/\order\other_report\other_report.css?51d6558ac02221d5e8f1" rel="stylesheet"></head>
+<body>
+<section class="page_container form" data-btn="next_btn">
+    <section class="report_content_box" >
+        <div class="title"><i class="left_bg"></i>保单号或身份证号只需填入一项即可</div>
+        <div class="form_input">
+            <label class="label_title">保单号</label>
+            <div class="input_box">
+                <input type="text" placeholder="填入保单号" data-toggle="true" checkType="policy">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="label_title">身份证号</label>
+            <div class="input_box">
+                <input type="text" placeholder="填入被保险人身份证号" data-toggle="true" checkType="card">
+            </div>
+        </div>
+    </section>
+    <section class="report_content_box padding_box">
+        <div class="title"><i class="left_bg"></i>报案描述</div>
+        <textarea class="text_area" placeholder="多行输入" data-toggle="true" checkType="empty" data-error="请输入报案描述信息"></textarea>
+    </section>
+    <section class="report_content_box padding">
+        <div class="form_input">
+            <label class="label_title">报案人手机号</label>
+            <div class="input_box">
+                <input type="text" placeholder="填入报案人手机号(选填)" data-toggle="true" checkType="phone" data-error="请输入正确的报案人手机号">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="label_title">报案人姓名</label>
+            <div class="input_box">
+                <input type="text" placeholder="填入报案人姓名(选填)" data-toggle="true" checkType="name" data-error="请输入正确的报案人姓名">
+            </div>
+        </div>
+        <div class="form_input">
+            <label class="label_title">报案现场拍照</label>
+            <div class="uploading">
+                <img width="100%" height="100%" class="xsz_img">
+                <input type="file" class="xsz_file" value="">
+                <input type="hidden" name="image_info[]" class="value_img">
+                <a href="javascript:" class="xsz_upload" data-id="#sfz_img"></a>
+            </div>
+        </div>
+    </section>
+    <section class="btm_btn_box">
+        <button class="next_btn">提交报案</button>
+    </section>
+</section>
+<script type="text/javascript" src="/xpxStatic/js/\order\other_report\other_report.js?51d6558ac02221d5e8f1"></script></body>
+<script src="../../bin/mui.min.js"></script>
+<script src="../../bin/exif.js"></script>
+<script src="../../bin/mui.picupload.js"></script>
+<script>
+  $(function(){
+    var uploadIng = $('.uploading');
+    uploadIng.each(function(){
+      var $this = $(this);
+      var xsz_file = $this.find('.xsz_file');
+      var xsz_img = $this.find('.xsz_img');
+      $this.find('.xsz_upload').on('click',function(){
+        xsz_file.trigger("click");
+      });
+      xsz_file.on("change",function(){
+        "use strict";
+        console.log('正在上传');
+        var UPLOAD_MODULE_COROLLER_METHOD = '{:U("upload")}';
+        var insure_img_upload = new mui.PicUpload({"MODULE_COROLLER_METHOD":UPLOAD_MODULE_COROLLER_METHOD, "FILE_ID":xsz_file, "IMG_ID":xsz_img,
+          'callback':function(data){
+            console.log('上传完毕');
+            //loadClose();
+            if(data.status){
+              xsz_file.next("input").val(data.msg);
+              //xsz_upload.removeClass('cl');
+            }
+          }
+        });
+      });
+    });
+  })
+</script>
+</html>

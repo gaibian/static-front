@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加影像</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <a class="return_page_btn"></a>
+    <section class="page_header_container">添加影像</section>
+    <section class="remarks_text">
+        <i class="remark_bg"></i>
+        核保退回修改,胡婷婷
+    </section>
+    <section class="form" data-btn="upload_btn">
+        <div class="input_box">
+            <input type="text" placeholder="备注信息" data-toggle="true" checkType="empty" data-error="请输入备注信息">
+        </div>
+    </section>
+    <section class="add_upload_photo_container">
+        <div class="file_box">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/add_images_img.jpg') %>">
+            <input type="file">
+        </div>
+        <div class="file_box">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/add_images_img1.jpg') %>">
+            <input type="file">
+        </div>
+    </section>
+    <button class="upload_btn">确认上传</button>
+</main>
+</body>
+<script>
+    $(function(){
+      verify([{
+        el:'.form',
+        success:function(){
+          console.log('tongg');
+        }
+      }]);
+      //图片的上传
+      var addFileBox = $('.add_upload_photo_container');
+      var pic = function(){
+        picUpLoad({
+          el:'.file_box',
+          url:'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+          callback(res,self,index){
+            console.log(res);
+            var img = self.querySelector('img');
+            img.src = res[0].msg;
+            var fileBox = $('.file_box');
+            if(index === fileBox.length - 1){
+              //是最后一个
+              var addDom = '<div class="file_box">\n' +
+                  '            <img width="100%" height="100%" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMqaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzMyRjkyNjI0RjZFMTFFODgxNDlCQkUzRUM0NDc2ODAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzMyRjkyNjM0RjZFMTFFODgxNDlCQkUzRUM0NDc2ODAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozMzJGOTI2MDRGNkUxMUU4ODE0OUJCRTNFQzQ0NzY4MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozMzJGOTI2MTRGNkUxMUU4ODE0OUJCRTNFQzQ0NzY4MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgID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">\n' +
+                  '            <input type="file">\n' +
+                  '        </div>';
+              addFileBox.append(addDom);
+              pic();
+            }
+          },
+        })
+      }
+      pic();
+    })
+</script>
+</html>

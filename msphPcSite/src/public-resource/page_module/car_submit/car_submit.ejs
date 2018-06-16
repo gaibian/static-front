@@ -1,0 +1,155 @@
+<!--核保审核-提交信息-->
+<div class="main_content_box form" data-btn="next_btn">
+    <div class="main_form_box add_address_box">
+        <h2 class="form_title">提交地址信息</h2>
+        <div class="form_right_content">
+            <!--车主基本信息填写-->
+            <div class="form_content">
+                <div class="form_input">
+                    <label class="input_title">车主姓名</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="name" placeholder="请输入您的姓名">
+                    </div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">手机号码</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="phone" placeholder="请输入手机号码">
+                    </div>
+                </div>
+            </div>
+            <!--所在地区-->
+            <div class="form_content">
+                <div class="form_input address_form_box">
+                    <label class="input_title">所在地区</label>
+                    <div class="select_box address_picker">
+                        <div class="picker_click">
+                            <p class="address_val">请选择所在地区</p>
+                            <i class="down_bg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--详细地址-->
+            <div class="form_content">
+                <div class="form_input address_box">
+                    <label class="input_title">详细地址</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="Address" placeholder="请输入详细地址">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chear"></div>
+    </div>
+    <div class="main_form_box">
+        <h2 class="form_title">提交文字信息</h2>
+        <div class="form_right_content">
+            <!--车主基本信息填写-->
+            <div class="form_content">
+                <div class="form_input">
+                    <label class="input_title">被保人身份证号</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="card" placeholder="请输入身份证号">
+                    </div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">权益索赔人姓名</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="name" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="car_infor_box">
+                    <label class="car_infor_title">投保人身份证有效日期</label>
+                    <div class="input_box time_choice" data-popup="boxshaw">
+                        <div class="time_click">
+                            <input type="text" disabled="disabled" placeholder="请选择有效日期"/>
+                            <i class="time_icon_bg"></i>
+                        </div>
+                        <!--<div class="boxshaw schedule-box"></div>-->
+                    </div>
+                </div>
+                <div class="car_infor_box">
+                    <label class="car_infor_title">被保人身份证有效日期</label>
+                    <div class="input_box time_choice" data-popup="boxshaw">
+                        <div class="time_click">
+                            <input type="text" disabled="disabled" placeholder="请选择有效日期"/>
+                            <i class="time_icon_bg"></i>
+                        </div>
+                        <!--<div class="boxshaw schedule-box"></div>-->
+                    </div>
+                </div>
+                <div class="form_input">
+                    <label class="input_title">被保人邮箱</label>
+                    <div class="input_box">
+                        <input type="text" data-toggle="true" checkType="Email" placeholder="请输入邮箱">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <div class="chear"></div>
+    </div>
+    <div class="main_form_box">
+        <h2 class="form_title">车辆信息</h2>
+        <div class="form_right_content">
+            <p class="form_note_text">核保通过需提供以下材料<span>：1.行驶证正页照； 2.行驶证副页照； 3.被保人身份证正面；4.被保人身份证反面</span>共4张照片。
+            </p>
+            <div class="loading_img_container">
+                <input type="file" class="xsz_file xsz_file1">
+                <div class="loading_img_box xsz_upload xsz_upload1">
+                    <span class="text">选择文件</span>
+                </div>
+            </div>
+            <div class="img_show_box img_show_box1">
+                <img width="100%" height="100%" src="">
+                <div class="btm_box">
+                    <i class="delete_img_btn"></i>
+                </div>
+            </div>
+            <p class="form_note_text">过户车需额外上传带有当日验车照的车辆图像，包括车辆<span>右前侧、左前侧、左右侧、右后侧、带有车辆识别码</span>的共5张照片。<em>(选填)</em>
+            </p>
+            <div class="loading_img_container">
+                <input type="file" class="xsz_file xsz_file2" multiple>
+                <div class="loading_img_box xsz_upload xsz_upload2">
+                    <span class="text">选择文件</span>
+                </div>
+            </div>
+            <div class="upload_multi_box">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="">
+                    <div class="btm_box">
+                        <i class="delete_img_btn"></i>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <img width="100%" height="100%" src="">
+                    <div class="btm_box">
+                        <i class="delete_img_btn"></i>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <img width="100%" height="100%" src="">
+                    <div class="btm_box">
+                        <i class="delete_img_btn"></i>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <img width="100%" height="100%" src="">
+                    <div class="btm_box">
+                        <i class="delete_img_btn"></i>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <img width="100%" height="100%" src="">
+                    <div class="btm_box">
+                        <i class="delete_img_btn"></i>
+                    </div>
+                </div>
+            </div>
+            <a href="car_first_plan.html" class="next_btn">确认信息</a>
+        </div>
+        <div class="chear"></div>
+    </div>
+</div>

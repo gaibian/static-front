@@ -1,0 +1,70 @@
+body{
+  line-height:normal;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+}
+/*长时间按住页面出现闪退*/
+element{
+  -webkit-touch-callout: none;
+}
+/*触摸元素时出现半透明灰色遮罩*/
+element{
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+/*Retina屏的1px边框*/
+element{
+  border-width:thin;
+}
+em{
+  font-style:normal;
+}
+ul li{
+  list-style:none
+}
+h1,h2,h3,h4,h5{
+  font-weight:normal;
+}
+input,button,textarea{
+  background:rgba(255,255,255,0);
+  border:none;
+  outline: none;
+}
+select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+img{
+  border:0;
+  outline: none;
+}
+img[src=""],img:not([src]){
+  opacity:0;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style:normal;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@import "define_less";

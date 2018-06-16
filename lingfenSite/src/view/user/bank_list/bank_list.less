@@ -1,0 +1,166 @@
+@import "../../../public-resource/less/init.less";
+@import "../../../public-resource/less/custom.less";
+body{
+  overflow-x: hidden;
+  background:#fff;
+}
+.page{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom:1rem;
+}
+.top_base_container{
+  width:100%;
+  padding:0.4rem 0;
+  margin-bottom:0.2rem;
+}
+.return_page_btn{
+  display:block;
+  width:0.4rem;
+  height:0.38rem;
+  background:url('../../../public-resource/imgs/icons/return_page_btn.png') no-repeat;
+  background-size:contain;
+  margin-bottom:0.45rem;
+  margin-left:0.4rem;
+}
+.page_header_container{
+  position:relative;
+  width:100%;
+  font-size:0.6rem;
+  color:#333;
+  font-weight:bold;
+  background:#fff;
+  padding-left:0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .location_box{
+    .box_right_position(0);
+    width:2.1rem;
+    height:0.6rem;
+    background:#fcec62;
+    border-top-left-radius:0.6rem;
+    border-bottom-left-radius:0.6rem;
+    .val{
+      .box_right_position(0.4rem);
+      font-size:0.24rem;
+      color:#333;
+    }
+    .location_bg{
+      .box_left_position(0.2rem);
+      display:inline-block;
+      width:0.23rem;
+      height:0.23rem;
+      background:url('../../../public-resource/imgs/icons/add_bg.png') no-repeat;
+      background-size:contain;
+    }
+  }
+}
+.bank_list_container{
+  width:100%;
+  padding:0 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .bank_list_box{
+    width:100%;
+    background:#ee3c2f;
+    border-radius:0.06rem;
+    height:2.3rem;
+    padding:0.2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:0.2rem;
+    &:last-child{
+      margin-bottom:0;
+    }
+    &.ny{
+      background:#636ae1;
+    }
+    .title_box{
+      width:100%;
+      position: relative;
+      .flex_box;
+      align-items: center;
+      .bank_logo{
+        width:0.4rem;
+        height:0.4rem;
+        font-size:0;
+        margin-right:0.2rem;
+      }
+      .bank_name{
+        font-size:0.28rem;
+        color:#fff;
+      }
+
+    }
+    .bank_num{
+      width:100%;
+      font-size:0.44rem;
+      color:#fff;
+      margin-top:0.64rem;
+      text-align: center;
+      span{
+        font-size:0.48rem;
+      }
+    }
+  }
+}
+.relieve_bank_popup{
+  width:7.5rem;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  display:none;
+  .mask_box{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1;
+  }
+  .content_box{
+    .box_position;
+    width:6.5rem;
+    height:2.88rem;
+    background:#fff;
+    border-radius:0.06rem;
+    z-index:2;
+    padding:0.45rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .title{
+      width:100%;
+      font-size:0.36rem;
+      color:#4a4a4a;
+      font-weight:bold;
+    }
+    .content{
+      width:100%;
+      font-size:0.28rem;
+      color:#4a4a4a;
+      padding:0.4rem 0;
+    }
+    .btn_box{
+      width:100%;
+      .flex_box;
+      justify-content: flex-end;
+      button{
+        display:block;
+        font-size:0.28rem;
+        color:#3a4280;
+        margin-left:0.4rem;
+      }
+    }
+  }
+}

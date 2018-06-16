@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择保险公司</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="company_list_box">
+        <article class="company_list">
+            <div class="company_img">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/tpy_company_img.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h2 class="title">中国太平洋财产保险股份有限公司</h2>
+                <div class="company_text_box">
+                    <div class="money_box">保费:<span>109</span>元</div>
+                    <div class="status_box">
+                        <div class="status_bg"></div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </article>
+        <article class="company_list">
+            <div class="company_img">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/zgpa_company_img.jpg') %>">
+            </div>
+            <div class="right_content_box">
+                <h2 class="title">中国太平洋财产保险股份有限公司</h2>
+                <div class="company_text_box">
+                    <div class="money_box">保费:<span>109</span>元</div>
+                    <div class="status_box">
+                        <div class="status_bg"></div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="btm_btn_box">
+        <button class="next_btn">下一步</button>
+    </section>
+</section>
+</body>
+</html>

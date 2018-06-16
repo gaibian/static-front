@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>保险条款</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+    <script src="../../bin/modernizr.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../bin/flashcanvas.js"></script>
+    <![endif]-->
+<link href="/xpxStatic/css/\order\agree_clause\agree_clause.css?51d6558ac02221d5e8f1" rel="stylesheet"></head>
+<body>
+<section class="page_container">
+    <section class="clause_content_box">
+        <h2 class="title">总则</h2>
+        <article class="text_content_box">
+            <p>第一条  本保险合同由保险条款、投保单、保险单、保险凭证以及批单等组成。凡涉及本保险合同的约定，均应采用书面形式。</p>
+            <p>第二条  被保险人应为在依法成立的各类学校或幼儿园具有正式学籍并在学，身体健康的大、中、小学学生及幼儿。被保险人的年龄最高不超过六十五周岁。</p>
+            <p>第三条  投保人应为具有完全民事行为能力的被保险人本人、对被保险人有保险利益的其他人。被保险人不具有完全民事行为能力的，必须由其监护人作为投保人，或在取得监护人同意参加本保险合同的前提下，由学校或幼儿园等作为投保人统一组织投保。</p>
+            <p>第四条  本保险合同的受益人包括：</p>
+        </article>
+    </section>
+    <section class="btm_btn_box">
+        <button class="agree_btn">我已阅读并且同意条款</button>
+    </section>
+    <!--签字弹窗-->
+    <section class="sign_popup">
+        <div class="mask_box"></div>
+        <div class="popup_content">
+            <div class="sign_header_title_container">
+                <div class="reset_btn"></div>
+                <h2 class="sign_title">请在下方区域内签上投保人姓名</h2>
+                <div class="close_btn"></div>
+            </div>
+            <div id="signature" class="sign_img_content_box"></div>
+            <div class="sign_btn_box">
+                <button class="sign_next_btn">确认签名,下一步</button>
+            </div>
+        </div>
+    </section>
+</section>
+<script type="text/javascript" src="/xpxStatic/js/\order\agree_clause\agree_clause.js?51d6558ac02221d5e8f1"></script></body>
+<script src="../../bin/jSignature.min.noconflict.js"></script>
+
+<script>
+  (function($){
+    $(document).ready(function(){
+      var $sigdiv = $("#signature").jSignature();
+      var export_plugins = $sigdiv.jSignature('listPlugins','export');
+      console.log(export_plugins);
+      var resetBtn = $('.reset_btn');
+      var signNextBtn = $('.sign_next_btn');
+      resetBtn.on('click',function(){
+        $sigdiv.jSignature("reset");
+      });
+      /*点击下一步*/
+      signNextBtn.on('click',function(){
+        var datapair = $sigdiv.jSignature("getData","image");
+        /*获取图片base64*/
+        var srcVal = 'data:' + datapair[0] + ',' + datapair[1];
+        console.log(srcVal);
+
+      })
+    })
+  })(jQuery)
+</script>
+</html>

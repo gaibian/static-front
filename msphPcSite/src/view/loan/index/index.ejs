@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贷款首页</title>
+    <%= layout() %>
+</head>
+<body>
+<%= pageTopNav() %>
+<%= pageNav({active:"loan"}) %>
+<!--banner-->
+<div class="page_banner_box">
+    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/loan_index_banner_img.jpg') %>">
+    <div class="right_content_box">
+        <div class="title">贷款计算器</div>
+        <p class="note_text">随时随地、随借随还</p>
+        <div class="num">0.8<span>%</span></div>
+        <p class="num_note_text">月利率低至</p>
+        <button class="popup_calc_btn">开始计算</button>
+    </div>
+</div>
+<!--贷款计算弹窗-->
+<div class="loan_calc_popup">
+    <div class="header_box">
+        贷款计算器
+        <div class="close_btn"></div>
+    </div>
+    <div class="calc_container">
+        <div class="middle_form_box calc_content_box">
+            <div class="form_input">
+                <label class="title">贷款金额</label>
+                <div class="input_box">
+                    <input type="text" id="all_money"/>
+                    <em>元</em>
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="title">贷款期数</label>
+                <div class="input_box">
+                    <input type="text" id="month"/>
+                    <em>月</em>
+                </div>
+            </div>
+            <div class="form_input">
+                <label class="title">贷款月利率</label>
+                <div class="input_box">
+                    <input type="text" id="inter_month"/>
+                    <em>‰</em>
+                </div>
+            </div>
+            <div class="form_input status_active">
+                <label class="title">还款方式</label>
+                <div class="status_box">
+                    <div class="status inter_box">
+                        <span class="spot crl"><em class="pos"></em></span>
+                        <span class="text" data-id="b">等本等息</span>
+                    </div>
+                    <div class="status inter_box">
+                        <span class="spot crl"><em class="pos"></em></span>
+                        <span class="text" data-id="x">先息后本</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_result_box data_show_box">
+            <div class="pos">
+                <ul class="result_ul">
+                    <li class="result_li">
+                        <p class="title">每月还款：</p>
+                        <em>元</em>
+                        <span id="each_repayment">0.00</span>
+                    </li>
+                    <li class="result_li">
+                        <p class="title">末月还款：</p>
+                        <em>元</em>
+                        <span id="late_repayment">0.00</span>
+                    </li>
+                    <li class="result_li">
+                        <p class="title">总支付利息：</p>
+                        <em>元</em>
+                        <span id="all_interest">0.00</span>
+                    </li>
+                    <li class="result_li">
+                        <p class="title">本息合计：</p>
+                        <em>元</em>
+                        <span id="all_interest_money">0.00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button class="calc_btn">计算</button>
+</div>
+<!--产品列表-->
+<div class="page_product_list_box">
+    <div class="content_header_box">产品列表<span>你想贷　我来办</span><a class="more_btn"></a></div>
+    <div class="header_title">
+        <ul class="title_ul">
+            <li class="title_li first">产品名称</li>
+            <li class="title_li second">一般月费率</li>
+            <li class="title_li three">产品描述</li>
+            <li class="title_li four">所需资料</li>
+        </ul>
+    </div>
+    <div class="product_content_list">
+        <div class="product_container">
+            <div class="hover_list_box">
+                <div class="list_box">
+                    <div class="list first">
+                        <div class="pos">
+                            <h2 class="title">车抵贷</h2>
+                        </div>
+                    </div>
+                    <div class="list second">
+                        <div class="pos">
+                            <div class="price">0.80<span>%</span></div>
+                        </div>
+                    </div>
+                    <div class="list three">
+                        <div class="pos">
+                            <div class="text">非营运车辆一次抵押、二次抵押均可办理，无需押车押证</div>
+                        </div>
+                    </div>
+                    <div class="list four">
+                        <div class="pos">
+                            <p class="text">1.浙江省内牌照</p>
+                            <p class="text">2.车龄8年以内</p>
+                        </div>
+                    </div>
+                    <div class="list five">
+                        <a href="loan_details.html" class="look_btn">急速申请</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hover_list_box">
+                <div class="list_box">
+                    <div class="list first">
+                        <div class="pos">
+                            <h2 class="title">车抵贷</h2>
+                        </div>
+                    </div>
+                    <div class="list second">
+                        <div class="pos">
+                            <div class="price">0.80<span>%</span></div>
+                        </div>
+                    </div>
+                    <div class="list three">
+                        <div class="pos">
+                            <div class="text">非营运车辆一次抵押、二次抵押均可办理，无需押车押证</div>
+                        </div>
+                    </div>
+                    <div class="list four">
+                        <div class="pos">
+                            <p class="text">1.浙江省内牌照</p>
+                            <p class="text">2.车龄8年以内</p>
+                        </div>
+                    </div>
+                    <div class="list five">
+                        <a href="loan_details.html" class="look_btn">急速申请</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hover_list_box">
+                <div class="list_box">
+                    <div class="list first">
+                        <div class="pos">
+                            <h2 class="title">车抵贷</h2>
+                        </div>
+                    </div>
+                    <div class="list second">
+                        <div class="pos">
+                            <div class="price">0.80<span>%</span></div>
+                        </div>
+                    </div>
+                    <div class="list three">
+                        <div class="pos">
+                            <div class="text">非营运车辆一次抵押、二次抵押均可办理，无需押车押证</div>
+                        </div>
+                    </div>
+                    <div class="list four">
+                        <div class="pos">
+                            <p class="text">1.浙江省内牌照</p>
+                            <p class="text">2.车龄8年以内</p>
+                        </div>
+                    </div>
+                    <div class="list five">
+                        <a href="loan_details.html" class="look_btn">急速申请</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hover_list_box">
+                <div class="list_box">
+                    <div class="list first">
+                        <div class="pos">
+                            <h2 class="title">车抵贷</h2>
+                        </div>
+                    </div>
+                    <div class="list second">
+                        <div class="pos">
+                            <div class="price">0.80<span>%</span></div>
+                        </div>
+                    </div>
+                    <div class="list three">
+                        <div class="pos">
+                            <div class="text">非营运车辆一次抵押、二次抵押均可办理，无需押车押证</div>
+                        </div>
+                    </div>
+                    <div class="list four">
+                        <div class="pos">
+                            <p class="text">1.浙江省内牌照</p>
+                            <p class="text">2.车龄8年以内</p>
+                        </div>
+                    </div>
+                    <div class="list five">
+                        <a href="loan_details.html" class="look_btn">急速申请</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hover_list_box">
+                <div class="list_box">
+                    <div class="list first">
+                        <div class="pos">
+                            <h2 class="title">车抵贷</h2>
+                        </div>
+                    </div>
+                    <div class="list second">
+                        <div class="pos">
+                            <div class="price">0.80<span>%</span></div>
+                        </div>
+                    </div>
+                    <div class="list three">
+                        <div class="pos">
+                            <div class="text">非营运车辆一次抵押、二次抵押均可办理，无需押车押证</div>
+                        </div>
+                    </div>
+                    <div class="list four">
+                        <div class="pos">
+                            <p class="text">1.浙江省内牌照</p>
+                            <p class="text">2.车龄8年以内</p>
+                        </div>
+                    </div>
+                    <div class="list five">
+                        <a href="loan_details.html" class="look_btn">急速申请</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= listPaging() %>
+    </div>
+</div>
+<%= sideContact() %>
+<%= footerNav({footer_background:"background:#fff"}) %>
+</body>
+</html>

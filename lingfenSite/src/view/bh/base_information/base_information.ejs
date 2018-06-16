@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本信息</title>
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <section class="top_base_container">
+        <a class="return_page_btn"></a>
+        <section class="page_header_container">
+            基本信息
+            <div class="location_box">
+                <i class="location_bg"></i>
+                <span class="val">宁波·浙B</span>
+            </div>
+        </section>
+        <section class="form" data-btn="choice_btn">
+            <div class="input_box">
+                <input type="text" placeholder="车主手机号" data-toggle="true" checkType="phone" data-error="请输入正确的手机号">
+            </div>
+        </section>
+    </section>
+    <section class="upload_photo_container">
+        <div class="uoloading_box">
+            <header class="header_title">
+                <i class="front_bg bg1"></i>
+                车主身份证上传
+            </header>
+            <div class="file_box">
+                <img class="file_img" width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img1.jpg') %>">
+                <input type="file" class="xsz_file">
+            </div>
+        </div>
+        <div class="uoloading_box">
+            <header class="header_title">
+                <i class="front_bg bg2"></i>
+                行驶证上传
+            </header>
+            <div class="file_box">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img2.jpg') %>">
+                <input type="file">
+            </div>
+        </div>
+    </section>
+    <section class="choice_uploading_container">
+        <div class="choice_upload_box">
+            <header class="choice_header_title">
+                <p class="title">投保人同车主</p>
+                <%= switchBtn() %>
+            </header>
+            <div class="file_box" class="xsz_upload">
+                <img class="file_img" width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img1.jpg') %>">
+                <input type="file" class="xsz_file">
+            </div>
+        </div>
+        <div class="choice_upload_box">
+            <header class="choice_header_title">
+                <p class="title">投保人同车主</p>
+                <%= switchBtn() %>
+            </header>
+            <div class="file_box" class="xsz_upload">
+                <img class="file_img" width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img1.jpg') %>">
+                <input type="file" class="xsz_file">
+            </div>
+        </div>
+        <div class="choice_upload_box">
+            <header class="choice_header_title">
+                <p class="title">投保人同车主</p>
+                <%= switchBtn() %>
+            </header>
+            <div class="file_box" class="xsz_upload">
+                <img class="file_img" width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img1.jpg') %>">
+                <input type="file" class="xsz_file">
+            </div>
+        </div>
+        <div class="choice_upload_box">
+            <header class="choice_header_title">
+                <p class="title">投保人同车主</p>
+                <%= switchBtn() %>
+            </header>
+            <div class="file_box" class="xsz_upload">
+                <img class="file_img" width="100%" height="100%" src="<%= require('../../../public-resource/imgs/bh_upload_img1.jpg') %>">
+                <input type="file" class="xsz_file">
+            </div>
+        </div>
+    </section>
+    <button class="choice_btn">选择投保方案</button>
+</main>
+</body>
+<script>
+    $(function(){
+      verify([{
+        el:'.form',
+        success:function(){
+          console.log('chengg')
+        }
+      }]);
+      window.picUpLoad({
+        el:'.file_box',
+        url:'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+        callback(res,self){
+          let img = self.querySelector('img');
+          img.src = res[0].msg;
+        },
+      });
+    })
+</script>
+</html>

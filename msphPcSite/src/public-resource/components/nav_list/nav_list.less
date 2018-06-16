@@ -1,0 +1,41 @@
+@import "../../../public-resource/less/custom.less";
+/*筛选列表*/
+.screen_list_box{
+  width:1200px;
+  margin:20px auto;
+  background:#fff;
+  padding:0 38px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .list_box{
+    width:100%;
+    .list{
+      width:100%;
+      height:50px;
+      line-height:50px;
+      border-bottom:1px #e5e5e5 dashed;
+      .tit{
+        float:left;
+        font-size:14px;
+        color:@color9;
+      }
+      .list_content{
+        float:left;
+        width:800px;
+        span{
+          font-size:14px;
+          color:@color3;
+          margin:0 24px;
+          cursor: pointer;
+        }
+        span.active{
+          color:#238fea;
+        }
+      }
+    }
+    .list:last-child{
+      border-bottom:none;
+    }
+  }
+}

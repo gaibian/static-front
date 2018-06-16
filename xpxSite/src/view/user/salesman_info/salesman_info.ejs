@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学平险投保</title>
+    <%= layout %>
+</head>
+<body>
+<section class="page_container">
+    <section class="salesman_container">
+        <div class="header_base_box">
+            <div class="header_img">
+                <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/salesman_header_img.jpg') %>">
+            </div>
+            <div class="base_name_box">
+                <div class="pos">
+                    <div class="tit_val">业务员：方文山</div>
+                    <div class="tit_val">工<span style="opacity:0;visibility: hidden">民</span>号：000111</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="info_content_container">
+            <div class="info_content_box">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/salesman_img.jpg') %>">
+                </div>
+                <div class="info_text_box">
+                    <div class="left_text_box">
+                        <div class="pos">
+                            <div class="text">长按右侧二维码，进入投保平台</div>
+                            <div class="text">公众号入口，请输入工号：000111</div>
+                        </div>
+                    </div>
+                    <div class="er_code_img">
+                        <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/er_code_img.jpg') %>">
+                    </div>
+                </div>
+            </div>
+            <div class="note_text">长按图片保存到本地相册</div>
+        </div>
+    </section>
+    <section class="btm_btn_box">
+        <a class="enter_btn">进入学平险投保平台</a>
+    </section>
+</section>
+</body>
+</html>

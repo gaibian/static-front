@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改昵称</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="http://cdn.upingou.com/lingfenStatic/css/user\modify_name.css?44bf26fa50817c7ddd88" rel="stylesheet"></head>
+<body>
+<main class="page">
+    <a class="return_page_btn"></a>
+    <section class="page_header_container">修改昵称</section>
+    <section class="remark_content">
+        <i class="front_bg"></i>
+        16个字符以内，可由中英文、数字、“-”、“_”构成
+    </section>
+    <section class="form" data-btn="keep_btn">
+        <div class="input_box">
+            <input type="text" value="蒋晓军" placeholder="请输入新的昵称" data-toggle="true" checkType="name" data-error="请输入正确的昵称">
+        </div>
+    </section>
+    <button class="keep_btn">保存</button>
+</main>
+<script type="text/javascript" src="http://cdn.upingou.com/lingfenStatic/js/user\modify_name.js?44bf26fa50817c7ddd88"></script></body>
+<script>
+    $(function(){
+      verify([{
+        el:'.form',
+        success:function(){
+          console.log('chengg');
+        }
+      }])
+    })
+</script>
+</html>

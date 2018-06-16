@@ -1,0 +1,1 @@
+require('./modify_bind_phone.less');

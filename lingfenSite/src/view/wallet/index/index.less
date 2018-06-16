@@ -1,0 +1,99 @@
+@import "../../../public-resource/less/init.less";
+@import "../../../public-resource/less/custom.less";
+body{
+  overflow-x: hidden;
+}
+.page{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:0 auto;
+  background:#fff;
+  padding:0.4rem 0.4rem 1rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page_header_container{
+  width:100%;
+  font-size:0.6rem;
+  color:#333;
+  font-weight:bold;
+}
+.wallet_base_container{
+  width:100%;
+  height:3.5rem;
+  background:url('../../../public-resource/imgs/wallet_base_bg.jpg') no-repeat;
+  background-size:contain;
+  border-radius:0.08rem;
+  overflow:hidden;
+  margin-top:0.77rem;
+  .flex_box;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -moz-box-orient:vertical;
+  -moz-box-direction:normal;
+  flex-direction:column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  padding-left:0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .base_content{
+    width:100%;
+    .text{
+      font-size:0.26rem;
+      color:rgba(51,51,51,0.5);
+    }
+    .money_val{
+      font-size:0.66rem;
+      color:#333;
+      font-weight:bold;
+      margin-top:0.12rem;
+    }
+    &:last-child{
+      margin-top:0.4rem;
+      .money_val{
+        font-size:0.34rem;
+        color:#333;
+        font-weight:normal;
+      }
+    }
+  }
+}
+
+.user_list_container{
+  width:100%;
+  margin-bottom:0.4rem;
+  .list_ul{
+    width:100%;
+    .list_a{
+      display:block;
+      width:100%;
+      position: relative;
+      padding:0.58rem 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size:0.28rem;
+      color:#333;
+      border-bottom:#e5e5e5 1px solid;
+      .right_content_box{
+        .box_right_position(0);
+        padding-right:0.26rem;
+        .val{
+          font-size:0.26rem;
+          color:#333;
+        }
+        .right_bg{
+          display:inline-block;
+          .box_right_position(0);
+          width:0.14rem;
+          height:0.24rem;
+          background:url('../../../public-resource/imgs/icons/right_bg.png') no-repeat;
+          background-size:contain;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传身份证</title>
+    <!--<link href="http://cdn.msphcn.com/msphStatic/bin/Mdate.css" rel="stylesheet">-->
+    <%= layout() %>
+</head>
+<body>
+<main class="page">
+    <a class="return_page_btn"></a>
+    <section class="page_header_container">上传身份证</section>
+    <section class="remarks_text">
+        <i class="remark_bg"></i>
+        请上传<span>*思维</span>的身份证正反面照片
+    </section>
+    <section class="upload_id_container">
+        <div class="upload_img_box file_box">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_dedault_img1.jpg') %>">
+            <input type="file">
+        </div>
+        <div class="upload_img_box file_box">
+            <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_dedault_img2.jpg') %>">
+            <input type="file">
+        </div>
+    </section>
+    <section class="requirement_container">
+        <div class="title_box">
+            <span>拍摄照片要求</span>
+        </div>
+        <ul class="requirement_ul">
+            <li class="requirement_li">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_img1.jpg') %>">
+                </div>
+                <p class="text_box">
+                    <i class="icon_bg dui"></i>
+                    <span class="text">标准拍摄</span>
+                </p>
+            </li>
+            <li class="requirement_li">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_img2.jpg') %>">
+                </div>
+                <p class="text_box">
+                    <i class="icon_bg cuo"></i>
+                    <span class="text">边框缺失</span>
+                </p>
+            </li>
+            <li class="requirement_li">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_img3.jpg') %>">
+                </div>
+                <p class="text_box">
+                    <i class="icon_bg cuo"></i>
+                    <span class="text">照片模糊</span>
+                </p>
+            </li>
+            <li class="requirement_li">
+                <div class="img_box">
+                    <img width="100%" height="100%" src="<%= require('../../../public-resource/imgs/upload_id_img4.jpg') %>">
+                </div>
+                <p class="text_box">
+                    <i class="icon_bg cuo"></i>
+                    <span class="text">闪光强烈</span>
+                </p>
+            </li>
+        </ul>
+    </section>
+    <input type="hidden" id="dateSelectorTwo">
+    <button class="sure_upload_btn" id="sure_upload_btn">确认上传</button>
+</main>
+</body>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/iScroll.js"></script>
+<!--<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/Mdate.js?1.0"></script>-->
+<script>
+    $(function(){
+      picUpLoad({
+        el:'.file_box',
+        url:'http://bh.upingou.com/index.php?g=Wap&m=Pay&a=upload',
+        callback(res,self,index){
+          console.log(index);
+          let img = self.querySelector('img');
+          img.src = res[0].msg;
+        },
+      });
+      console.log(window.Mdate);
+          var newData = new Mdate.Mdate("sure_upload_btn",{
+            acceptId:'dateSelectorTwo',
+            beginYear:'2018',
+            beginMonth:'5',
+            beginDay:'7',
+            endYear:'2050',
+            endMonth:'5',
+            endDay:'7',
+          })
+    })
+</script>
+</html>

@@ -1,0 +1,1 @@
+require('./bill_detailed.less');

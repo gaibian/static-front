@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>告家长书</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/msphStatic/bin/rem.js"></script>
+<link href="/xpxStatic/css/\order\informing\informing.css?51d6558ac02221d5e8f1" rel="stylesheet"></head>
+<body>
+<section class="page_container">
+    <section class="informing_content_text">
+        <p class="text">尊敬的学生家长：<br>
+            您好！值此新学年来临之际，衷心祝愿您的孩子身体健康，学习进步！<br>
+            为给您的孩子提供有针对性地保障，我们根据孩子是否参加居民医保，分别设计了两个承保方案：未参加居民医保的学生（幼儿）仅限投保《学生综合保险（非社保版）》，已参加居民医保的学生（含幼儿）仅限投保《学生综合保险（社保版）》。
+            <br>今年的学生幼儿综合保险沿用去年的承保方案，非社保版包含意外伤害、疾病身故或全残、意外伤害医疗和住院医疗与重大疾病门诊医疗四项责任；社保版包含意外伤害、疾病身故与全残、意外伤害门急诊医疗补充、疾病门急诊医疗补充、住院与特殊病种门诊医疗费用补偿和住院安心津贴六项责任，中小学年保费仍然为100元，幼儿园年保费仍然为120元。
+            为保障您的权益，请您仔细阅读本宣传单页的各项内容，尤其是“特别提示”和加粗字体部分，并完整填写《学生家长委托投保回执》，递交给您孩子所在学校或保险公司。</p>
+        <h2 class="title">投保声明：</h2>
+        <div class="statement_text">本人已阅知<span>《告家长书》</span>各项内容，保险人就保险待遇、保险金
+            额、责任免除、特别提示等事项对本人已经明确说明、解释，现
+            自愿为孩子根据是否参加城镇居民医保情况，选投本保险。</div>
+    </section>
+    <!--签字弹窗-->
+    <section class="sign_popup">
+        <div class="popup_content">
+            <div class="sign_header_title_container">
+                <div class="reset_btn"></div>
+                <h2 class="sign_title">请在下方区域内签上投保人(家长)姓名</h2>
+            </div>
+            <div id="signature" class="sign_img_content_box"></div>
+            <div class="sign_btn_box">
+                <button class="sign_next_btn">确认签名,下一步</button>
+            </div>
+        </div>
+    </section>
+</section>
+<script type="text/javascript" src="/xpxStatic/js/\order\informing\informing.js?51d6558ac02221d5e8f1"></script></body>
+<script src="../../bin/jSignature.min.noconflict.js"></script>
+<script>
+    $(function(){
+      var $sigdiv = $("#signature").jSignature();
+      var export_plugins = $sigdiv.jSignature('listPlugins','export');
+      console.log(export_plugins);
+      var resetBtn = $('.reset_btn');
+      var signNextBtn = $('.sign_next_btn');
+      resetBtn.on('click',function(){
+        $sigdiv.jSignature("reset");
+      });
+      /*点击下一步*/
+      signNextBtn.on('click',function(){
+        var datapair = $sigdiv.jSignature("getData","image");
+        /*获取图片base64*/
+        var srcVal = 'data:' + datapair[0] + ',' + datapair[1];
+        console.log(srcVal);
+
+      })
+    })
+</script>
+</html>
